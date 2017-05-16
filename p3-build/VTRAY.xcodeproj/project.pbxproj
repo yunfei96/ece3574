@@ -1,0 +1,1457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		83F43E5898B74EAB84AA2F47 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F0C0FBA9D5CE43ADACE741D5 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				56B7AF93F2EB4BA097A120F5 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		95E64667DF7C4E7EAB0B631D /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3B8AFE297C7247D199CDCE14 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				A1ACD6FD55E148AFAA164E41 /* CMake Rules */,
+			);
+			dependencies = (
+				222A69CF7F8E4C8C80FBA1EB /* PBXTargetDependency */,
+				1337F24D9CA84C118494305F /* PBXTargetDependency */,
+				0BC3D256300A4CC0AC1A3AEB /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		9E8126C6FB3E4072873335F3 /* vtray_automoc */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D0352841AA9F4785833BA1DC /* Build configuration list for PBXAggregateTarget "vtray_automoc" */;
+			buildPhases = (
+				3E6ED5CB82E549DAAC0E57D5 /* CMake Rules */,
+			);
+			dependencies = (
+				E6C339D686904DD188301E32 /* PBXTargetDependency */,
+			);
+			name = vtray_automoc;
+			productName = vtray_automoc;
+		};
+		C96FBBE40D1C437985C66EC6 /* unittests_automoc */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DF01DEFCBB1B4FF99931AD3F /* Build configuration list for PBXAggregateTarget "unittests_automoc" */;
+			buildPhases = (
+				7A99453F5B514A1697EC34EC /* CMake Rules */,
+			);
+			dependencies = (
+				943D4BB2932B49F6A6AA3C33 /* PBXTargetDependency */,
+			);
+			name = unittests_automoc;
+			productName = unittests_automoc;
+		};
+		EC3E2588F0B34EBE981D06F5 /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 88081DF2789D42B29D5043A9 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				57DB0A0D1560481DB3CE9C63 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		08CEC6581A2E4BB9847A9D77 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.h */ = {isa = PBXBuildFile; fileRef = 1C0EC898C0024806AAB17DFE /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.h */; };
+		1E8CC5A319EB430998C05ABA /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */ = {isa = PBXBuildFile; fileRef = C3F208C3F23844F88727A3D0 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */; };
+		35DA2198D85443E1B3F8AEE1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/unittests_automoc.cpp */ = {isa = PBXBuildFile; fileRef = 1D1CDB58565145CB8D9BCA00 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/unittests_automoc.cpp */; };
+		397182B301F545D58E020B0E /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/catch.hpp */ = {isa = PBXBuildFile; fileRef = 366069C15A864182926554E3 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/catch.hpp */; };
+		3FBDCFD698054914B825A4A4 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 673C188876B5486DBFDD2F48 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */; };
+		4C1BB5C8B67A4999B8972933 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/unittests.cpp */ = {isa = PBXBuildFile; fileRef = 5DEA890138F44240B6592EF1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/unittests.cpp */; };
+		63BE2BBD7DF84B0DAB225EAB /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.h */ = {isa = PBXBuildFile; fileRef = 976F2A89D0104CDC9309701C /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.h */; };
+		68CDD3D2E6194DE58F1321CF /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vtray.cpp */ = {isa = PBXBuildFile; fileRef = B94F4002481F4056B6D82635 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vtray.cpp */; };
+		69788CBB1F10481880FAAD07 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.h */ = {isa = PBXBuildFile; fileRef = DC4880402C2B4A36A6EB1146 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.h */; };
+		7396316223394121B5DF6834 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/vtray_automoc.cpp */ = {isa = PBXBuildFile; fileRef = 8B37197E1AB74F7487AD14D1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/vtray_automoc.cpp */; };
+		73D356EB25644A3A84483A8C /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.h */ = {isa = PBXBuildFile; fileRef = 4F46BD38062649AAA380F662 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.h */; };
+		844E88323E4A48539DDB3263 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.h */ = {isa = PBXBuildFile; fileRef = 15217A926B5443508B68EE0D /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.h */; };
+		8A6F56071005438C9BCA34EC /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */ = {isa = PBXBuildFile; fileRef = CB05AA687F474A0F858B5C3B /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */; };
+		8EA2B7681C52449F827DFDE0 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.h */ = {isa = PBXBuildFile; fileRef = ECD3D624483840F182E2D9CC /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.h */; };
+		8EF0E331099D4295B9D6E7C8 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 67E2E88F8FBB4FE79F2BC0ED /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */; };
+		95BA02F654D64BE4AEB58112 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */ = {isa = PBXBuildFile; fileRef = 391C121CF57842E8B5AC0039 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */; };
+		A52896880B064072B8A59F4E /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */ = {isa = PBXBuildFile; fileRef = 27D06C689DC94577A1753BD4 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */; };
+		AE86EAC1B08348BC80439C82 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */ = {isa = PBXBuildFile; fileRef = EBEA99D19CB14D36A00371B6 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */; };
+		B8A1B6533DCA4919BA96EA5C /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */ = {isa = PBXBuildFile; fileRef = 57A5A3DD8D874A4B9A67E9A1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */; };
+		BAE4B5A6DCB64E20AEE91D7B /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */ = {isa = PBXBuildFile; fileRef = 2A4DC89E67524A86BC5FCB86 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */; };
+		C13C2E0E01BF44D68E9108A2 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */ = {isa = PBXBuildFile; fileRef = 01852D60FFF34B3AABDCE034 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */; };
+		D128C9561F0D4AE9A1DB0690 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.h */ = {isa = PBXBuildFile; fileRef = 28BB4B5117D146BA8D3D759F /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.h */; };
+		D2E223AEB0714052970383C3 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.h */ = {isa = PBXBuildFile; fileRef = C0A8A2FB024D4BA6ACF4E72D /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.h */; };
+		E4769F666F044035A5F95FAE /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.h */ = {isa = PBXBuildFile; fileRef = 730F1D227C7B49999BED52F2 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.h */; };
+		E5C3BB2668B34E36BEBFB1F7 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */ = {isa = PBXBuildFile; fileRef = B3F212EE3519494B959E4739 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */; };
+		F976A9C0E0634AB0BA48147E /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */ = {isa = PBXBuildFile; fileRef = 022C9D4D14584B9F9CA29EE3 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */; };
+		FD63FDE1DA6F4FBE8FF3CA25 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.h */ = {isa = PBXBuildFile; fileRef = E73763DCC24142FCA8B423F8 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		1F389A7C68B348439886204F /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		54664DC9E6364A5C864D4C4F /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		57484B3EAC2D42148011F889 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		D7466E7AA19643EDB706C6E0 = {
+			isa = PBXBuildStyle;
+		};
+		F6F318B3EFFC48F5B345B106 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		3E705D089AF044FE97911E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96FBBE40D1C437985C66EC6;
+			remoteInfo = unittests_automoc;
+		};
+		42125777304E4C2CA2488319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E8126C6FB3E4072873335F3;
+			remoteInfo = vtray_automoc;
+		};
+		53162199B4E14AD798EE8D57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83F43E5898B74EAB84AA2F47;
+			remoteInfo = ZERO_CHECK;
+		};
+		6BE0B91FBF7548A280B34F7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83F43E5898B74EAB84AA2F47;
+			remoteInfo = ZERO_CHECK;
+		};
+		BCB92DABE5644F549C7488ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83F43E5898B74EAB84AA2F47;
+			remoteInfo = ZERO_CHECK;
+		};
+		CB11F4E8386B4FFE826B4236 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F4A8332730B495FBD485EBD;
+			remoteInfo = vtray;
+		};
+		D4D7A9D336144BC8A287916D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83F43E5898B74EAB84AA2F47;
+			remoteInfo = ZERO_CHECK;
+		};
+		E8D81FBB5D6E44D49C34A9CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8054CEE2515846B2AB5A5352;
+			remoteInfo = unittests;
+		};
+		F2EDBE0156AA428E8EE346F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA7FDB2FE4D742EAADB50471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83F43E5898B74EAB84AA2F47;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01852D60FFF34B3AABDCE034 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = calculate.cpp; path = calculate.cpp; sourceTree = SOURCE_ROOT; };
+		022C9D4D14584B9F9CA29EE3 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = parsejson.cpp; path = parsejson.cpp; sourceTree = SOURCE_ROOT; };
+		103F6E2EF756430682764FED /* vtray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = vtray; sourceTree = BUILT_PRODUCTS_DIR; };
+		10777BA8A070416FAA85013C /* unittests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = unittests; sourceTree = BUILT_PRODUCTS_DIR; };
+		15217A926B5443508B68EE0D /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = parsejson.h; path = parsejson.h; sourceTree = SOURCE_ROOT; };
+		1C0EC898C0024806AAB17DFE /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = plane.h; path = plane.h; sourceTree = SOURCE_ROOT; };
+		1D1CDB58565145CB8D9BCA00 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/unittests_automoc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unittests_automoc.cpp; path = "../p3-build/unittests_automoc.cpp"; sourceTree = SOURCE_ROOT; };
+		27D06C689DC94577A1753BD4 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sphere.cpp; path = sphere.cpp; sourceTree = SOURCE_ROOT; };
+		28BB4B5117D146BA8D3D759F /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = parsejson.h; path = parsejson.h; sourceTree = SOURCE_ROOT; };
+		2A4DC89E67524A86BC5FCB86 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = plane.cpp; path = plane.cpp; sourceTree = SOURCE_ROOT; };
+		366069C15A864182926554E3 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/catch.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = catch.hpp; path = catch.hpp; sourceTree = SOURCE_ROOT; };
+		391C121CF57842E8B5AC0039 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = parsejson.cpp; path = parsejson.cpp; sourceTree = SOURCE_ROOT; };
+		4F46BD38062649AAA380F662 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = calculate.h; path = calculate.h; sourceTree = SOURCE_ROOT; };
+		57A5A3DD8D874A4B9A67E9A1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector3d.cpp; path = vector3d.cpp; sourceTree = SOURCE_ROOT; };
+		5DEA890138F44240B6592EF1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/unittests.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unittests.cpp; path = unittests.cpp; sourceTree = SOURCE_ROOT; };
+		673C188876B5486DBFDD2F48 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		67E2E88F8FBB4FE79F2BC0ED /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		730F1D227C7B49999BED52F2 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vector3d.h; path = vector3d.h; sourceTree = SOURCE_ROOT; };
+		8B37197E1AB74F7487AD14D1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/vtray_automoc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vtray_automoc.cpp; path = "../p3-build/vtray_automoc.cpp"; sourceTree = SOURCE_ROOT; };
+		93C30866064F42E2885CADDE /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		976F2A89D0104CDC9309701C /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = calculate.h; path = calculate.h; sourceTree = SOURCE_ROOT; };
+		9A05E8CC32F7418AB78FC0E6 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B3F212EE3519494B959E4739 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector3d.cpp; path = vector3d.cpp; sourceTree = SOURCE_ROOT; };
+		B94F4002481F4056B6D82635 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vtray.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vtray.cpp; path = vtray.cpp; sourceTree = SOURCE_ROOT; };
+		C0A8A2FB024D4BA6ACF4E72D /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vector3d.h; path = vector3d.h; sourceTree = SOURCE_ROOT; };
+		C3F208C3F23844F88727A3D0 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sphere.cpp; path = sphere.cpp; sourceTree = SOURCE_ROOT; };
+		CB05AA687F474A0F858B5C3B /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = plane.cpp; path = plane.cpp; sourceTree = SOURCE_ROOT; };
+		D7AF9C620C134A41B51BDA02 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DC4880402C2B4A36A6EB1146 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sphere.h; path = sphere.h; sourceTree = SOURCE_ROOT; };
+		E73763DCC24142FCA8B423F8 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sphere.h; path = sphere.h; sourceTree = SOURCE_ROOT; };
+		EBEA99D19CB14D36A00371B6 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = calculate.cpp; path = calculate.cpp; sourceTree = SOURCE_ROOT; };
+		ECB83C2D18994E60B3D60841 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		ECD3D624483840F182E2D9CC /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = plane.h; path = plane.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A037691A4E9499588E37DDA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				159D341C21B84DC680289A63 /* vtray */,
+				FE61C3081BBE46A7A885D1EE /* unittests */,
+				D83FCE18D1824312898006B5 /* vtray_automoc */,
+				D88D2455B97D4E57B56DDEB0 /* unittests_automoc */,
+				15E1DC1B21B14031B3EAB41A /* ALL_BUILD */,
+				A46C750408464013AFFCB4B6 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		159D341C21B84DC680289A63 /* vtray */ = {
+			isa = PBXGroup;
+			children = (
+				DA6ED99CFC0046A0A6EE1BD5 /* Source Files */,
+				E092CCAE70CD4F1795B1363C /* Header Files */,
+				673C188876B5486DBFDD2F48 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */,
+			);
+			name = vtray;
+			sourceTree = "<group>";
+		};
+		15E1DC1B21B14031B3EAB41A /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				F5B7B974FFAE40E492A0C1BC /* CMake Rules */,
+				93C30866064F42E2885CADDE /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		4B897F4ADBDF4DC6BA31C83A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		766EBAEB76444AB9BDE0C9E8 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D1CDB58565145CB8D9BCA00 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/unittests_automoc.cpp */,
+				EBEA99D19CB14D36A00371B6 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */,
+				022C9D4D14584B9F9CA29EE3 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */,
+				2A4DC89E67524A86BC5FCB86 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */,
+				27D06C689DC94577A1753BD4 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */,
+				5DEA890138F44240B6592EF1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/unittests.cpp */,
+				B3F212EE3519494B959E4739 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A46C750408464013AFFCB4B6 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				CE2A18857EA145AB91D87A8B /* CMake Rules */,
+				ECB83C2D18994E60B3D60841 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		A99A8D52FC8E4C9788E00F04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10777BA8A070416FAA85013C /* unittests */,
+				103F6E2EF756430682764FED /* vtray */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B562F2EF859E4C83A82C3D12 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				976F2A89D0104CDC9309701C /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.h */,
+				366069C15A864182926554E3 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/catch.hpp */,
+				15217A926B5443508B68EE0D /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.h */,
+				1C0EC898C0024806AAB17DFE /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.h */,
+				DC4880402C2B4A36A6EB1146 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.h */,
+				730F1D227C7B49999BED52F2 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		C0C0E862F08940F0A4650FAE /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		C3A9DCA4C7554C5C8D433004 = {
+			isa = PBXGroup;
+			children = (
+				0A037691A4E9499588E37DDA /* Sources */,
+				4B897F4ADBDF4DC6BA31C83A /* Resources */,
+				A99A8D52FC8E4C9788E00F04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE2A18857EA145AB91D87A8B /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D76FAEB74623453DB1D5A1EA /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D83FCE18D1824312898006B5 /* vtray_automoc */ = {
+			isa = PBXGroup;
+			children = (
+				D76FAEB74623453DB1D5A1EA /* CMake Rules */,
+				9A05E8CC32F7418AB78FC0E6 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */,
+			);
+			name = vtray_automoc;
+			sourceTree = "<group>";
+		};
+		D88D2455B97D4E57B56DDEB0 /* unittests_automoc */ = {
+			isa = PBXGroup;
+			children = (
+				C0C0E862F08940F0A4650FAE /* CMake Rules */,
+				D7AF9C620C134A41B51BDA02 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */,
+			);
+			name = unittests_automoc;
+			sourceTree = "<group>";
+		};
+		DA6ED99CFC0046A0A6EE1BD5 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B37197E1AB74F7487AD14D1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/vtray_automoc.cpp */,
+				01852D60FFF34B3AABDCE034 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */,
+				391C121CF57842E8B5AC0039 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */,
+				CB05AA687F474A0F858B5C3B /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */,
+				C3F208C3F23844F88727A3D0 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */,
+				57A5A3DD8D874A4B9A67E9A1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */,
+				B94F4002481F4056B6D82635 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vtray.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E092CCAE70CD4F1795B1363C /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F46BD38062649AAA380F662 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.h */,
+				28BB4B5117D146BA8D3D759F /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.h */,
+				ECD3D624483840F182E2D9CC /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.h */,
+				E73763DCC24142FCA8B423F8 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.h */,
+				C0A8A2FB024D4BA6ACF4E72D /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		F5B7B974FFAE40E492A0C1BC /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		FE61C3081BBE46A7A885D1EE /* unittests */ = {
+			isa = PBXGroup;
+			children = (
+				B562F2EF859E4C83A82C3D12 /* Header Files */,
+				766EBAEB76444AB9BDE0C9E8 /* Source Files */,
+				67E2E88F8FBB4FE79F2BC0ED /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/CMakeLists.txt */,
+			);
+			name = unittests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F4A8332730B495FBD485EBD /* vtray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC67D3C92F847C6BB3CEF89 /* Build configuration list for PBXNativeTarget "vtray" */;
+			buildPhases = (
+				2199ABE0D1B0411B821AD717 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E59AAEDF7B7D467EBC72A701 /* PBXTargetDependency */,
+				611C9EB3080A46558E67E394 /* PBXTargetDependency */,
+			);
+			name = vtray;
+			productName = vtray;
+			productReference = 103F6E2EF756430682764FED /* vtray */;
+			productType = "com.apple.product-type.tool";
+		};
+		8054CEE2515846B2AB5A5352 /* unittests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC402F3A03894D5FA6907B2A /* Build configuration list for PBXNativeTarget "unittests" */;
+			buildPhases = (
+				C685C4FB3D6E401E9DAE3CEC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44ACBCE4DC8B490AB913C9C8 /* PBXTargetDependency */,
+				6F88F1CFC2AC4E23BCCD4776 /* PBXTargetDependency */,
+			);
+			name = unittests;
+			productName = unittests;
+			productReference = 10777BA8A070416FAA85013C /* unittests */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA7FDB2FE4D742EAADB50471 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0830;
+			};
+			buildConfigurationList = 8B19C5165D574CF2A4CE45E4 /* Build configuration list for PBXProject "VTRAY" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				1F389A7C68B348439886204F /* Debug */,
+				F6F318B3EFFC48F5B345B106 /* Release */,
+				54664DC9E6364A5C864D4C4F /* MinSizeRel */,
+				57484B3EAC2D42148011F889 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = C3A9DCA4C7554C5C8D433004;
+			projectDirPath = "/Users/YunfeiGuo/Desktop/ece3574/p3-source";
+			projectRoot = "";
+			targets = (
+				95E64667DF7C4E7EAB0B631D /* ALL_BUILD */,
+				EC3E2588F0B34EBE981D06F5 /* RUN_TESTS */,
+				83F43E5898B74EAB84AA2F47 /* ZERO_CHECK */,
+				8054CEE2515846B2AB5A5352 /* unittests */,
+				C96FBBE40D1C437985C66EC6 /* unittests_automoc */,
+				4F4A8332730B495FBD485EBD /* vtray */,
+				9E8126C6FB3E4072873335F3 /* vtray_automoc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		082ECE6F49554ACB87523485 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		2B17503767224CF39A0F74E9 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		3E6ED5CB82E549DAAC0E57D5 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/YunfeiGuo/Desktop/ece3574/p3-build -f /Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeScripts/vtray_automoc_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		56B7AF93F2EB4BA097A120F5 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/YunfeiGuo/Desktop/ece3574/p3-build -f /Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		57DB0A0D1560481DB3CE9C63 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/YunfeiGuo/Desktop/ece3574/p3-build -f /Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		7A99453F5B514A1697EC34EC /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/YunfeiGuo/Desktop/ece3574/p3-build -f /Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeScripts/unittests_automoc_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		84BCAA37111A490CBFE82339 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A1ACD6FD55E148AFAA164E41 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/YunfeiGuo/Desktop/ece3574/p3-build -f /Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		A442FD5551534CBEB858DA19 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C4385B93068E44C085A73D19 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2199ABE0D1B0411B821AD717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7396316223394121B5DF6834 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/vtray_automoc.cpp */,
+				C13C2E0E01BF44D68E9108A2 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */,
+				95BA02F654D64BE4AEB58112 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */,
+				8A6F56071005438C9BCA34EC /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */,
+				1E8CC5A319EB430998C05ABA /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */,
+				B8A1B6533DCA4919BA96EA5C /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */,
+				68CDD3D2E6194DE58F1321CF /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vtray.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C685C4FB3D6E401E9DAE3CEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35DA2198D85443E1B3F8AEE1 /* /Users/YunfeiGuo/Desktop/ece3574/p3-build/unittests_automoc.cpp */,
+				AE86EAC1B08348BC80439C82 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/calculate.cpp */,
+				F976A9C0E0634AB0BA48147E /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/parsejson.cpp */,
+				BAE4B5A6DCB64E20AEE91D7B /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/plane.cpp */,
+				A52896880B064072B8A59F4E /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/sphere.cpp */,
+				4C1BB5C8B67A4999B8972933 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/unittests.cpp */,
+				E5C3BB2668B34E36BEBFB1F7 /* /Users/YunfeiGuo/Desktop/ece3574/p3-source/vector3d.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BC3D256300A4CC0AC1A3AEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8054CEE2515846B2AB5A5352 /* unittests */;
+			targetProxy = E8D81FBB5D6E44D49C34A9CA /* PBXContainerItemProxy */;
+		};
+		1337F24D9CA84C118494305F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F4A8332730B495FBD485EBD /* vtray */;
+			targetProxy = CB11F4E8386B4FFE826B4236 /* PBXContainerItemProxy */;
+		};
+		222A69CF7F8E4C8C80FBA1EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83F43E5898B74EAB84AA2F47 /* ZERO_CHECK */;
+			targetProxy = D4D7A9D336144BC8A287916D /* PBXContainerItemProxy */;
+		};
+		44ACBCE4DC8B490AB913C9C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83F43E5898B74EAB84AA2F47 /* ZERO_CHECK */;
+			targetProxy = 53162199B4E14AD798EE8D57 /* PBXContainerItemProxy */;
+		};
+		611C9EB3080A46558E67E394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E8126C6FB3E4072873335F3 /* vtray_automoc */;
+			targetProxy = 42125777304E4C2CA2488319 /* PBXContainerItemProxy */;
+		};
+		6F88F1CFC2AC4E23BCCD4776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C96FBBE40D1C437985C66EC6 /* unittests_automoc */;
+			targetProxy = 3E705D089AF044FE97911E48 /* PBXContainerItemProxy */;
+		};
+		943D4BB2932B49F6A6AA3C33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83F43E5898B74EAB84AA2F47 /* ZERO_CHECK */;
+			targetProxy = F2EDBE0156AA428E8EE346F6 /* PBXContainerItemProxy */;
+		};
+		E59AAEDF7B7D467EBC72A701 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83F43E5898B74EAB84AA2F47 /* ZERO_CHECK */;
+			targetProxy = 6BE0B91FBF7548A280B34F7E /* PBXContainerItemProxy */;
+		};
+		E6C339D686904DD188301E32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83F43E5898B74EAB84AA2F47 /* ZERO_CHECK */;
+			targetProxy = BCB92DABE5644F549C7488ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C5581CF04424F8FBCE943B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		127365CCA04A465BA2113D28 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests_automoc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1743C84325BE493CA9018F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/usr/local/Cellar/qt5/5.8.0_1/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source",/usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/Headers,"/usr/local/Cellar/qt5/5.8.0_1/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   -fPIC '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/QtGui /usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		209FDA28206548888E302256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		23145C17CB3643E5B6106C82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests_automoc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		28B72236359748C986ED1E3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/usr/local/Cellar/qt5/5.8.0_1/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source",/usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/Headers,"/usr/local/Cellar/qt5/5.8.0_1/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   -fPIC '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/QtGui /usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2F9498D854954CA68349F5A6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		32A55CEACFA14612A763A724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build/build";
+			};
+			name = Debug;
+		};
+		3A8E0396F88546D890F9EF67 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests_automoc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3D861552194E4108B7898B43 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		410D52D276EE4C49B0C466E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/usr/local/Cellar/qt5/5.8.0_1/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source",/usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/Headers,"/usr/local/Cellar/qt5/5.8.0_1/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/QtGui /usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		56DB97043AE54F16B4C1662B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray_automoc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		606DB9DEE9F94839AF5774A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		79FDA3FDC8364018B1FFB7AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7BEEAB88B20B4AF4BBA6C6E1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/usr/local/Cellar/qt5/5.8.0_1/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source",/usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/Headers,"/usr/local/Cellar/qt5/5.8.0_1/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/QtGui /usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		83B3DFBFE70A40459215D694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build/build";
+			};
+			name = Release;
+		};
+		8C2FF45AB402457583105041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray_automoc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		9AA0056AE8DD4E79BD8CD84A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A33F55C9609A480B8C19ED25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests_automoc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		AA3C8895EEA84F508BD01EAB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/usr/local/Cellar/qt5/5.8.0_1/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source",/usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/Headers,"/usr/local/Cellar/qt5/5.8.0_1/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG -fPIC '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/QtGui /usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B54FD9A7109249D392A22115 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build/build";
+			};
+			name = MinSizeRel;
+		};
+		BB0F513AD1E74B3D877F9FC6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray_automoc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C874031E04E3491A897E51F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		CF383C9F169C4B0988DAA2F6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DCFDD88783564E3EBD9D00AD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E00FE041F2344173B9698203 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/usr/local/Cellar/qt5/5.8.0_1/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source",/usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/Headers,"/usr/local/Cellar/qt5/5.8.0_1/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/QtGui /usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EA436BEDF10847D2B4107D22 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/usr/local/Cellar/qt5/5.8.0_1/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source",/usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/Headers,"/usr/local/Cellar/qt5/5.8.0_1/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG -fPIC '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/QtGui /usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EDBB9653EEE74A50AC3F188C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F239785F101B460686EA36D7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray_automoc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F329A9ECC2CC4A3CBA01735F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F4C0E241E6254FCEB55D64AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/usr/local/Cellar/qt5/5.8.0_1/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p3-build","/Users/YunfeiGuo/Desktop/ece3574/p3-source",/usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/Headers,"/usr/local/Cellar/qt5/5.8.0_1/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/Cellar/qt5/5.8.0_1/lib/QtGui.framework/QtGui /usr/local/Cellar/qt5/5.8.0_1/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		FE905965BAAA4C6C93D9A970 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p3-build/build";
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B8AFE297C7247D199CDCE14 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				209FDA28206548888E302256 /* Debug */,
+				79FDA3FDC8364018B1FFB7AF /* Release */,
+				2F9498D854954CA68349F5A6 /* MinSizeRel */,
+				3D861552194E4108B7898B43 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5CC67D3C92F847C6BB3CEF89 /* Build configuration list for PBXNativeTarget "vtray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B72236359748C986ED1E3E /* Debug */,
+				410D52D276EE4C49B0C466E2 /* Release */,
+				7BEEAB88B20B4AF4BBA6C6E1 /* MinSizeRel */,
+				AA3C8895EEA84F508BD01EAB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		88081DF2789D42B29D5043A9 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				606DB9DEE9F94839AF5774A2 /* Debug */,
+				0C5581CF04424F8FBCE943B8 /* Release */,
+				CF383C9F169C4B0988DAA2F6 /* MinSizeRel */,
+				EDBB9653EEE74A50AC3F188C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8B19C5165D574CF2A4CE45E4 /* Build configuration list for PBXProject "VTRAY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32A55CEACFA14612A763A724 /* Debug */,
+				83B3DFBFE70A40459215D694 /* Release */,
+				B54FD9A7109249D392A22115 /* MinSizeRel */,
+				FE905965BAAA4C6C93D9A970 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D0352841AA9F4785833BA1DC /* Build configuration list for PBXAggregateTarget "vtray_automoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56DB97043AE54F16B4C1662B /* Debug */,
+				8C2FF45AB402457583105041 /* Release */,
+				BB0F513AD1E74B3D877F9FC6 /* MinSizeRel */,
+				F239785F101B460686EA36D7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DF01DEFCBB1B4FF99931AD3F /* Build configuration list for PBXAggregateTarget "unittests_automoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33F55C9609A480B8C19ED25 /* Debug */,
+				23145C17CB3643E5B6106C82 /* Release */,
+				3A8E0396F88546D890F9EF67 /* MinSizeRel */,
+				127365CCA04A465BA2113D28 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EC402F3A03894D5FA6907B2A /* Build configuration list for PBXNativeTarget "unittests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1743C84325BE493CA9018F3E /* Debug */,
+				F4C0E241E6254FCEB55D64AD /* Release */,
+				E00FE041F2344173B9698203 /* MinSizeRel */,
+				EA436BEDF10847D2B4107D22 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F0C0FBA9D5CE43ADACE741D5 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F329A9ECC2CC4A3CBA01735F /* Debug */,
+				C874031E04E3491A897E51F1 /* Release */,
+				DCFDD88783564E3EBD9D00AD /* MinSizeRel */,
+				9AA0056AE8DD4E79BD8CD84A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA7FDB2FE4D742EAADB50471 /* Project object */;
+}

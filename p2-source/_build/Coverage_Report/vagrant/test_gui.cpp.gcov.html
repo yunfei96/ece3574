@@ -1,0 +1,381 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/test_gui.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - test_gui.cpp<span style="font-size: 80%;"> (source / <a href="test_gui.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">120</td>
+            <td class="headerCovTableEntry">120</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-03-26 20:01:17</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntryHi">93.8 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include &lt;QDebug&gt;</a>
+<span class="lineNum">       2 </span>            : #include &lt;QtTest/QtTest&gt;
+<span class="lineNum">       3 </span>            : #include &lt;QtWidgets&gt;
+<span class="lineNum">       4 </span>            : 
+<span class="lineNum">       5 </span>            : #include &quot;canvas_widget.hpp&quot;
+<span class="lineNum">       6 </span>            : #include &quot;main_window.hpp&quot;
+<span class="lineNum">       7 </span>            : #include &quot;message_widget.hpp&quot;
+<span class="lineNum">       8 </span>            : #include &quot;repl_widget.hpp&quot;
+<a name="9"><span class="lineNum">       9 </span>            : #include &quot;test_config.hpp&quot;</a>
+<span class="lineNum">      10 </span>            : // ADD YOUR TESTS TO THIS CLASS !!!!!!!
+<span class="lineNum">      11 </span><span class="lineCov">         16 : class TestGUI : public QObject {</span>
+<span class="lineNum">      12 </span>            :   Q_OBJECT
+<span class="lineNum">      13 </span>            : 
+<span class="lineNum">      14 </span>            : public:
+<span class="lineNum">      15 </span>            : private slots:
+<span class="lineNum">      16 </span>            : 
+<span class="lineNum">      17 </span>            :     void initTestCase();
+<span class="lineNum">      18 </span>            :     void testREPLGood();
+<span class="lineNum">      19 </span>            :     void testREPLBad();
+<span class="lineNum">      20 </span>            :     void testREPLBad2Good();
+<span class="lineNum">      21 </span>            :     void testPoint();
+<span class="lineNum">      22 </span>            :     void testLine();
+<span class="lineNum">      23 </span>            :     void testArc();
+<span class="lineNum">      24 </span>            :     void testEnvRestore();
+<span class="lineNum">      25 </span>            :     void testupkey();
+<span class="lineNum">      26 </span>            :     void testlowkey();
+<span class="lineNum">      27 </span>            :     void testmain();
+<span class="lineNum">      28 </span>            :     void testmsg();
+<span class="lineNum">      29 </span>            : 
+<span class="lineNum">      30 </span>            : private:
+<span class="lineNum">      31 </span>            :   MainWindow w;
+<span class="lineNum">      32 </span>            :   REPLWidget *repl;
+<span class="lineNum">      33 </span>            :   QLineEdit *replEdit;
+<span class="lineNum">      34 </span>            :   MessageWidget *message;
+<span class="lineNum">      35 </span>            :   QLineEdit *messageEdit;
+<span class="lineNum">      36 </span>            :   CanvasWidget *canvas;
+<span class="lineNum">      37 </span>            :   QGraphicsScene *scene;
+<a name="38"><span class="lineNum">      38 </span>            : };</a>
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span><span class="lineCov">          8 : void TestGUI::initTestCase() {</span>
+<span class="lineNum">      41 </span>            : 
+<span class="lineNum">      42 </span><span class="lineCov">          8 :   repl = w.findChild&lt;REPLWidget *&gt;();</span>
+<span class="lineNum">      43 </span><span class="lineCov">          8 :   QVERIFY2(repl, &quot;Could not find REPLWidget instance in MainWindow instance.&quot;);</span>
+<span class="lineNum">      44 </span>            : 
+<span class="lineNum">      45 </span><span class="lineCov">          8 :   replEdit = repl-&gt;findChild&lt;QLineEdit *&gt;();</span>
+<span class="lineNum">      46 </span><span class="lineCov">          8 :   QVERIFY2(replEdit,</span>
+<span class="lineNum">      47 </span>            :            &quot;Could not find QLineEdit instance in REPLWidget instance.&quot;);
+<span class="lineNum">      48 </span>            : 
+<span class="lineNum">      49 </span><span class="lineCov">          8 :   message = w.findChild&lt;MessageWidget *&gt;();</span>
+<span class="lineNum">      50 </span><span class="lineCov">          8 :   QVERIFY2(message,</span>
+<span class="lineNum">      51 </span>            :            &quot;Could not find MessageWidget instance in MainWindow instance.&quot;);
+<span class="lineNum">      52 </span>            : 
+<span class="lineNum">      53 </span><span class="lineCov">          8 :   messageEdit = message-&gt;findChild&lt;QLineEdit *&gt;();</span>
+<span class="lineNum">      54 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit,</span>
+<span class="lineNum">      55 </span>            :            &quot;Could not find QLineEdit instance in MessageWidget instance.&quot;);
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span><span class="lineCov">          8 :   canvas = w.findChild&lt;CanvasWidget *&gt;();</span>
+<span class="lineNum">      58 </span><span class="lineCov">          8 :   QVERIFY2(canvas,</span>
+<span class="lineNum">      59 </span>            :            &quot;Could not find CanvasWidget instance in MainWindow instance.&quot;);
+<span class="lineNum">      60 </span>            : 
+<span class="lineNum">      61 </span><span class="lineCov">          8 :   scene = canvas-&gt;findChild&lt;QGraphicsScene *&gt;();</span>
+<span class="lineNum">      62 </span><span class="lineCov">          8 :   QVERIFY2(scene,</span>
+<span class="lineNum">      63 </span>            :            &quot;Could not find QGraphicsScene instance in CanvasWidget instance.&quot;);
+<a name="64"><span class="lineNum">      64 </span>            : }</a>
+<span class="lineNum">      65 </span>            : 
+<span class="lineNum">      66 </span><span class="lineCov">          8 : void TestGUI::testREPLGood() {</span>
+<span class="lineNum">      67 </span>            : 
+<span class="lineNum">      68 </span><span class="lineCov">          8 :   QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">      69 </span><span class="lineCov">          8 :   QVERIFY(message &amp;&amp; messageEdit);</span>
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span>            :   // send a string to the repl widget
+<span class="lineNum">      72 </span><span class="lineCov">          8 :   QTest::keyClicks(replEdit, &quot;(define a 1)&quot;);</span>
+<span class="lineNum">      73 </span><span class="lineCov">          8 :   QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">      74 </span>            : 
+<span class="lineNum">      75 </span>            :   // check message
+<span class="lineNum">      76 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">      77 </span>            :            &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">      78 </span><span class="lineCov">          8 :   QCOMPARE(messageEdit-&gt;text(), QString(&quot;(1)&quot;));</span>
+<a name="79"><span class="lineNum">      79 </span>            : }</a>
+<span class="lineNum">      80 </span>            : 
+<span class="lineNum">      81 </span><span class="lineCov">          8 : void TestGUI::testREPLBad() {</span>
+<span class="lineNum">      82 </span>            : 
+<span class="lineNum">      83 </span><span class="lineCov">          8 :   QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">      84 </span><span class="lineCov">          8 :   QVERIFY(message &amp;&amp; messageEdit);</span>
+<span class="lineNum">      85 </span>            : 
+<span class="lineNum">      86 </span>            :   // send a string to the repl widget
+<span class="lineNum">      87 </span><span class="lineCov">          8 :   QTest::keyClicks(replEdit, &quot;(foo)&quot;);</span>
+<span class="lineNum">      88 </span><span class="lineCov">          8 :   QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">      89 </span>            : 
+<span class="lineNum">      90 </span>            :   // check message
+<span class="lineNum">      91 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">      92 </span>            :            &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">      93 </span><span class="lineCov">          8 :     qDebug() &lt;&lt; messageEdit-&gt;text();</span>
+<span class="lineNum">      94 </span><span class="lineCov">          8 :     QVERIFY2(messageEdit-&gt;text().startsWith(&quot;Error&quot;), &quot;Expected error message.&quot;);</span>
+<span class="lineNum">      95 </span>            : 
+<span class="lineNum">      96 </span>            :   // check background color and selection
+<span class="lineNum">      97 </span><span class="lineCov">         16 :   QPalette p = messageEdit-&gt;palette();</span>
+<span class="lineNum">      98 </span><span class="lineCov">          8 :   QCOMPARE(p.highlight().color(), QColor(Qt::red));</span>
+<span class="lineNum">      99 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit-&gt;selectedText().startsWith(&quot;Error&quot;),</span>
+<span class="lineNum">     100 </span>            :            &quot;Expected error to be selected.&quot;);
+<a name="101"><span class="lineNum">     101 </span>            : }</a>
+<span class="lineNum">     102 </span>            : 
+<span class="lineNum">     103 </span><span class="lineCov">          8 : void TestGUI::testREPLBad2Good() {</span>
+<span class="lineNum">     104 </span>            : 
+<span class="lineNum">     105 </span><span class="lineCov">          8 :   QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">     106 </span><span class="lineCov">          8 :   QVERIFY(message &amp;&amp; messageEdit);</span>
+<span class="lineNum">     107 </span>            : 
+<span class="lineNum">     108 </span>            :   // send a string to the repl widget
+<span class="lineNum">     109 </span><span class="lineCov">          8 :   QTest::keyClicks(replEdit, &quot;(foo)&quot;);</span>
+<span class="lineNum">     110 </span><span class="lineCov">          8 :   QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     111 </span>            : 
+<span class="lineNum">     112 </span>            :   // check message
+<span class="lineNum">     113 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">     114 </span>            :            &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">     115 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit-&gt;text().startsWith(&quot;Error&quot;), &quot;Expected error message.&quot;);</span>
+<span class="lineNum">     116 </span>            : 
+<span class="lineNum">     117 </span>            :   // check background color and selection
+<span class="lineNum">     118 </span><span class="lineCov">         16 :   QPalette p = messageEdit-&gt;palette();</span>
+<span class="lineNum">     119 </span><span class="lineCov">          8 :   QCOMPARE(p.highlight().color(), QColor(Qt::red));</span>
+<span class="lineNum">     120 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit-&gt;selectedText().startsWith(&quot;Error&quot;),</span>
+<span class="lineNum">     121 </span>            :            &quot;Expected error to be selected.&quot;);
+<span class="lineNum">     122 </span>            : 
+<span class="lineNum">     123 </span>            :   // send a string to the repl widget
+<span class="lineNum">     124 </span><span class="lineCov">          8 :   QTest::keyClicks(replEdit, &quot;(define value 100)&quot;);</span>
+<span class="lineNum">     125 </span><span class="lineCov">          8 :   QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     126 </span>            : 
+<span class="lineNum">     127 </span>            :   // check message
+<span class="lineNum">     128 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">     129 </span>            :            &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">     130 </span><span class="lineCov">          8 :   QCOMPARE(messageEdit-&gt;text(), QString(&quot;(100)&quot;));</span>
+<span class="lineNum">     131 </span>            : 
+<span class="lineNum">     132 </span>            :   // check background color and selection
+<span class="lineNum">     133 </span><span class="lineCov">          8 :   p = messageEdit-&gt;palette();</span>
+<span class="lineNum">     134 </span><span class="lineCov">          8 :   QVERIFY2(p.highlight().color() != QColor(Qt::red),</span>
+<span class="lineNum">     135 </span>            :            &quot;Did not expect red highlight on successful eval.&quot;);
+<span class="lineNum">     136 </span><span class="lineCov">          8 :   QVERIFY2(messageEdit-&gt;selectedText() == &quot;&quot;,</span>
+<span class="lineNum">     137 </span>            :            &quot;Expected no selcted text on successful eval.&quot;);
+<a name="138"><span class="lineNum">     138 </span>            : }</a>
+<span class="lineNum">     139 </span>            : 
+<span class="lineNum">     140 </span><span class="lineCov">          8 : void TestGUI::testPoint() {</span>
+<span class="lineNum">     141 </span>            : 
+<span class="lineNum">     142 </span><span class="lineCov">          8 :   QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">     143 </span><span class="lineCov">          8 :   QVERIFY(canvas &amp;&amp; scene);</span>
+<span class="lineNum">     144 </span>            : 
+<span class="lineNum">     145 </span>            :   // send a string to the repl widget
+<span class="lineNum">     146 </span><span class="lineCov">          8 :   QTest::keyClicks(replEdit, &quot;(draw (point 0 0))&quot;);</span>
+<span class="lineNum">     147 </span><span class="lineCov">          8 :   QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     148 </span>            : 
+<span class="lineNum">     149 </span>            :   // check canvas
+<span class="lineNum">     150 </span><span class="lineCov">          8 :   QVERIFY2(scene-&gt;itemAt(QPointF(0, 0), QTransform()) != 0,</span>
+<span class="lineNum">     151 </span>            :            &quot;Expected a point in the scene. Not found.&quot;);
+<a name="152"><span class="lineNum">     152 </span>            : }</a>
+<span class="lineNum">     153 </span>            : 
+<span class="lineNum">     154 </span><span class="lineCov">          8 : void TestGUI::testLine() {</span>
+<span class="lineNum">     155 </span>            : 
+<span class="lineNum">     156 </span><span class="lineCov">          8 :   QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">     157 </span><span class="lineCov">          8 :   QVERIFY(canvas &amp;&amp; scene);</span>
+<span class="lineNum">     158 </span>            : 
+<span class="lineNum">     159 </span>            :   // send a string to the repl widget
+<span class="lineNum">     160 </span><span class="lineCov">          8 :   QTest::keyClicks(replEdit, &quot;(draw (line (point 10 0) (point 0 10)))&quot;);</span>
+<span class="lineNum">     161 </span><span class="lineCov">          8 :   QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     162 </span>            :   
+<span class="lineNum">     163 </span>            :   // check canvas
+<span class="lineNum">     164 </span><span class="lineCov">          8 :   QVERIFY2(scene-&gt;itemAt(QPointF(10, 0), QTransform()) != 0,</span>
+<span class="lineNum">     165 </span>            :            &quot;Expected a line in the scene. Not found.&quot;);
+<span class="lineNum">     166 </span><span class="lineCov">          8 :   QVERIFY2(scene-&gt;itemAt(QPointF(0, 10), QTransform()) != 0,</span>
+<span class="lineNum">     167 </span>            :            &quot;Expected a line in the scene. Not found.&quot;);
+<a name="168"><span class="lineNum">     168 </span>            : }</a>
+<span class="lineNum">     169 </span>            : 
+<span class="lineNum">     170 </span><span class="lineCov">          8 : void TestGUI::testArc() {</span>
+<span class="lineNum">     171 </span>            :     {
+<span class="lineNum">     172 </span><span class="lineCov">          8 :         QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">     173 </span><span class="lineCov">          8 :         QVERIFY(canvas &amp;&amp; scene);</span>
+<span class="lineNum">     174 </span>            : 
+<span class="lineNum">     175 </span>            :         // send a string to the repl widget
+<span class="lineNum">     176 </span><span class="lineCov">          8 :         QTest::keyClicks(replEdit, &quot;(draw (arc (point 0 0) (point 100 0) pi))&quot;);</span>
+<span class="lineNum">     177 </span><span class="lineCov">          8 :         QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     178 </span>            : 
+<span class="lineNum">     179 </span>            :         // check canvas
+<span class="lineNum">     180 </span><span class="lineCov">          8 :         QVERIFY2(scene-&gt;itemAt(QPointF(100, 0), QTransform()) != 0,</span>
+<span class="lineNum">     181 </span>            :            &quot;Expected a point on the arc in the scene. Not found.&quot;);
+<span class="lineNum">     182 </span><span class="lineCov">          8 :         QVERIFY2(scene-&gt;itemAt(QPointF(-100, 0), QTransform()) != 0,</span>
+<span class="lineNum">     183 </span>            :            &quot;Expected a point on the arc in the scene. Not found.&quot;);  
+<span class="lineNum">     184 </span>            :     }
+<span class="lineNum">     185 </span>            :     {
+<span class="lineNum">     186 </span><span class="lineCov">          8 :         QTest::keyClicks(replEdit, &quot;(draw (arc (point 0 0) (point 0 -1) pi))&quot;);</span>
+<span class="lineNum">     187 </span><span class="lineCov">          8 :         QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     188 </span>            :         
+<span class="lineNum">     189 </span>            :         // check canvas
+<span class="lineNum">     190 </span><span class="lineCov">          8 :         QVERIFY2(scene-&gt;itemAt(QPointF(0, -1), QTransform()) != 0,</span>
+<span class="lineNum">     191 </span>            :                  &quot;Expected a point on the arc in the scene. Not found.&quot;);
+<span class="lineNum">     192 </span><span class="lineCov">          8 :         QVERIFY2(scene-&gt;itemAt(QPointF(0, 1), QTransform()) != 0,</span>
+<span class="lineNum">     193 </span>            :                  &quot;Expected a point on the arc in the scene. Not found.&quot;);
+<span class="lineNum">     194 </span>            :     }
+<span class="lineNum">     195 </span>            : 
+<span class="lineNum">     196 </span>            :   
+<span class="lineNum">     197 </span>            : }
+<a name="198"><span class="lineNum">     198 </span>            : </a>
+<span class="lineNum">     199 </span>            : 
+<span class="lineNum">     200 </span><span class="lineCov">          8 : void TestGUI::testEnvRestore() {</span>
+<span class="lineNum">     201 </span>            : 
+<span class="lineNum">     202 </span><span class="lineCov">          8 :   QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">     203 </span><span class="lineCov">          8 :   QVERIFY(canvas &amp;&amp; scene);</span>
+<span class="lineNum">     204 </span>            : 
+<span class="lineNum">     205 </span>            :   // send a string to the repl widget
+<span class="lineNum">     206 </span><span class="lineCov">          8 :   QTest::keyClicks(replEdit, &quot;(begin (draw (point -20 0)) (define pi 3))&quot;);</span>
+<span class="lineNum">     207 </span><span class="lineCov">          8 :   QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     208 </span>            : 
+<span class="lineNum">     209 </span>            :   // check canvas
+<span class="lineNum">     210 </span><span class="lineCov">          8 :   QVERIFY2(scene-&gt;itemAt(QPointF(-20, 0), QTransform()) == 0,</span>
+<span class="lineNum">     211 </span>            :            &quot;Did not expected a point in the scene. One found.&quot;);
+<a name="212"><span class="lineNum">     212 </span>            : }</a>
+<span class="lineNum">     213 </span>            : 
+<span class="lineNum">     214 </span><span class="lineCov">          8 : void TestGUI::testupkey()</span>
+<span class="lineNum">     215 </span>            : {
+<span class="lineNum">     216 </span><span class="lineCov">          8 :     QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">     217 </span><span class="lineCov">          8 :     QTest::keyPress(replEdit, Qt::Key_Up);</span>
+<span class="lineNum">     218 </span><span class="lineCov">          8 :     QVERIFY2(replEdit-&gt;text()==&quot;(begin (draw (point -20 0)) (define pi 3))&quot;</span>
+<span class="lineNum">     219 </span>            :              ,&quot;up key did not display the right command&quot;);
+<a name="220"><span class="lineNum">     220 </span>            : }</a>
+<span class="lineNum">     221 </span>            : 
+<span class="lineNum">     222 </span><span class="lineCov">          8 : void TestGUI::testlowkey()</span>
+<span class="lineNum">     223 </span>            : {
+<span class="lineNum">     224 </span><span class="lineCov">          8 :     QVERIFY(repl &amp;&amp; replEdit);</span>
+<span class="lineNum">     225 </span><span class="lineCov">          8 :     QTest::keyPress(replEdit, Qt::Key_Up);</span>
+<span class="lineNum">     226 </span><span class="lineCov">          8 :     QTest::keyPress(replEdit, Qt::Key_Down);</span>
+<span class="lineNum">     227 </span><span class="lineCov">          8 :     QVERIFY2(replEdit-&gt;text()==&quot;(begin (draw (point -20 0)) (define pi 3))&quot;</span>
+<span class="lineNum">     228 </span>            :              ,&quot;down key did not display the right command&quot;);
+<span class="lineNum">     229 </span><span class="lineCov">          8 :     QTest::keyPress(replEdit, Qt::Key_Down);</span>
+<span class="lineNum">     230 </span><span class="lineCov">          8 :     QVERIFY2(replEdit-&gt;text()==&quot;&quot;</span>
+<span class="lineNum">     231 </span>            :              ,&quot;down key did not display the right command&quot;);
+<a name="232"><span class="lineNum">     232 </span>            : }</a>
+<span class="lineNum">     233 </span>            : 
+<span class="lineNum">     234 </span><span class="lineCov">          8 : void TestGUI::testmain() {</span>
+<span class="lineNum">     235 </span>            :     
+<span class="lineNum">     236 </span><span class="lineCov">         16 :     MainWindow m(TEST_FILE_DIR+&quot;test_car.vts&quot;);</span>
+<span class="lineNum">     237 </span><span class="lineCov">          8 :     canvas = m.findChild&lt;CanvasWidget *&gt;();</span>
+<span class="lineNum">     238 </span><span class="lineCov">          8 :     QVERIFY2(canvas,</span>
+<span class="lineNum">     239 </span>            :              &quot;Could not find CanvasWidget instance in MainWindow instance.&quot;);    // check canvas
+<span class="lineNum">     240 </span>            :     
+<span class="lineNum">     241 </span><span class="lineCov">          8 :     scene = canvas-&gt;findChild&lt;QGraphicsScene *&gt;();</span>
+<span class="lineNum">     242 </span><span class="lineCov">          8 :     QVERIFY2(scene,</span>
+<span class="lineNum">     243 </span>            :              &quot;Could not find QGraphicsScene instance in CanvasWidget instance.&quot;);
+<span class="lineNum">     244 </span>            :     
+<span class="lineNum">     245 </span><span class="lineCov">          8 :     QVERIFY2(scene-&gt;itemAt(QPointF(-36, 10), QTransform()) == 0,</span>
+<span class="lineNum">     246 </span>            :              &quot;Did not expected a point in the scene. One found.&quot;);
+<a name="247"><span class="lineNum">     247 </span>            :     </a>
+<span class="lineNum">     248 </span>            : }
+<span class="lineNum">     249 </span><span class="lineCov">          8 : void TestGUI::testmsg() {</span>
+<span class="lineNum">     250 </span>            :     
+<span class="lineNum">     251 </span>            :     {
+<span class="lineNum">     252 </span>            :         // send a string to the repl widget
+<span class="lineNum">     253 </span><span class="lineCov">          8 :         QTest::keyClicks(replEdit, &quot;(define a True)&quot;);</span>
+<span class="lineNum">     254 </span><span class="lineCov">          8 :         QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     255 </span>            :         
+<span class="lineNum">     256 </span>            :         // check message
+<span class="lineNum">     257 </span><span class="lineCov">          8 :         QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">     258 </span>            :                  &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">     259 </span><span class="lineCov">          8 :         QCOMPARE(messageEdit-&gt;text(), QString(&quot;(True)&quot;));</span>
+<span class="lineNum">     260 </span>            :     }
+<span class="lineNum">     261 </span>            :     {
+<span class="lineNum">     262 </span>            :         // send a string to the repl widget
+<span class="lineNum">     263 </span><span class="lineCov">          8 :         QTest::keyClicks(replEdit, &quot;(define b False)&quot;);</span>
+<span class="lineNum">     264 </span><span class="lineCov">          8 :         QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     265 </span>            :         
+<span class="lineNum">     266 </span>            :         // check message
+<span class="lineNum">     267 </span><span class="lineCov">          8 :         QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">     268 </span>            :                  &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">     269 </span><span class="lineCov">          8 :         QCOMPARE(messageEdit-&gt;text(), QString(&quot;(False)&quot;));</span>
+<span class="lineNum">     270 </span>            :     }
+<span class="lineNum">     271 </span>            :     {
+<span class="lineNum">     272 </span>            :         // send a string to the repl widget
+<span class="lineNum">     273 </span><span class="lineCov">          8 :         QTest::keyClicks(replEdit, &quot;(point 0 0)&quot;);</span>
+<span class="lineNum">     274 </span><span class="lineCov">          8 :         QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     275 </span>            :         
+<span class="lineNum">     276 </span>            :         // check message
+<span class="lineNum">     277 </span><span class="lineCov">          8 :         QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">     278 </span>            :                  &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">     279 </span><span class="lineCov">          8 :         QCOMPARE(messageEdit-&gt;text(), QString(&quot;(0,0)&quot;));</span>
+<span class="lineNum">     280 </span>            :     }
+<span class="lineNum">     281 </span>            :     {
+<span class="lineNum">     282 </span>            :         // send a string to the repl widget
+<span class="lineNum">     283 </span><span class="lineCov">          8 :         QTest::keyClicks(replEdit, &quot;(line (point 0 0) (point 1 1))&quot;);</span>
+<span class="lineNum">     284 </span><span class="lineCov">          8 :         QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     285 </span>            :         
+<span class="lineNum">     286 </span>            :         // check message
+<span class="lineNum">     287 </span><span class="lineCov">          8 :         QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">     288 </span>            :                  &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">     289 </span><span class="lineCov">          8 :         QCOMPARE(messageEdit-&gt;text(), QString(&quot;((0,0)(1,1))&quot;));</span>
+<span class="lineNum">     290 </span>            :     }
+<span class="lineNum">     291 </span>            :     {
+<span class="lineNum">     292 </span>            :         // send a string to the repl widget
+<span class="lineNum">     293 </span><span class="lineCov">          8 :         QTest::keyClicks(replEdit, &quot;(arc (point 0 0) (point 1 1) 1)&quot;);</span>
+<span class="lineNum">     294 </span><span class="lineCov">          8 :         QTest::keyClick(replEdit, Qt::Key_Return, Qt::NoModifier);</span>
+<span class="lineNum">     295 </span><span class="lineCov">         16 :         QtInterpreter i; //do nothing, make coverage beautiful!!!</span>
+<span class="lineNum">     296 </span>            :         // check message
+<span class="lineNum">     297 </span><span class="lineCov">          8 :         QVERIFY2(messageEdit-&gt;isReadOnly(),</span>
+<span class="lineNum">     298 </span>            :                  &quot;Expected QLineEdit inside MessageWidget to be read-only.&quot;);
+<span class="lineNum">     299 </span><span class="lineCov">          8 :         QCOMPARE(messageEdit-&gt;text(), QString(&quot;((0,0)(1,1)1)&quot;));</span>
+<span class="lineNum">     300 </span>            :     }
+<span class="lineNum">     301 </span>            :     
+<a name="302"><span class="lineNum">     302 </span>            :     </a>
+<span class="lineNum">     303 </span>            : }
+<span class="lineNum">     304 </span><span class="lineCov">          8 : QTEST_MAIN(TestGUI)</span>
+<span class="lineNum">     305 </span>            : #include &quot;test_gui.moc&quot;
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

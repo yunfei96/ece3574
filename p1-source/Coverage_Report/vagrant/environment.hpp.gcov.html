@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/environment.hpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - environment.hpp<span style="font-size: 80%;"> (source / <a href="environment.hpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-03-02 05:51:41</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #ifndef ENVIR</a>
+<span class="lineNum">       2 </span>            : #define ENVIR
+<span class="lineNum">       3 </span>            : #include &quot;expression.hpp&quot;
+<span class="lineNum">       4 </span>            : #include &lt;exception&gt;
+<span class="lineNum">       5 </span>            : #include &lt;math.h&gt;
+<span class="lineNum">       6 </span>            : #include &lt;iostream&gt;
+<span class="lineNum">       7 </span>            : #include &lt;string&gt;
+<span class="lineNum">       8 </span>            : #include &lt;vector&gt;
+<span class="lineNum">       9 </span>            : #include &lt;map&gt;
+<span class="lineNum">      10 </span>            : #include &lt;stdlib.h&gt;
+<span class="lineNum">      11 </span>            : #include &quot;interpreter_semantic_error.hpp&quot;
+<span class="lineNum">      12 </span>            : #define is_numop(c) (c == &quot;+&quot;) || (c == &quot;-&quot;) || (c == &quot;*&quot;) || (c == &quot;/&quot;)
+<span class="lineNum">      13 </span>            : #define is_boolop(c) (c == &quot;and&quot;) || (c == &quot;or&quot;) || (c == &quot;not&quot;) || (c == &quot;=&quot;) || (c == &quot;&gt;&quot;) || (c == &quot;&lt;&quot;) || (c == &quot;&gt;=&quot;) || (c == &quot;&lt;=&quot;)
+<span class="lineNum">      14 </span>            : #define is_number(c) (c == '0' || c == '1' || c == '2'|| c == '3'|| c == '4'|| c == '5'|| c == '6'|| c == '7'|| c == '8'|| c == '9')
+<span class="lineNum">      15 </span>            : #define is_specialop(c) (c == &quot;if&quot;) || (c == &quot;begin&quot;) || (c == &quot;define&quot;)
+<a name="16"><span class="lineNum">      16 </span>            : using namespace std;</a>
+<span class="lineNum">      17 </span>            : 
+<span class="lineNum">      18 </span><span class="lineCov">        432 : class envir</span>
+<span class="lineNum">      19 </span>            : {
+<span class="lineNum">      20 </span>            : public:
+<span class="lineNum">      21 </span>            :     envir();
+<span class="lineNum">      22 </span>            :     //------------cal func--------
+<span class="lineNum">      23 </span>            :     double number(vector&lt;Expression&gt; args);
+<span class="lineNum">      24 </span>            :     bool which_bool(vector&lt;Expression&gt; args);
+<span class="lineNum">      25 </span>            :     
+<span class="lineNum">      26 </span>            :     //-------------return double---------
+<span class="lineNum">      27 </span>            :     double add(vector&lt;Expression&gt; input);
+<span class="lineNum">      28 </span>            :     double sub(vector&lt;Expression&gt; input);
+<span class="lineNum">      29 </span>            :     double times(vector&lt;Expression&gt; input);
+<span class="lineNum">      30 </span>            :     double divid(vector&lt;Expression&gt; input);
+<span class="lineNum">      31 </span>            :     //-------------special--------------
+<span class="lineNum">      32 </span>            :     
+<span class="lineNum">      33 </span>            :     Expression define(vector&lt;Expression&gt; input);
+<span class="lineNum">      34 </span>            :     Expression begin(vector&lt;Expression&gt; input);
+<span class="lineNum">      35 </span>            :     Expression _if(vector&lt;Expression&gt; input);
+<span class="lineNum">      36 </span>            :     Expression single(vector&lt;Expression&gt; input);
+<span class="lineNum">      37 </span>            :     //------------return bool-----------
+<span class="lineNum">      38 </span>            :     bool _and(vector&lt;Expression&gt; input);
+<span class="lineNum">      39 </span>            :     bool _or(vector&lt;Expression&gt; input);
+<span class="lineNum">      40 </span>            :     bool _not(vector&lt;Expression&gt; input);
+<span class="lineNum">      41 </span>            :     bool small(vector&lt;Expression&gt; input);
+<span class="lineNum">      42 </span>            :     bool small_equal(vector&lt;Expression&gt; input);
+<span class="lineNum">      43 </span>            :     bool larger(vector&lt;Expression&gt; input);
+<span class="lineNum">      44 </span>            :     bool larger_equal(vector&lt;Expression&gt; input);
+<span class="lineNum">      45 </span>            :     bool equal(vector&lt;Expression&gt; input);
+<span class="lineNum">      46 </span>            :     
+<span class="lineNum">      47 </span>            :     //the environment set up
+<span class="lineNum">      48 </span>            :     map&lt;string, bool&gt; bool_envir;
+<span class="lineNum">      49 </span>            :     map&lt;string,double&gt; environment;
+<span class="lineNum">      50 </span>            : private:
+<span class="lineNum">      51 </span>            :     //helper
+<span class="lineNum">      52 </span>            :     void build_string_vector(vector&lt;Expression&gt; &amp;input,vector&lt;double&gt; &amp;result);
+<span class="lineNum">      53 </span>            :     void not_found(string key);
+<span class="lineNum">      54 </span>            :     void not_found_bool(string key);
+<span class="lineNum">      55 </span>            : };
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span>            : #endif
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

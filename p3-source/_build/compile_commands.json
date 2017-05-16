@@ -1,0 +1,72 @@
+[
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/vtray.cpp.o -c /vagrant/vtray.cpp",
+  "file": "/vagrant/vtray.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/parsejson.cpp.o -c /vagrant/parsejson.cpp",
+  "file": "/vagrant/parsejson.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/calculate.cpp.o -c /vagrant/calculate.cpp",
+  "file": "/vagrant/calculate.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/vector3d.cpp.o -c /vagrant/vector3d.cpp",
+  "file": "/vagrant/vector3d.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/sphere.cpp.o -c /vagrant/sphere.cpp",
+  "file": "/vagrant/sphere.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/plane.cpp.o -c /vagrant/plane.cpp",
+  "file": "/vagrant/plane.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/vtray_automoc.cpp.o -c /vagrant/_build/vtray_automoc.cpp",
+  "file": "/vagrant/_build/vtray_automoc.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/unittests.cpp.o -c /vagrant/unittests.cpp",
+  "file": "/vagrant/unittests.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/parsejson.cpp.o -c /vagrant/parsejson.cpp",
+  "file": "/vagrant/parsejson.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/calculate.cpp.o -c /vagrant/calculate.cpp",
+  "file": "/vagrant/calculate.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/vector3d.cpp.o -c /vagrant/vector3d.cpp",
+  "file": "/vagrant/vector3d.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/sphere.cpp.o -c /vagrant/sphere.cpp",
+  "file": "/vagrant/sphere.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/plane.cpp.o -c /vagrant/plane.cpp",
+  "file": "/vagrant/plane.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/unittests_automoc.cpp.o -c /vagrant/_build/unittests_automoc.cpp",
+  "file": "/vagrant/_build/unittests_automoc.cpp"
+}
+]

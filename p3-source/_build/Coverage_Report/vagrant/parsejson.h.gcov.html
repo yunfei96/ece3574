@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/parsejson.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - parsejson.h<span style="font-size: 80%;"> (source / <a href="parsejson.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-05-01 15:06:33</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #ifndef PARSEJSON</a>
+<span class="lineNum">       2 </span>            : #define PARSEJSON
+<span class="lineNum">       3 </span>            : #include &lt;QString&gt;
+<span class="lineNum">       4 </span>            : #include &lt;QList&gt;
+<span class="lineNum">       5 </span>            : #include &lt;QJsonObject&gt;
+<span class="lineNum">       6 </span>            : #include &lt;QObject&gt;
+<span class="lineNum">       7 </span>            : #include &lt;QJsonDocument&gt;
+<span class="lineNum">       8 </span>            : #include &lt;QJsonArray&gt;
+<span class="lineNum">       9 </span>            : #include &lt;QDebug&gt;
+<span class="lineNum">      10 </span>            : #include &lt;vector&gt;
+<span class="lineNum">      11 </span>            : #include &lt;string&gt;
+<a name="12"><span class="lineNum">      12 </span>            : using namespace std;</a>
+<span class="lineNum">      13 </span>            : 
+<span class="lineNum">      14 </span><span class="lineCov">       9247 : struct light_struct</span>
+<span class="lineNum">      15 </span>            : {
+<span class="lineNum">      16 </span>            :     double intensity;
+<span class="lineNum">      17 </span>            :     vector&lt;double&gt; location;
+<a name="18"><span class="lineNum">      18 </span>            : };</a>
+<span class="lineNum">      19 </span>            : 
+<span class="lineNum">      20 </span><span class="lineCov">       1102 : struct objects_struct</span>
+<span class="lineNum">      21 </span>            : {
+<span class="lineNum">      22 </span>            :     vector&lt;double&gt; center;
+<span class="lineNum">      23 </span>            :     vector&lt;double&gt; color;
+<span class="lineNum">      24 </span>            :     double lambert;
+<span class="lineNum">      25 </span>            :     double radius;
+<span class="lineNum">      26 </span>            :     vector&lt;double&gt; normal;
+<span class="lineNum">      27 </span>            :     string type;
+<a name="28"><span class="lineNum">      28 </span>            : };</a>
+<span class="lineNum">      29 </span>            : 
+<span class="lineNum">      30 </span><span class="lineCov">         52 : class objects</span>
+<span class="lineNum">      31 </span>            : {
+<span class="lineNum">      32 </span>            : public:
+<span class="lineNum">      33 </span>            :     void fromJSON(QString json);
+<span class="lineNum">      34 </span>            :     vector&lt;double&gt; camera_center;
+<span class="lineNum">      35 </span>            :     double camera_focus;
+<span class="lineNum">      36 </span>            :     vector&lt;double&gt; camera_normal;
+<span class="lineNum">      37 </span>            :     vector&lt;double&gt; camera_resolution;
+<span class="lineNum">      38 </span>            :     vector&lt;double&gt; camera_size;
+<span class="lineNum">      39 </span>            :     vector&lt;light_struct&gt; lights_vector;
+<span class="lineNum">      40 </span>            :     vector&lt;objects_struct&gt; objects_vector;
+<span class="lineNum">      41 </span>            : private:
+<span class="lineNum">      42 </span>            :     bool isint(string str);
+<span class="lineNum">      43 </span>            :     bool isnumber(string str);
+<span class="lineNum">      44 </span>            :     void parsing_camera();
+<span class="lineNum">      45 </span>            :     void parsing_light();
+<span class="lineNum">      46 </span>            :     void parsing_objects();
+<span class="lineNum">      47 </span>            :     void check_positive(double a, double b);
+<span class="lineNum">      48 </span>            :     void check_size(int a, int b);
+<span class="lineNum">      49 </span>            :     void check_positive_with0(double a);
+<span class="lineNum">      50 </span>            :     QJsonObject camera;
+<span class="lineNum">      51 </span>            :     QJsonArray lights;
+<span class="lineNum">      52 </span>            :     QJsonArray objects;
+<span class="lineNum">      53 </span>            : };
+<span class="lineNum">      54 </span>            : 
+<span class="lineNum">      55 </span>            : #endif
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

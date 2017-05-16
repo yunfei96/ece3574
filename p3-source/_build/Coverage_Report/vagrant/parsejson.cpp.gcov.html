@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/parsejson.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - parsejson.cpp<span style="font-size: 80%;"> (source / <a href="parsejson.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">100</td>
+            <td class="headerCovTableEntry">104</td>
+            <td class="headerCovTableEntryHi">96.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-05-01 15:06:33</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include &quot;parsejson.h&quot;</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span><span class="lineCov">        466 : void objects::fromJSON(QString json)</span>
+<span class="lineNum">       4 </span>            : {
+<span class="lineNum">       5 </span>            :     QJsonParseError error;
+<span class="lineNum">       6 </span><span class="lineCov">        932 :     QJsonDocument jsonDoc = QJsonDocument::fromJson(json.toUtf8(), &amp;error);</span>
+<span class="lineNum">       7 </span><span class="lineCov">        466 :     if (error.error != QJsonParseError::NoError) {</span>
+<span class="lineNum">       8 </span><span class="lineCov">         82 :         throw error;</span>
+<span class="lineNum">       9 </span>            :     }
+<span class="lineNum">      10 </span><span class="lineCov">        768 :     QJsonObject obj = jsonDoc.object();</span>
+<span class="lineNum">      11 </span><span class="lineCov">        384 :     camera = obj[&quot;camera&quot;].toObject();</span>
+<span class="lineNum">      12 </span><span class="lineCov">        384 :     lights = obj[&quot;lights&quot;].toArray();</span>
+<span class="lineNum">      13 </span><span class="lineCov">        384 :     objects = obj[&quot;objects&quot;].toArray();</span>
+<span class="lineNum">      14 </span><span class="lineCov">        384 :     parsing_camera();</span>
+<span class="lineNum">      15 </span><span class="lineCov">        343 :     parsing_light();</span>
+<a name="16"><span class="lineNum">      16 </span><span class="lineCov">        343 :     parsing_objects();</span></a>
+<span class="lineNum">      17 </span><span class="lineCov">        220 : }</span>
+<span class="lineNum">      18 </span><span class="lineCov">        343 : void objects::parsing_objects()</span>
+<span class="lineNum">      19 </span>            : {
+<span class="lineNum">      20 </span>            :     //----------------------parse objects--------------------
+<span class="lineNum">      21 </span><span class="lineCov">        896 :     for(QJsonValue it : objects)</span>
+<span class="lineNum">      22 </span>            :     {
+<span class="lineNum">      23 </span><span class="lineCov">       1106 :         QJsonObject objects = it.toObject();</span>
+<span class="lineNum">      24 </span><span class="lineCov">       1106 :         objects_struct o;</span>
+<span class="lineNum">      25 </span>            :         //center
+<span class="lineNum">      26 </span><span class="lineCov">       1106 :         QJsonObject center = objects[&quot;center&quot;].toObject();</span>
+<span class="lineNum">      27 </span><span class="lineCov">        553 :         check_size(center.size(), 3);</span>
+<span class="lineNum">      28 </span><span class="lineCov">        553 :         o.center.push_back(center[&quot;x&quot;].toDouble());</span>
+<span class="lineNum">      29 </span><span class="lineCov">        553 :         o.center.push_back(center[&quot;y&quot;].toDouble());</span>
+<span class="lineNum">      30 </span><span class="lineCov">        553 :         o.center.push_back(center[&quot;z&quot;].toDouble());</span>
+<span class="lineNum">      31 </span>            :         //color
+<span class="lineNum">      32 </span><span class="lineCov">       1106 :         QJsonObject color = objects[&quot;color&quot;].toObject();</span>
+<span class="lineNum">      33 </span><span class="lineCov">        553 :         check_size(color.size(), 3);</span>
+<span class="lineNum">      34 </span><span class="lineCov">        553 :         if(color[&quot;b&quot;].toDouble() != color[&quot;b&quot;].toInt() || color[&quot;g&quot;].toDouble() != color[&quot;g&quot;].toInt()||color[&quot;r&quot;].toDouble() != color[&quot;r&quot;].toInt())</span>
+<span class="lineNum">      35 </span>            :         {
+<span class="lineNum">      36 </span><span class="lineNoCov">          0 :             throw QJsonParseError();</span>
+<span class="lineNum">      37 </span>            :         }
+<span class="lineNum">      38 </span><span class="lineCov">        553 :         if( color[&quot;b&quot;].toDouble() &lt; 0 || color[&quot;b&quot;].toDouble() &gt; 255 || color[&quot;g&quot;].toDouble() &lt; 0 || color[&quot;g&quot;].toDouble() &gt; 255 || color[&quot;r&quot;].toDouble() &lt; 0 || color[&quot;r&quot;].toDouble() &gt; 255)</span>
+<span class="lineNum">      39 </span>            :         {
+<span class="lineNum">      40 </span><span class="lineCov">         41 :             throw QJsonParseError();</span>
+<span class="lineNum">      41 </span>            :         }
+<span class="lineNum">      42 </span><span class="lineCov">        512 :         o.color.push_back(color[&quot;b&quot;].toDouble());</span>
+<span class="lineNum">      43 </span><span class="lineCov">        512 :         o.color.push_back(color[&quot;g&quot;].toDouble());</span>
+<span class="lineNum">      44 </span><span class="lineCov">        512 :         o.color.push_back(color[&quot;r&quot;].toDouble());</span>
+<span class="lineNum">      45 </span>            :         //lambert
+<span class="lineNum">      46 </span><span class="lineCov">        512 :         if(objects[&quot;lambert&quot;].toDouble() != objects[&quot;lambert&quot;].toInt())</span>
+<span class="lineNum">      47 </span>            :         {
+<span class="lineNum">      48 </span><span class="lineNoCov">          0 :             throw QJsonParseError();</span>
+<span class="lineNum">      49 </span>            :         }
+<span class="lineNum">      50 </span><span class="lineCov">        512 :         if(objects[&quot;lambert&quot;].toDouble() &lt; 0 || objects[&quot;lambert&quot;].toDouble() &gt; 1)</span>
+<span class="lineNum">      51 </span>            :         {
+<span class="lineNum">      52 </span><span class="lineCov">         41 :             throw QJsonParseError();</span>
+<span class="lineNum">      53 </span>            :         }
+<span class="lineNum">      54 </span><span class="lineCov">        471 :         o.lambert = objects[&quot;lambert&quot;].toDouble();</span>
+<span class="lineNum">      55 </span><span class="lineCov">        471 :         o.type = objects[&quot;type&quot;].toString().toStdString();</span>
+<span class="lineNum">      56 </span><span class="lineCov">        471 :         if(o.type == &quot;sphere&quot;)</span>
+<span class="lineNum">      57 </span>            :         {
+<span class="lineNum">      58 </span><span class="lineCov">        359 :             check_positive_with0(objects[&quot;radius&quot;].toDouble());</span>
+<span class="lineNum">      59 </span><span class="lineCov">        277 :             o.radius = objects[&quot;radius&quot;].toDouble();</span>
+<span class="lineNum">      60 </span>            :         }
+<span class="lineNum">      61 </span>            :         else
+<span class="lineNum">      62 </span>            :         {
+<span class="lineNum">      63 </span><span class="lineCov">        306 :             QJsonObject normal = objects[&quot;normal&quot;].toObject();</span>
+<span class="lineNum">      64 </span><span class="lineCov">        153 :             check_size(normal.size(), 3);</span>
+<span class="lineNum">      65 </span><span class="lineCov">        153 :             o.normal.push_back(normal[&quot;x&quot;].toDouble());</span>
+<span class="lineNum">      66 </span><span class="lineCov">        153 :             o.normal.push_back(normal[&quot;y&quot;].toDouble());</span>
+<span class="lineNum">      67 </span><span class="lineCov">        153 :             o.normal.push_back(normal[&quot;z&quot;].toDouble());</span>
+<span class="lineNum">      68 </span>            :         }
+<span class="lineNum">      69 </span><span class="lineCov">        430 :         objects_vector.push_back(o);</span>
+<span class="lineNum">      70 </span>            :     }
+<a name="71"><span class="lineNum">      71 </span>            : </a>
+<span class="lineNum">      72 </span><span class="lineCov">        220 : }</span>
+<span class="lineNum">      73 </span><span class="lineCov">        343 : void objects::parsing_light()</span>
+<span class="lineNum">      74 </span>            : {
+<span class="lineNum">      75 </span>            :     //----------------------parse lights---------------------
+<span class="lineNum">      76 </span><span class="lineCov">       4466 :     for (QJsonValue it : lights)</span>
+<span class="lineNum">      77 </span>            :     {
+<span class="lineNum">      78 </span><span class="lineCov">       8246 :         QJsonObject light_object = it.toObject();</span>
+<span class="lineNum">      79 </span><span class="lineCov">       8246 :         light_struct l;</span>
+<span class="lineNum">      80 </span>            :         //------------------intensity-----------------
+<span class="lineNum">      81 </span><span class="lineCov">       4123 :         check_positive_with0(light_object[&quot;intensity&quot;].toDouble());</span>
+<span class="lineNum">      82 </span>            :         //
+<span class="lineNum">      83 </span><span class="lineCov">       4123 :         l.intensity = light_object[&quot;intensity&quot;].toDouble();</span>
+<span class="lineNum">      84 </span>            :         //-------------------location
+<span class="lineNum">      85 </span><span class="lineCov">       8246 :         QJsonObject location = light_object[&quot;location&quot;].toObject();</span>
+<span class="lineNum">      86 </span>            :         //check
+<span class="lineNum">      87 </span><span class="lineCov">       4123 :         check_size(location.size(), 3);</span>
+<span class="lineNum">      88 </span>            :         //
+<span class="lineNum">      89 </span><span class="lineCov">       4123 :         l.location.push_back(location[&quot;x&quot;].toDouble());</span>
+<span class="lineNum">      90 </span><span class="lineCov">       4123 :         l.location.push_back(location[&quot;y&quot;].toDouble());</span>
+<span class="lineNum">      91 </span><span class="lineCov">       4123 :         l.location.push_back(location[&quot;z&quot;].toDouble());</span>
+<span class="lineNum">      92 </span><span class="lineCov">       4123 :         lights_vector.push_back(l);</span>
+<span class="lineNum">      93 </span>            :     }
+<a name="94"><span class="lineNum">      94 </span><span class="lineCov">        343 : }</span></a>
+<span class="lineNum">      95 </span>            : 
+<span class="lineNum">      96 </span><span class="lineCov">        384 : void objects::parsing_camera()</span>
+<span class="lineNum">      97 </span>            : {
+<span class="lineNum">      98 </span>            :     //-----------------------parse camera------------------
+<span class="lineNum">      99 </span><span class="lineCov">        768 :     QJsonObject center = camera[&quot;center&quot;].toObject();</span>
+<span class="lineNum">     100 </span>            :     //parse center
+<span class="lineNum">     101 </span><span class="lineCov">        768 :     QJsonValue centerx = center[&quot;x&quot;];</span>
+<span class="lineNum">     102 </span><span class="lineCov">        768 :     QJsonValue centery = center[&quot;y&quot;];</span>
+<span class="lineNum">     103 </span><span class="lineCov">        768 :     QJsonValue centerz = center[&quot;z&quot;];</span>
+<span class="lineNum">     104 </span>            :     //check
+<span class="lineNum">     105 </span><span class="lineCov">        384 :     check_size(center.size(), 3);</span>
+<span class="lineNum">     106 </span>            :     //
+<span class="lineNum">     107 </span><span class="lineCov">        384 :     camera_center.push_back(centerx.toDouble());</span>
+<span class="lineNum">     108 </span><span class="lineCov">        384 :     camera_center.push_back(centery.toDouble());</span>
+<span class="lineNum">     109 </span><span class="lineCov">        384 :     camera_center.push_back(centerz.toDouble());</span>
+<span class="lineNum">     110 </span>            :     //---------------------------parse focus------------
+<span class="lineNum">     111 </span><span class="lineCov">        768 :     QJsonValue focus = camera[&quot;focus&quot;];</span>
+<span class="lineNum">     112 </span><span class="lineCov">        384 :     camera_focus = focus.toDouble();</span>
+<span class="lineNum">     113 </span>            :     //---------------------------parse normal------------
+<span class="lineNum">     114 </span><span class="lineCov">        768 :     QJsonObject normal = camera[&quot;normal&quot;].toObject();</span>
+<span class="lineNum">     115 </span><span class="lineCov">        768 :     QJsonValue normalx = normal[&quot;x&quot;];</span>
+<span class="lineNum">     116 </span><span class="lineCov">        768 :     QJsonValue normaly = normal[&quot;y&quot;];</span>
+<span class="lineNum">     117 </span><span class="lineCov">        768 :     QJsonValue normalz = normal[&quot;z&quot;];</span>
+<span class="lineNum">     118 </span>            :     //check
+<span class="lineNum">     119 </span><span class="lineCov">        384 :     check_size(normal.size(), 3);</span>
+<span class="lineNum">     120 </span>            :     //
+<span class="lineNum">     121 </span><span class="lineCov">        384 :     camera_normal.push_back(normalx.toDouble());</span>
+<span class="lineNum">     122 </span><span class="lineCov">        384 :     camera_normal.push_back(normaly.toDouble());</span>
+<span class="lineNum">     123 </span><span class="lineCov">        384 :     camera_normal.push_back(normalz.toDouble());</span>
+<span class="lineNum">     124 </span>            :     //----------------------------parse resolution--------
+<span class="lineNum">     125 </span><span class="lineCov">        768 :     QJsonArray resolution = camera[&quot;resolution&quot;].toArray();</span>
+<span class="lineNum">     126 </span>            :     //check
+<span class="lineNum">     127 </span><span class="lineCov">        384 :     check_size(resolution.size(), 2);</span>
+<span class="lineNum">     128 </span><span class="lineCov">        384 :     check_positive(resolution[0].toDouble(), resolution[1].toDouble());</span>
+<span class="lineNum">     129 </span>            :     //
+<span class="lineNum">     130 </span><span class="lineCov">        384 :     camera_resolution.push_back(resolution[0].toDouble());</span>
+<span class="lineNum">     131 </span><span class="lineCov">        384 :     camera_resolution.push_back(resolution[1].toDouble());</span>
+<span class="lineNum">     132 </span>            :     //----------------------------parse size---------------
+<span class="lineNum">     133 </span><span class="lineCov">        768 :     QJsonArray size = camera[&quot;size&quot;].toArray();</span>
+<span class="lineNum">     134 </span>            :     //check
+<span class="lineNum">     135 </span><span class="lineCov">        384 :     check_size(size.size(), 2);</span>
+<span class="lineNum">     136 </span><span class="lineCov">        768 :     string x = size[0].toString().toStdString();</span>
+<span class="lineNum">     137 </span><span class="lineCov">        384 :     if(size[0].toDouble() != size[0].toInt() || size[1].toDouble() != size[1].toInt())</span>
+<span class="lineNum">     138 </span>            :     {
+<span class="lineNum">     139 </span><span class="lineCov">         41 :         throw QJsonParseError();</span>
+<span class="lineNum">     140 </span>            :     }
+<span class="lineNum">     141 </span><span class="lineCov">        343 :     check_positive(size[0].toDouble(), size[1].toDouble());</span>
+<span class="lineNum">     142 </span>            :     //
+<span class="lineNum">     143 </span><span class="lineCov">        343 :     camera_size.push_back(size[0].toDouble());</span>
+<a name="144"><span class="lineNum">     144 </span><span class="lineCov">        343 :     camera_size.push_back(size[1].toDouble());</span></a>
+<span class="lineNum">     145 </span><span class="lineCov">        343 : }</span>
+<span class="lineNum">     146 </span><span class="lineCov">       6918 : void objects::check_size(int a, int b)</span>
+<span class="lineNum">     147 </span>            : {
+<span class="lineNum">     148 </span><span class="lineCov">       6918 :     if(a != b)</span>
+<span class="lineNum">     149 </span>            :     {
+<span class="lineNum">     150 </span><span class="lineNoCov">          0 :         throw QJsonParseError();</span>
+<a name="151"><span class="lineNum">     151 </span>            :     }</a>
+<span class="lineNum">     152 </span><span class="lineCov">       6918 : }</span>
+<span class="lineNum">     153 </span><span class="lineCov">       4441 : void objects::check_positive_with0(double a)</span>
+<span class="lineNum">     154 </span>            : {
+<span class="lineNum">     155 </span><span class="lineCov">       4441 :     if(a &lt; 0)</span>
+<span class="lineNum">     156 </span>            :     {
+<span class="lineNum">     157 </span><span class="lineCov">         41 :         throw QJsonParseError();</span>
+<a name="158"><span class="lineNum">     158 </span>            :     }</a>
+<span class="lineNum">     159 </span><span class="lineCov">       4400 : }</span>
+<span class="lineNum">     160 </span><span class="lineCov">        727 : void objects::check_positive(double a, double b)</span>
+<span class="lineNum">     161 </span>            : {
+<span class="lineNum">     162 </span><span class="lineCov">        727 :     if(a &lt;= 0 || b &lt;= 0)</span>
+<span class="lineNum">     163 </span>            :     {
+<span class="lineNum">     164 </span><span class="lineNoCov">          0 :         throw QJsonParseError();</span>
+<span class="lineNum">     165 </span>            :     }
+<span class="lineNum">     166 </span><span class="lineCov">        727 : }</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

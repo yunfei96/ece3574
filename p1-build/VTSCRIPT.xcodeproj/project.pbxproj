@@ -1,0 +1,1095 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		47BA08C5A62E43F8866BD151 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 826E8045CABD4D1280CC4550 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				FEE6760ACB6D4ECC8E3CEEE8 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B711F7F77DD84F38A03CFA21 /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9155C0094F1043AB885CAEA3 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				1F78BD4101DA48F290A585FF /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+		C04D351003ED4B959A1E9110 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3EC1EE8B99BA4404AE29DAB7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				85C5E6A26D664154867A60C1 /* CMake Rules */,
+			);
+			dependencies = (
+				DB02C1E02E6A451EB9FA24CD /* PBXTargetDependency */,
+				221BBEB7F7CA4AA283F55697 /* PBXTargetDependency */,
+				03EFBC2723584D3AB9D1F68C /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1B782F3FF5B9411382EBB047 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.hpp */ = {isa = PBXBuildFile; fileRef = 71A8E4842BDB449EAEBC162B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.hpp */; };
+		3BDEEDC77AA2408BAD3D91EA /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */ = {isa = PBXBuildFile; fileRef = 45F62ECFAC5142CC8843C519 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */; };
+		48D139BD682B4FCAAD0B2A4E /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.hpp */ = {isa = PBXBuildFile; fileRef = C32D8371A03448B0B5E1C946 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.hpp */; };
+		4F8D56CCDE5148199BCFEAB8 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */ = {isa = PBXBuildFile; fileRef = F970A1C163224DF097FB293D /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */; };
+		59857E11933C4CC6B0AF6CE6 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 8E933D228ED44984A0D24B02 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */; };
+		5EDEBAAE08B545A8ABE2296F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */ = {isa = PBXBuildFile; fileRef = F612B83FA9984387AAE68688 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */; };
+		6F174A979B5242EC819D9FBE /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/vtscript.cpp */ = {isa = PBXBuildFile; fileRef = A583435E1B0148E7874C7281 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/vtscript.cpp */; };
+		736694EED2914AD788FF4302 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter_semantic_error.hpp */ = {isa = PBXBuildFile; fileRef = 68F1ABDEF75A4FA2A9400B4F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter_semantic_error.hpp */; };
+		7719CEA48FEE4004A46B41D2 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.hpp */ = {isa = PBXBuildFile; fileRef = 51F9196073344CDA935CFB8B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.hpp */; };
+		808C295339BA46BF9A0B3DD1 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 1492EB2B1E37474E8DF36D85 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */; };
+		8B302AD4C5CA4DFEBD1A3840 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.hpp */ = {isa = PBXBuildFile; fileRef = 7509B631BED34D3788BB6A3E /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.hpp */; };
+		8ED204CA085F4F33AB35FC13 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */ = {isa = PBXBuildFile; fileRef = 70E4D756D3F849D1AC983D70 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */; };
+		8FA113E3B2834F0FB4468B93 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/catch.hpp */ = {isa = PBXBuildFile; fileRef = 0B3F409239364BFA8A6EEF35 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/catch.hpp */; };
+		AC8E67571D2A41288AFA6D1F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.hpp */ = {isa = PBXBuildFile; fileRef = F4218376D2BC444984E94124 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.hpp */; };
+		B80E45035A28460EACDCC6E7 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/unittests.cpp */ = {isa = PBXBuildFile; fileRef = B9FD62C3BA7C4965827AECF4 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/unittests.cpp */; };
+		B9C42EA1337F4F9E94BFC0B5 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */ = {isa = PBXBuildFile; fileRef = 09CCC79748C748249D3CE4C7 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */; };
+		C1B34503003A4A4099589C4F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.hpp */ = {isa = PBXBuildFile; fileRef = F87C100A247347DEB3C43E04 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.hpp */; };
+		C525932318EA458E99A3CF31 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_expression.cpp */ = {isa = PBXBuildFile; fileRef = D381B6A79991429281B2242B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_expression.cpp */; };
+		CBD5C86948C446B190EE7B49 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_environment.cpp */ = {isa = PBXBuildFile; fileRef = 0FAED215879449BA8DC33914 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_environment.cpp */; };
+		D33983B7BDE349EFAE67D4A2 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */ = {isa = PBXBuildFile; fileRef = 485D72498C3E4CF584AEFDA0 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */; };
+		D5E4723C044E4331B85BE9FF /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter_semantic_error.hpp */ = {isa = PBXBuildFile; fileRef = 91FF71AE47BF4900BE2E6699 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter_semantic_error.hpp */; };
+		DB8EE992365841929583F36B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */ = {isa = PBXBuildFile; fileRef = 9C97241873C24678AFBC86F9 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */; };
+		E5DBA9BB86EF47949480831F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */ = {isa = PBXBuildFile; fileRef = 7475F91606B14FCB9175F02A /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */; };
+		E97590B896324180A71BAF9C /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.hpp */ = {isa = PBXBuildFile; fileRef = F0CE843E33E54C4F84C53324 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.hpp */; };
+		F0342AD4F2EC40048E2F1311 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_interpreter.cpp */ = {isa = PBXBuildFile; fileRef = 21EB4968B06B41A68D42D3D2 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_interpreter.cpp */; };
+		F53CC1B8D41E41F2AF513ECC /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_tokenize.cpp */ = {isa = PBXBuildFile; fileRef = 14BF7C5B83E040BB95F72809 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_tokenize.cpp */; };
+		FE1107A02F88436C8630671E /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.hpp */ = {isa = PBXBuildFile; fileRef = 3D3B001B62144AAB91B2A738 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		198861C622C94546AB4FB271 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		3A6B9190110F44B4B956A7BE /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		5B7FD4E5A3C24069A70B11E5 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		CD07EAF1A6C3477091E41DD2 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		FCA9E9F5782D479B97B54328 = {
+			isa = PBXBuildStyle;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		1069E4448495495793DF023E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D55726BB8F74F65A78C213B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47BA08C5A62E43F8866BD151;
+			remoteInfo = ZERO_CHECK;
+		};
+		24442019B00A41618FEA8BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D55726BB8F74F65A78C213B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65DF46552AE148A9B8A515BD;
+			remoteInfo = unittests;
+		};
+		7AD4CA4CC0104E1ABC75A76F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D55726BB8F74F65A78C213B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47BA08C5A62E43F8866BD151;
+			remoteInfo = ZERO_CHECK;
+		};
+		D228A2ED108E4CE2B05D999D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D55726BB8F74F65A78C213B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2287965590844832864650F4;
+			remoteInfo = vtscript;
+		};
+		F1E4957D235641D3B8B6CC54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D55726BB8F74F65A78C213B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47BA08C5A62E43F8866BD151;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09CCC79748C748249D3CE4C7 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = interpreter.cpp; path = interpreter.cpp; sourceTree = SOURCE_ROOT; };
+		0B3F409239364BFA8A6EEF35 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/catch.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = catch.hpp; path = catch.hpp; sourceTree = SOURCE_ROOT; };
+		0FAED215879449BA8DC33914 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_environment.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_environment.cpp; path = test_environment.cpp; sourceTree = SOURCE_ROOT; };
+		1492EB2B1E37474E8DF36D85 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		14BF7C5B83E040BB95F72809 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_tokenize.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_tokenize.cpp; path = test_tokenize.cpp; sourceTree = SOURCE_ROOT; };
+		21EB4968B06B41A68D42D3D2 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_interpreter.cpp; path = test_interpreter.cpp; sourceTree = SOURCE_ROOT; };
+		2B2D70B07DF742C0A1005D05 /* unittests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = unittests; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D3B001B62144AAB91B2A738 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = expression.hpp; path = expression.hpp; sourceTree = SOURCE_ROOT; };
+		45F62ECFAC5142CC8843C519 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tokenize.cpp; path = tokenize.cpp; sourceTree = SOURCE_ROOT; };
+		485D72498C3E4CF584AEFDA0 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = environment.cpp; path = environment.cpp; sourceTree = SOURCE_ROOT; };
+		51F9196073344CDA935CFB8B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = environment.hpp; path = environment.hpp; sourceTree = SOURCE_ROOT; };
+		68F1ABDEF75A4FA2A9400B4F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter_semantic_error.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = interpreter_semantic_error.hpp; path = interpreter_semantic_error.hpp; sourceTree = SOURCE_ROOT; };
+		70E4D756D3F849D1AC983D70 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = interpreter.cpp; path = interpreter.cpp; sourceTree = SOURCE_ROOT; };
+		71A8E4842BDB449EAEBC162B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = tokenize.hpp; path = tokenize.hpp; sourceTree = SOURCE_ROOT; };
+		7475F91606B14FCB9175F02A /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tokenize.cpp; path = tokenize.cpp; sourceTree = SOURCE_ROOT; };
+		7509B631BED34D3788BB6A3E /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = interpreter.hpp; path = interpreter.hpp; sourceTree = SOURCE_ROOT; };
+		8783859EE0094787BB5E4BE6 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8E933D228ED44984A0D24B02 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		91FF71AE47BF4900BE2E6699 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter_semantic_error.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = interpreter_semantic_error.hpp; path = interpreter_semantic_error.hpp; sourceTree = SOURCE_ROOT; };
+		9C97241873C24678AFBC86F9 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = environment.cpp; path = environment.cpp; sourceTree = SOURCE_ROOT; };
+		A583435E1B0148E7874C7281 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/vtscript.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vtscript.cpp; path = vtscript.cpp; sourceTree = SOURCE_ROOT; };
+		B9FD62C3BA7C4965827AECF4 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/unittests.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unittests.cpp; path = unittests.cpp; sourceTree = SOURCE_ROOT; };
+		BF3584941A504BEAB0EA668F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C32D8371A03448B0B5E1C946 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = tokenize.hpp; path = tokenize.hpp; sourceTree = SOURCE_ROOT; };
+		D381B6A79991429281B2242B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_expression.cpp; path = test_expression.cpp; sourceTree = SOURCE_ROOT; };
+		D52631AB83B848D9B534D2CD /* vtscript */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = vtscript; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0CE843E33E54C4F84C53324 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = environment.hpp; path = environment.hpp; sourceTree = SOURCE_ROOT; };
+		F4218376D2BC444984E94124 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = interpreter.hpp; path = interpreter.hpp; sourceTree = SOURCE_ROOT; };
+		F612B83FA9984387AAE68688 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = expression.cpp; path = expression.cpp; sourceTree = SOURCE_ROOT; };
+		F87C100A247347DEB3C43E04 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = expression.hpp; path = expression.hpp; sourceTree = SOURCE_ROOT; };
+		F970A1C163224DF097FB293D /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = expression.cpp; path = expression.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1B4211B869014AED94EA188C /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				51F9196073344CDA935CFB8B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.hpp */,
+				3D3B001B62144AAB91B2A738 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.hpp */,
+				7509B631BED34D3788BB6A3E /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.hpp */,
+				91FF71AE47BF4900BE2E6699 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter_semantic_error.hpp */,
+				71A8E4842BDB449EAEBC162B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		26897AE4E2A54B1B9D1ECFBC /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		333F86521FF34BD0B31DCF96 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				26897AE4E2A54B1B9D1ECFBC /* CMake Rules */,
+				8783859EE0094787BB5E4BE6 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		3463D6EA61B04D3698BF0B33 /* unittests */ = {
+			isa = PBXGroup;
+			children = (
+				AB69434003B344ABAAD8775F /* Header Files */,
+				D1363DC5E80741E38034735A /* Source Files */,
+				8E933D228ED44984A0D24B02 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */,
+			);
+			name = unittests;
+			sourceTree = "<group>";
+		};
+		355EA6AEAFD8493C92ED60B6 /* vtscript */ = {
+			isa = PBXGroup;
+			children = (
+				1B4211B869014AED94EA188C /* Header Files */,
+				9BA8016344AF4F17BFEA1F6C /* Source Files */,
+				1492EB2B1E37474E8DF36D85 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */,
+			);
+			name = vtscript;
+			sourceTree = "<group>";
+		};
+		3ECA1AF32F5E48D2B3693526 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3463D6EA61B04D3698BF0B33 /* unittests */,
+				355EA6AEAFD8493C92ED60B6 /* vtscript */,
+				68FB914E3A5A44EB96C95112 /* ALL_BUILD */,
+				333F86521FF34BD0B31DCF96 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		499FADCB59894560813B6213 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		68FB914E3A5A44EB96C95112 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				C3C8D6A7117442D9A50EBE76 /* CMake Rules */,
+				BF3584941A504BEAB0EA668F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		8580775BD8034E35B807856B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D70B07DF742C0A1005D05 /* unittests */,
+				D52631AB83B848D9B534D2CD /* vtscript */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BA8016344AF4F17BFEA1F6C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C97241873C24678AFBC86F9 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */,
+				F612B83FA9984387AAE68688 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */,
+				09CCC79748C748249D3CE4C7 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */,
+				7475F91606B14FCB9175F02A /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */,
+				A583435E1B0148E7874C7281 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/vtscript.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		9F6FE613AF4047D2828256A0 = {
+			isa = PBXGroup;
+			children = (
+				3ECA1AF32F5E48D2B3693526 /* Sources */,
+				499FADCB59894560813B6213 /* Resources */,
+				8580775BD8034E35B807856B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB69434003B344ABAAD8775F /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B3F409239364BFA8A6EEF35 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/catch.hpp */,
+				F0CE843E33E54C4F84C53324 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.hpp */,
+				F87C100A247347DEB3C43E04 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.hpp */,
+				F4218376D2BC444984E94124 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.hpp */,
+				68F1ABDEF75A4FA2A9400B4F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter_semantic_error.hpp */,
+				C32D8371A03448B0B5E1C946 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		C3C8D6A7117442D9A50EBE76 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D1363DC5E80741E38034735A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				485D72498C3E4CF584AEFDA0 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */,
+				F970A1C163224DF097FB293D /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */,
+				70E4D756D3F849D1AC983D70 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */,
+				0FAED215879449BA8DC33914 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_environment.cpp */,
+				D381B6A79991429281B2242B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_expression.cpp */,
+				21EB4968B06B41A68D42D3D2 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_interpreter.cpp */,
+				14BF7C5B83E040BB95F72809 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_tokenize.cpp */,
+				45F62ECFAC5142CC8843C519 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */,
+				B9FD62C3BA7C4965827AECF4 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/unittests.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2287965590844832864650F4 /* vtscript */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EA813E39E554BB5AEE0D21F /* Build configuration list for PBXNativeTarget "vtscript" */;
+			buildPhases = (
+				2085547490B8423AA1D82348 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E918A0A6F17D451593C56CFE /* PBXTargetDependency */,
+			);
+			name = vtscript;
+			productName = vtscript;
+			productReference = D52631AB83B848D9B534D2CD /* vtscript */;
+			productType = "com.apple.product-type.tool";
+		};
+		65DF46552AE148A9B8A515BD /* unittests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EE313654A4D4C4CB16549BC /* Build configuration list for PBXNativeTarget "unittests" */;
+			buildPhases = (
+				90EF457C9017480F832FB8E9 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				979C48B0FC504F18A302E479 /* PBXTargetDependency */,
+			);
+			name = unittests;
+			productName = unittests;
+			productReference = 2B2D70B07DF742C0A1005D05 /* unittests */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D55726BB8F74F65A78C213B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0830;
+			};
+			buildConfigurationList = 3F61126C53D94A51A3EFC2BE /* Build configuration list for PBXProject "VTSCRIPT" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				5B7FD4E5A3C24069A70B11E5 /* Debug */,
+				CD07EAF1A6C3477091E41DD2 /* Release */,
+				198861C622C94546AB4FB271 /* MinSizeRel */,
+				3A6B9190110F44B4B956A7BE /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 9F6FE613AF4047D2828256A0;
+			projectDirPath = "/Users/YunfeiGuo/Desktop/ece3574/p1-source";
+			projectRoot = "";
+			targets = (
+				C04D351003ED4B959A1E9110 /* ALL_BUILD */,
+				B711F7F77DD84F38A03CFA21 /* RUN_TESTS */,
+				47BA08C5A62E43F8866BD151 /* ZERO_CHECK */,
+				65DF46552AE148A9B8A515BD /* unittests */,
+				2287965590844832864650F4 /* vtscript */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F78BD4101DA48F290A585FF /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/YunfeiGuo/Desktop/ece3574/p1-build -f /Users/YunfeiGuo/Desktop/ece3574/p1-build/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		2AB253633919450489F1B5EC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		85C5E6A26D664154867A60C1 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/YunfeiGuo/Desktop/ece3574/p1-build -f /Users/YunfeiGuo/Desktop/ece3574/p1-build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		861CDC20DC2C419DBEACB9F2 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		AB06CEB4C06D4B288AC10D1D = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		FEE6760ACB6D4ECC8E3CEEE8 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/YunfeiGuo/Desktop/ece3574/p1-build -f /Users/YunfeiGuo/Desktop/ece3574/p1-build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2085547490B8423AA1D82348 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8EE992365841929583F36B /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */,
+				5EDEBAAE08B545A8ABE2296F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */,
+				B9C42EA1337F4F9E94BFC0B5 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */,
+				E5DBA9BB86EF47949480831F /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */,
+				6F174A979B5242EC819D9FBE /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/vtscript.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90EF457C9017480F832FB8E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33983B7BDE349EFAE67D4A2 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/environment.cpp */,
+				4F8D56CCDE5148199BCFEAB8 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/expression.cpp */,
+				8ED204CA085F4F33AB35FC13 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/interpreter.cpp */,
+				CBD5C86948C446B190EE7B49 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_environment.cpp */,
+				C525932318EA458E99A3CF31 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_expression.cpp */,
+				F0342AD4F2EC40048E2F1311 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_interpreter.cpp */,
+				F53CC1B8D41E41F2AF513ECC /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/test_tokenize.cpp */,
+				3BDEEDC77AA2408BAD3D91EA /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/tokenize.cpp */,
+				B80E45035A28460EACDCC6E7 /* /Users/YunfeiGuo/Desktop/ece3574/p1-source/unittests.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03EFBC2723584D3AB9D1F68C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47BA08C5A62E43F8866BD151 /* ZERO_CHECK */;
+			targetProxy = 1069E4448495495793DF023E /* PBXContainerItemProxy */;
+		};
+		221BBEB7F7CA4AA283F55697 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65DF46552AE148A9B8A515BD /* unittests */;
+			targetProxy = 24442019B00A41618FEA8BCC /* PBXContainerItemProxy */;
+		};
+		979C48B0FC504F18A302E479 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47BA08C5A62E43F8866BD151 /* ZERO_CHECK */;
+			targetProxy = 7AD4CA4CC0104E1ABC75A76F /* PBXContainerItemProxy */;
+		};
+		DB02C1E02E6A451EB9FA24CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2287965590844832864650F4 /* vtscript */;
+			targetProxy = D228A2ED108E4CE2B05D999D /* PBXContainerItemProxy */;
+		};
+		E918A0A6F17D451593C56CFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47BA08C5A62E43F8866BD151 /* ZERO_CHECK */;
+			targetProxy = F1E4957D235641D3B8B6CC54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		169D2A52D7E944BCB728097A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1AAE86DF612D4688802E5773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtscript;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		225283D346F34DCDBF112EBF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		279521F55E1942BCB0D59D24 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		35FD8B0344064258B574A47B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build/build";
+			};
+			name = MinSizeRel;
+		};
+		3843742B798245BD9B25FDCA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3EAA3C5DD0B14E09A39CB549 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		485694D084F4449F8226A685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		576B6CE6920444D7B31A89A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		64745684984D45899B6E35A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build/build";
+			};
+			name = Release;
+		};
+		6570FCDA714343EAA23CD1BC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6B68DD4CB65F44168C52C3EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtscript;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		6DE52A85BA294201827B0B68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8BC56E68546E498BA8D2ABEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8C8D05457AA04525A7DD097D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build/build";
+			};
+			name = Debug;
+		};
+		9D2D00E1A8CC40C0BA57EB6A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A3D5DDE539B9401FAB522BAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B114ECFD65104342B4AB82E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B1EEFF097373457B8BC11456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		C79EC2D8341D4A858649172A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtscript;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E4512F19F760430098A85FB2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E4E9DAF12E514048871729B2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EB581D6E9996488F852ABE47 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtscript;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F7DEC70235A14841AADFC148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/YunfeiGuo/Desktop/ece3574/p1-build");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/YunfeiGuo/Desktop/ece3574/p1-build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EC1EE8B99BA4404AE29DAB7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D5DDE539B9401FAB522BAC /* Debug */,
+				F7DEC70235A14841AADFC148 /* Release */,
+				279521F55E1942BCB0D59D24 /* MinSizeRel */,
+				E4512F19F760430098A85FB2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3F61126C53D94A51A3EFC2BE /* Build configuration list for PBXProject "VTSCRIPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C8D05457AA04525A7DD097D /* Debug */,
+				64745684984D45899B6E35A3 /* Release */,
+				35FD8B0344064258B574A47B /* MinSizeRel */,
+				3EAA3C5DD0B14E09A39CB549 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		826E8045CABD4D1280CC4550 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B114ECFD65104342B4AB82E8 /* Debug */,
+				485694D084F4449F8226A685 /* Release */,
+				9D2D00E1A8CC40C0BA57EB6A /* MinSizeRel */,
+				169D2A52D7E944BCB728097A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9155C0094F1043AB885CAEA3 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BC56E68546E498BA8D2ABEC /* Debug */,
+				576B6CE6920444D7B31A89A3 /* Release */,
+				E4E9DAF12E514048871729B2 /* MinSizeRel */,
+				6570FCDA714343EAA23CD1BC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9EA813E39E554BB5AEE0D21F /* Build configuration list for PBXNativeTarget "vtscript" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B68DD4CB65F44168C52C3EC /* Debug */,
+				1AAE86DF612D4688802E5773 /* Release */,
+				C79EC2D8341D4A858649172A /* MinSizeRel */,
+				EB581D6E9996488F852ABE47 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9EE313654A4D4C4CB16549BC /* Build configuration list for PBXNativeTarget "unittests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DE52A85BA294201827B0B68 /* Debug */,
+				B1EEFF097373457B8BC11456 /* Release */,
+				225283D346F34DCDBF112EBF /* MinSizeRel */,
+				3843742B798245BD9B25FDCA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D55726BB8F74F65A78C213B /* Project object */;
+}

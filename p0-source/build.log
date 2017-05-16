@@ -1,0 +1,14 @@
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmp6fyo7ou7/build
+Scanning dependencies of target hexd
+[ 50%] Building CXX object CMakeFiles/hexd.dir/hexd.cpp.o
+[100%] Linking CXX executable hexd
+[100%] Built target hexd

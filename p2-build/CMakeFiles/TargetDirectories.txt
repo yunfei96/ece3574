@@ -1,0 +1,11 @@
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/RUN_TESTS.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/test_gui.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/unittests.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/vtdraw.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/vtscript.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/test_gui_automoc.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/unittests_automoc.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/vtdraw_automoc.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/vtscript_automoc.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/ALL_BUILD.dir
+/Users/YunfeiGuo/Desktop/ece3574/p2-build/CMakeFiles/ZERO_CHECK.dir

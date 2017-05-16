@@ -1,0 +1,264 @@
+
+Begin Grading at 2017-01-22 20:36:18.709542
+File hexd.cpp exists.
+
+Begin Grading at 2017-01-23 01:01:00.851977
+File hexd.cpp exists.
+
+Begin Grading at 2017-01-23 01:02:02.978839
+File hexd.cpp exists.
+
+Begin Grading at 2017-01-23 01:02:48.304759
+File hexd.cpp exists.
+Program Builds.
+Error: Test 0 failed.
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 26 / 30
+End Grading at 2017-01-23 01:02:49.583162
+
+
+Begin Grading at 2017-01-23 01:09:09.465081
+File hexd.cpp exists.
+Program Builds.
+Error: Test 0 failed.
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 26 / 30
+End Grading at 2017-01-23 01:09:10.804724
+
+
+Begin Grading at 2017-01-23 01:09:54.883769
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 30 / 30
+End Grading at 2017-01-23 01:09:56.160879
+
+
+Begin Grading at 2017-01-23 01:21:41.534460
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 30 / 30
+End Grading at 2017-01-23 01:21:42.852347
+
+
+Begin Grading at 2017-01-23 03:29:22.155060
+File hexd.cpp exists.
+Program Builds.
+Error: Test 0 failed.
+Test 1 passed. +4
+Test 2 passed. +4
+Error: Test 3 failed.
+Test 4 passed. +4
+Test 5 passed. +4
+Error: Build has WARNINGS. See build.log
+Expected number of commits are present. +1
+Total Grade 17 / 30
+End Grading at 2017-01-23 03:29:23.452076
+
+
+Begin Grading at 2017-01-23 03:38:29.864920
+File hexd.cpp exists.
+Program Builds.
+Error: Test 0 failed.
+Test 1 passed. +4
+Test 2 passed. +4
+Error: Test 3 failed.
+Test 4 passed. +4
+Test 5 passed. +4
+Error: Build has WARNINGS. See build.log
+Expected number of commits are present. +1
+Total Grade 17 / 30
+End Grading at 2017-01-23 03:38:31.342002
+
+
+Begin Grading at 2017-01-23 03:51:08.429911
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Error: Test 1 failed.
+Test 2 passed. +4
+Error: Test 3 failed.
+Test 4 passed. +4
+Error: Test 5 failed.
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 18 / 30
+End Grading at 2017-01-23 03:51:09.769728
+
+
+Begin Grading at 2017-01-23 21:20:09.627192
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Error: Test 1 failed.
+Test 2 passed. +4
+Error: Test 3 failed.
+Test 4 passed. +4
+Error: Test 5 failed.
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 18 / 30
+End Grading at 2017-01-23 21:20:11.214939
+
+
+Begin Grading at 2017-01-24 01:24:51.261022
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Error: Test 1 failed.
+Test 2 passed. +4
+Error: Test 3 failed.
+Test 4 passed. +4
+Error: Test 5 failed.
+Error: Build has WARNINGS. See build.log
+Expected number of commits are present. +1
+Total Grade 13 / 30
+End Grading at 2017-01-24 01:24:52.767054
+
+
+Begin Grading at 2017-01-24 01:26:05.444586
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Error: Test 1 failed.
+Test 2 passed. +4
+Error: Test 3 failed.
+Test 4 passed. +4
+Error: Test 5 failed.
+Error: Build has WARNINGS. See build.log
+Expected number of commits are present. +1
+Total Grade 13 / 30
+End Grading at 2017-01-24 01:26:06.608184
+
+
+Begin Grading at 2017-01-24 01:26:51.536512
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Error: Test 1 failed.
+Test 2 passed. +4
+Error: Test 3 failed.
+Test 4 passed. +4
+Error: Test 5 failed.
+Error: Build has WARNINGS. See build.log
+Expected number of commits are present. +1
+Total Grade 13 / 30
+End Grading at 2017-01-24 01:26:52.728638
+
+
+Begin Grading at 2017-01-24 01:29:08.438564
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Test 1 passed. +4
+Test 2 passed. +4
+Error: Test 3 failed.
+Test 4 passed. +4
+Test 5 passed. +4
+Error: Build has WARNINGS. See build.log
+Expected number of commits are present. +1
+Total Grade 21 / 30
+End Grading at 2017-01-24 01:29:09.645555
+
+
+Begin Grading at 2017-01-24 01:29:55.919367
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Error: Build has WARNINGS. See build.log
+Expected number of commits are present. +1
+Total Grade 25 / 30
+End Grading at 2017-01-24 01:29:57.093173
+
+
+Begin Grading at 2017-01-24 01:30:58.280944
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 30 / 30
+End Grading at 2017-01-24 01:30:59.517961
+
+
+Begin Grading at 2017-01-24 19:31:00.506325
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 30 / 30
+End Grading at 2017-01-24 19:31:02.023757
+
+
+Begin Grading at 2017-01-24 19:50:21.558009
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 30 / 30
+End Grading at 2017-01-24 19:50:23.092502
+
+
+Begin Grading at 2017-01-28 01:48:17.674330
+File hexd.cpp exists.
+Program Builds.
+Test 0 passed. +4
+Test 1 passed. +4
+Test 2 passed. +4
+Test 3 passed. +4
+Test 4 passed. +4
+Test 5 passed. +4
+Program Builds with NO WARNINGS. +5
+Expected number of commits are present. +1
+Total Grade 30 / 30
+End Grading at 2017-01-28 01:48:19.184482
+

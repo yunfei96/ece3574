@@ -1,0 +1,932 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/environment.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - environment.cpp<span style="font-size: 80%;"> (source / <a href="environment.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">431</td>
+            <td class="headerCovTableEntry">431</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-03-26 20:01:17</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include &quot;environment.hpp&quot;</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span><span class="lineCov">       3291 : envir::envir()</span>
+<span class="lineNum">       4 </span>            : {
+<span class="lineNum">       5 </span><span class="lineCov">       3291 :     environment[&quot;pi&quot;] = atan2(0, -1);</span>
+<span class="lineNum">       6 </span><span class="lineCov">       3291 : }</span>
+<a name="7"><span class="lineNum">       7 </span>            : </a>
+<span class="lineNum">       8 </span>            : //----------------call func-------------------
+<span class="lineNum">       9 </span><span class="lineCov">       1122 : double envir::number(vector&lt;Expression&gt; args)</span>
+<span class="lineNum">      10 </span>            : {
+<span class="lineNum">      11 </span><span class="lineCov">       1122 :     if(args[0].symbol == &quot;+&quot;)</span>
+<span class="lineNum">      12 </span>            :     {
+<span class="lineNum">      13 </span><span class="lineCov">        324 :         args.erase(args.begin());</span>
+<span class="lineNum">      14 </span><span class="lineCov">        360 :         return add(args);</span>
+<span class="lineNum">      15 </span>            :     }
+<span class="lineNum">      16 </span><span class="lineCov">        798 :     else if(args[0].symbol== &quot;-&quot;)</span>
+<span class="lineNum">      17 </span>            :     {
+<span class="lineNum">      18 </span><span class="lineCov">        302 :         args.erase(args.begin());</span>
+<span class="lineNum">      19 </span><span class="lineCov">        428 :         return sub(args);</span>
+<span class="lineNum">      20 </span>            :     }
+<span class="lineNum">      21 </span><span class="lineCov">        496 :     else if(args[0].symbol == &quot;/&quot;)</span>
+<span class="lineNum">      22 </span>            :     {
+<span class="lineNum">      23 </span><span class="lineCov">        160 :         args.erase(args.begin());</span>
+<span class="lineNum">      24 </span><span class="lineCov">        214 :         return divid(args);</span>
+<span class="lineNum">      25 </span>            :     }
+<span class="lineNum">      26 </span><span class="lineCov">        336 :     else if(args[0].symbol == &quot;sin&quot;)</span>
+<span class="lineNum">      27 </span>            :     {
+<span class="lineNum">      28 </span><span class="lineCov">         72 :         args.erase(args.begin());</span>
+<span class="lineNum">      29 </span><span class="lineCov">        108 :         return _sin(args);</span>
+<span class="lineNum">      30 </span>            :     }
+<span class="lineNum">      31 </span><span class="lineCov">        264 :     else if(args[0].symbol == &quot;cos&quot;)</span>
+<span class="lineNum">      32 </span>            :     {
+<span class="lineNum">      33 </span><span class="lineCov">         70 :         args.erase(args.begin());</span>
+<span class="lineNum">      34 </span><span class="lineCov">        106 :         return _cos(args);</span>
+<span class="lineNum">      35 </span>            :     }
+<span class="lineNum">      36 </span><span class="lineCov">        194 :     else if(args[0].symbol == &quot;arctan&quot;)</span>
+<span class="lineNum">      37 </span>            :     {
+<span class="lineNum">      38 </span><span class="lineCov">         70 :         args.erase(args.begin());</span>
+<span class="lineNum">      39 </span><span class="lineCov">        106 :         return arctan(args);</span>
+<span class="lineNum">      40 </span>            :     }
+<span class="lineNum">      41 </span>            :     else
+<span class="lineNum">      42 </span>            :     {
+<span class="lineNum">      43 </span><span class="lineCov">        124 :         args.erase(args.begin());</span>
+<span class="lineNum">      44 </span><span class="lineCov">        196 :         return times(args);</span>
+<span class="lineNum">      45 </span>            :     }
+<a name="46"><span class="lineNum">      46 </span>            : }</a>
+<span class="lineNum">      47 </span>            : //
+<span class="lineNum">      48 </span><span class="lineCov">        864 : bool envir::which_bool(vector&lt;Expression&gt; args)</span>
+<span class="lineNum">      49 </span>            : {
+<span class="lineNum">      50 </span><span class="lineCov">        864 :     if(args[0].symbol == &quot;and&quot;)</span>
+<span class="lineNum">      51 </span>            :     {
+<span class="lineNum">      52 </span><span class="lineCov">        180 :         args.erase(args.begin());</span>
+<span class="lineNum">      53 </span><span class="lineCov">        234 :         return _and(args);</span>
+<span class="lineNum">      54 </span>            :     }
+<span class="lineNum">      55 </span><span class="lineCov">        684 :     else if(args[0].symbol == &quot;or&quot;)</span>
+<span class="lineNum">      56 </span>            :     {
+<span class="lineNum">      57 </span><span class="lineCov">        180 :         args.erase(args.begin());</span>
+<span class="lineNum">      58 </span><span class="lineCov">        234 :         return _or(args);</span>
+<span class="lineNum">      59 </span>            :     }
+<span class="lineNum">      60 </span><span class="lineCov">        504 :     else if(args[0].symbol == &quot;not&quot;)</span>
+<span class="lineNum">      61 </span>            :     {
+<span class="lineNum">      62 </span><span class="lineCov">        108 :         args.erase(args.begin());</span>
+<span class="lineNum">      63 </span><span class="lineCov">        162 :         return _not(args);</span>
+<span class="lineNum">      64 </span>            :     }
+<span class="lineNum">      65 </span><span class="lineCov">        396 :     else if(args[0].symbol == &quot;&lt;&quot;)</span>
+<span class="lineNum">      66 </span>            :     {
+<span class="lineNum">      67 </span><span class="lineCov">        126 :         args.erase(args.begin());</span>
+<span class="lineNum">      68 </span><span class="lineCov">        162 :         return small(args);</span>
+<span class="lineNum">      69 </span>            :     }
+<span class="lineNum">      70 </span><span class="lineCov">        270 :     else if(args[0].symbol == &quot;&lt;=&quot;)</span>
+<span class="lineNum">      71 </span>            :     {
+<span class="lineNum">      72 </span><span class="lineCov">         72 :         args.erase(args.begin());</span>
+<span class="lineNum">      73 </span><span class="lineCov">         72 :         return small_equal(args);</span>
+<span class="lineNum">      74 </span>            :     }
+<span class="lineNum">      75 </span><span class="lineCov">        198 :     else if(args[0].symbol == &quot;&gt;&quot;)</span>
+<span class="lineNum">      76 </span>            :     {
+<span class="lineNum">      77 </span><span class="lineCov">         36 :         args.erase(args.begin());</span>
+<span class="lineNum">      78 </span><span class="lineCov">         36 :         return larger(args);</span>
+<span class="lineNum">      79 </span>            :     }
+<span class="lineNum">      80 </span><span class="lineCov">        162 :     else if(args[0].symbol == &quot;&gt;=&quot;)</span>
+<span class="lineNum">      81 </span>            :     {
+<span class="lineNum">      82 </span><span class="lineCov">         72 :         args.erase(args.begin());</span>
+<span class="lineNum">      83 </span><span class="lineCov">         72 :         return larger_equal(args);</span>
+<span class="lineNum">      84 </span>            :     }
+<span class="lineNum">      85 </span>            :     else
+<span class="lineNum">      86 </span>            :     {
+<span class="lineNum">      87 </span><span class="lineCov">         90 :         args.erase(args.begin());</span>
+<span class="lineNum">      88 </span><span class="lineCov">         90 :         return equal(args);</span>
+<span class="lineNum">      89 </span>            :     }
+<a name="90"><span class="lineNum">      90 </span>            : }</a>
+<span class="lineNum">      91 </span>            : //
+<span class="lineNum">      92 </span><span class="lineCov">        788 : Expression envir::which_draw(vector&lt;Expression&gt; args)</span>
+<span class="lineNum">      93 </span>            : {
+<span class="lineNum">      94 </span><span class="lineCov">        788 :     if(args[0].symbol == &quot;point&quot;)</span>
+<span class="lineNum">      95 </span>            :     {
+<span class="lineNum">      96 </span><span class="lineCov">        547 :         args.erase(args.begin());</span>
+<span class="lineNum">      97 </span><span class="lineCov">        583 :         return point(args);</span>
+<span class="lineNum">      98 </span>            :     }
+<span class="lineNum">      99 </span><span class="lineCov">        241 :     else if(args[0].symbol == &quot;line&quot;)</span>
+<span class="lineNum">     100 </span>            :     {
+<span class="lineNum">     101 </span><span class="lineCov">         99 :         args.erase(args.begin());</span>
+<span class="lineNum">     102 </span><span class="lineCov">        135 :         return line(args);</span>
+<span class="lineNum">     103 </span>            :     }
+<span class="lineNum">     104 </span>            :     else
+<span class="lineNum">     105 </span>            :     {
+<span class="lineNum">     106 </span><span class="lineCov">        142 :         args.erase(args.begin());</span>
+<span class="lineNum">     107 </span><span class="lineCov">        210 :         return arc(args);</span>
+<span class="lineNum">     108 </span>            :     }
+<a name="109"><span class="lineNum">     109 </span>            : }</a>
+<span class="lineNum">     110 </span>            : //--------------------draw----------------------------
+<span class="lineNum">     111 </span><span class="lineCov">        147 : vector&lt;Expression&gt; envir::draw(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     112 </span>            : {
+<span class="lineNum">     113 </span><span class="lineCov">        147 :     if(input.size() &gt;= 2)</span>
+<span class="lineNum">     114 </span>            :     {
+<span class="lineNum">     115 </span><span class="lineCov">        258 :         for(int i=1; i &lt; input.size(); i++)</span>
+<span class="lineNum">     116 </span>            :         {
+<span class="lineNum">     117 </span><span class="lineCov">        147 :             if(input[i].type == &quot;point&quot; || input[i].type == &quot;arc&quot;||input[i].type == &quot;line&quot;)</span>
+<span class="lineNum">     118 </span>            :             {
+<span class="lineNum">     119 </span><span class="lineCov">        111 :                 continue;</span>
+<span class="lineNum">     120 </span>            :             }
+<span class="lineNum">     121 </span><span class="lineCov">         36 :             else if(input[i].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     122 </span>            :             {
+<span class="lineNum">     123 </span><span class="lineCov">         18 :                 not_found_exp(input[i].symbol);</span>
+<span class="lineNum">     124 </span><span class="lineCov">         18 :                 input[i] = exp_envir.find(input[i].symbol)-&gt;second;</span>
+<span class="lineNum">     125 </span>            :             }
+<span class="lineNum">     126 </span>            :             else
+<span class="lineNum">     127 </span>            :             {
+<span class="lineNum">     128 </span><span class="lineCov">         18 :                 InterpreterSemanticError error(&quot;object not drawable&quot;);</span>
+<span class="lineNum">     129 </span><span class="lineCov">         18 :                 throw error;</span>
+<span class="lineNum">     130 </span>            :             }
+<span class="lineNum">     131 </span>            :             
+<span class="lineNum">     132 </span>            :         }
+<span class="lineNum">     133 </span>            :     }
+<span class="lineNum">     134 </span>            :     else
+<span class="lineNum">     135 </span>            :     {
+<span class="lineNum">     136 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     137 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     138 </span>            :     }
+<span class="lineNum">     139 </span><span class="lineCov">        111 :     return input;</span>
+<a name="140"><span class="lineNum">     140 </span>            : }</a>
+<span class="lineNum">     141 </span>            : //---------------------drawobj---------------------------
+<span class="lineNum">     142 </span><span class="lineCov">        547 : Expression envir::point(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     143 </span>            : {
+<span class="lineNum">     144 </span><span class="lineCov">       1094 :     vector&lt;double&gt; result;</span>
+<span class="lineNum">     145 </span><span class="lineCov">        547 :     if(input.size() == 2)</span>
+<span class="lineNum">     146 </span>            :     {
+<span class="lineNum">     147 </span>            :         //sub
+<span class="lineNum">     148 </span><span class="lineCov">       1551 :         for(int i=0; i &lt; 2; i++)</span>
+<span class="lineNum">     149 </span>            :         {
+<span class="lineNum">     150 </span><span class="lineCov">       1040 :             if(input[i].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     151 </span>            :             {
+<span class="lineNum">     152 </span><span class="lineCov">       1004 :                 result.push_back(input[i].number_value);</span>
+<span class="lineNum">     153 </span>            :             }
+<span class="lineNum">     154 </span><span class="lineCov">         36 :             else if(input[i].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     155 </span>            :             {
+<span class="lineNum">     156 </span><span class="lineCov">         18 :                 not_found(input[i].symbol);</span>
+<span class="lineNum">     157 </span><span class="lineCov">         18 :                 result.push_back((environment.find(input[i].symbol) -&gt; second));</span>
+<span class="lineNum">     158 </span>            :             }
+<span class="lineNum">     159 </span>            :             else
+<span class="lineNum">     160 </span>            :             {
+<span class="lineNum">     161 </span><span class="lineCov">         18 :                 InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     162 </span><span class="lineCov">         18 :                 throw error;</span>
+<span class="lineNum">     163 </span>            :             }
+<span class="lineNum">     164 </span>            :         }
+<span class="lineNum">     165 </span>            :     }
+<span class="lineNum">     166 </span>            :     else
+<span class="lineNum">     167 </span>            :     {
+<span class="lineNum">     168 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     169 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     170 </span>            :     }
+<span class="lineNum">     171 </span><span class="lineCov">       1022 :     return Expression(make_tuple(result[0],result[1]));</span>
+<a name="172"><span class="lineNum">     172 </span>            :     </a>
+<span class="lineNum">     173 </span>            : }
+<span class="lineNum">     174 </span><span class="lineCov">         99 : Expression envir::line(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     175 </span>            : {
+<span class="lineNum">     176 </span><span class="lineCov">        198 :     vector&lt;tuple&lt;double,double&gt;&gt; result;</span>
+<span class="lineNum">     177 </span><span class="lineCov">         99 :     if(input.size() != 2)</span>
+<span class="lineNum">     178 </span>            :     {
+<span class="lineNum">     179 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     180 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     181 </span>            :     }
+<span class="lineNum">     182 </span><span class="lineCov">        207 :     for(int i=0; i&lt;2; i++)</span>
+<span class="lineNum">     183 </span>            :     {
+<span class="lineNum">     184 </span><span class="lineCov">        144 :         if(input[i].type != &quot;point&quot; &amp;&amp; input[i].type != &quot;symbol&quot;)</span>
+<span class="lineNum">     185 </span>            :         {
+<span class="lineNum">     186 </span><span class="lineCov">         18 :             InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     187 </span><span class="lineCov">         18 :             throw error;</span>
+<span class="lineNum">     188 </span>            :         }
+<span class="lineNum">     189 </span><span class="lineCov">        126 :         if(input[i].type == &quot;point&quot;)</span>
+<span class="lineNum">     190 </span>            :         {
+<span class="lineNum">     191 </span><span class="lineCov">        108 :            result.push_back(input[i].start);</span>
+<span class="lineNum">     192 </span>            :         }
+<span class="lineNum">     193 </span><span class="lineCov">        126 :         if(input[i].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     194 </span>            :         {
+<span class="lineNum">     195 </span><span class="lineCov">         18 :             not_found_exp(input[i].symbol);</span>
+<span class="lineNum">     196 </span><span class="lineCov">         18 :             input[i] = exp_envir.find(input[i].symbol)-&gt;second;</span>
+<span class="lineNum">     197 </span><span class="lineCov">         18 :             result.push_back(input[i].start);</span>
+<span class="lineNum">     198 </span>            :         }
+<span class="lineNum">     199 </span>            :     }
+<span class="lineNum">     200 </span><span class="lineCov">        126 :     return Expression(result[0],result[1]);</span>
+<a name="201"><span class="lineNum">     201 </span>            :     </a>
+<span class="lineNum">     202 </span>            : }
+<span class="lineNum">     203 </span><span class="lineCov">        142 : Expression envir::arc(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     204 </span>            : {
+<span class="lineNum">     205 </span><span class="lineCov">        142 :     if(input.size() != 3)</span>
+<span class="lineNum">     206 </span>            :     {
+<span class="lineNum">     207 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     208 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     209 </span>            :     }
+<span class="lineNum">     210 </span><span class="lineCov">        248 :     vector&lt;tuple&lt;double,double&gt;&gt; result;</span>
+<span class="lineNum">     211 </span><span class="lineCov">        124 :     double angle = 0;</span>
+<span class="lineNum">     212 </span><span class="lineCov">        322 :     for(int i=0; i&lt;2; i++)</span>
+<span class="lineNum">     213 </span>            :     {
+<span class="lineNum">     214 </span><span class="lineCov">        230 :         if(input[i].type != &quot;point&quot; &amp;&amp; input[i].type != &quot;symbol&quot;)</span>
+<span class="lineNum">     215 </span>            :         {
+<span class="lineNum">     216 </span><span class="lineCov">         18 :             InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     217 </span><span class="lineCov">         18 :             throw error;</span>
+<span class="lineNum">     218 </span>            :         }
+<span class="lineNum">     219 </span><span class="lineCov">        212 :         if(input[i].type == &quot;point&quot;)</span>
+<span class="lineNum">     220 </span>            :         {
+<span class="lineNum">     221 </span><span class="lineCov">        180 :             result.push_back(input[i].start);</span>
+<span class="lineNum">     222 </span>            :         }
+<span class="lineNum">     223 </span><span class="lineCov">        212 :         if(input[i].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     224 </span>            :         {
+<span class="lineNum">     225 </span><span class="lineCov">         46 :             not_found_exp(input[i].symbol);</span>
+<span class="lineNum">     226 </span><span class="lineCov">         18 :             input[i] = exp_envir.find(input[i].symbol)-&gt;second;</span>
+<span class="lineNum">     227 </span><span class="lineCov">         18 :             result.push_back(input[i].start);</span>
+<span class="lineNum">     228 </span>            :         }
+<span class="lineNum">     229 </span>            : 
+<span class="lineNum">     230 </span>            :     }
+<span class="lineNum">     231 </span><span class="lineCov">         92 :     if(input[2].type == &quot;number&quot;)</span>
+<span class="lineNum">     232 </span>            :     {
+<span class="lineNum">     233 </span><span class="lineCov">         29 :         angle = input[2].number_value;</span>
+<span class="lineNum">     234 </span>            :     }
+<span class="lineNum">     235 </span><span class="lineCov">         63 :     else if(input[2].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     236 </span>            :     {
+<span class="lineNum">     237 </span><span class="lineCov">         45 :         not_found(input[2].symbol);</span>
+<span class="lineNum">     238 </span><span class="lineCov">         45 :         angle = environment.find(input[2].symbol) -&gt; second;</span>
+<span class="lineNum">     239 </span>            :     }
+<span class="lineNum">     240 </span>            :     else
+<span class="lineNum">     241 </span>            :     {
+<span class="lineNum">     242 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     243 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     244 </span>            :     }
+<span class="lineNum">     245 </span><span class="lineCov">        148 :     return Expression(result[0],result[1],angle);</span>
+<a name="246"><span class="lineNum">     246 </span>            : }</a>
+<span class="lineNum">     247 </span>            : //--------------------return bool---------------------
+<span class="lineNum">     248 </span><span class="lineCov">        180 : bool envir::_and(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     249 </span>            : {
+<span class="lineNum">     250 </span><span class="lineCov">        180 :     if(input.size() == 1)</span>
+<span class="lineNum">     251 </span>            :     {
+<span class="lineNum">     252 </span><span class="lineCov">         36 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     253 </span><span class="lineCov">         36 :         throw error;</span>
+<span class="lineNum">     254 </span>            :     }
+<span class="lineNum">     255 </span><span class="lineCov">        288 :     for(int i =0; i&lt;input.size(); i++)</span>
+<span class="lineNum">     256 </span>            :     {
+<span class="lineNum">     257 </span><span class="lineCov">        252 :         if(input[i].type != &quot;bool&quot; &amp;&amp; input[i].type != &quot;symbol&quot;)</span>
+<span class="lineNum">     258 </span>            :         {
+<span class="lineNum">     259 </span><span class="lineCov">         18 :             InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     260 </span><span class="lineCov">         18 :             throw error;</span>
+<span class="lineNum">     261 </span>            :         }
+<span class="lineNum">     262 </span><span class="lineCov">        234 :         if(input[i].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     263 </span>            :         {
+<span class="lineNum">     264 </span><span class="lineCov">         54 :             not_found_bool(input[i].symbol);</span>
+<span class="lineNum">     265 </span><span class="lineCov">         54 :             input[i].bool_value = bool_envir.find(input[i].symbol) -&gt; second;</span>
+<span class="lineNum">     266 </span>            :         }
+<span class="lineNum">     267 </span><span class="lineCov">        234 :         if(input[i].bool_value == true)</span>
+<span class="lineNum">     268 </span>            :         {
+<span class="lineNum">     269 </span><span class="lineCov">        144 :             continue;</span>
+<span class="lineNum">     270 </span>            :         }
+<span class="lineNum">     271 </span>            :         else
+<span class="lineNum">     272 </span>            :         {
+<span class="lineNum">     273 </span><span class="lineCov">         90 :             return false;</span>
+<span class="lineNum">     274 </span>            :         }
+<span class="lineNum">     275 </span>            :     }
+<span class="lineNum">     276 </span><span class="lineCov">         36 :     return true;</span>
+<a name="277"><span class="lineNum">     277 </span>            : }</a>
+<span class="lineNum">     278 </span>            : //
+<span class="lineNum">     279 </span><span class="lineCov">        180 : bool envir::_or(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     280 </span>            : {
+<span class="lineNum">     281 </span><span class="lineCov">        180 :     if(input.size() == 1)</span>
+<span class="lineNum">     282 </span>            :     {
+<span class="lineNum">     283 </span><span class="lineCov">         36 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     284 </span><span class="lineCov">         36 :         throw error;</span>
+<span class="lineNum">     285 </span>            :     }
+<span class="lineNum">     286 </span><span class="lineCov">        198 :     for(int i=0; i&lt;input.size();i++)</span>
+<span class="lineNum">     287 </span>            :     {
+<span class="lineNum">     288 </span><span class="lineCov">        180 :         if(input[i].type != &quot;bool&quot; &amp;&amp; input[i].type != &quot;symbol&quot;)</span>
+<span class="lineNum">     289 </span>            :         {
+<span class="lineNum">     290 </span><span class="lineCov">         18 :             InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     291 </span><span class="lineCov">         18 :             throw error;</span>
+<span class="lineNum">     292 </span>            :         }
+<span class="lineNum">     293 </span><span class="lineCov">        162 :         if(input[i].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     294 </span>            :         {
+<span class="lineNum">     295 </span><span class="lineCov">         36 :             not_found_bool(input[i].symbol);</span>
+<span class="lineNum">     296 </span><span class="lineCov">         36 :             input[i].bool_value = bool_envir.find(input[i].symbol) -&gt; second;</span>
+<span class="lineNum">     297 </span>            :         }
+<span class="lineNum">     298 </span><span class="lineCov">        162 :         if(input[i].bool_value == true )</span>
+<span class="lineNum">     299 </span>            :         {
+<span class="lineNum">     300 </span><span class="lineCov">        108 :             return true;</span>
+<span class="lineNum">     301 </span>            :         }
+<span class="lineNum">     302 </span>            :     }
+<span class="lineNum">     303 </span><span class="lineCov">         18 :     return false;</span>
+<span class="lineNum">     304 </span>            :     
+<a name="305"><span class="lineNum">     305 </span>            : }</a>
+<span class="lineNum">     306 </span>            : //
+<span class="lineNum">     307 </span><span class="lineCov">        108 : bool envir::_not(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     308 </span>            : {
+<span class="lineNum">     309 </span><span class="lineCov">        108 :     if(input.size() != 1)</span>
+<span class="lineNum">     310 </span>            :     {
+<span class="lineNum">     311 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     312 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     313 </span>            :     }
+<span class="lineNum">     314 </span><span class="lineCov">         90 :     if(input[0].type != &quot;bool&quot; &amp;&amp; input[0].type != &quot;symbol&quot;)</span>
+<span class="lineNum">     315 </span>            :     {
+<span class="lineNum">     316 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     317 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     318 </span>            :     }
+<span class="lineNum">     319 </span><span class="lineCov">         72 :     if(input[0].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     320 </span>            :     {
+<span class="lineNum">     321 </span><span class="lineCov">         54 :         not_found_bool(input[0].symbol);</span>
+<span class="lineNum">     322 </span><span class="lineCov">         18 :         input[0].bool_value = bool_envir.find(input[0].symbol) -&gt; second;</span>
+<span class="lineNum">     323 </span>            :     }
+<span class="lineNum">     324 </span><span class="lineCov">         54 :     if(input[0].bool_value == true)</span>
+<span class="lineNum">     325 </span>            :     {
+<span class="lineNum">     326 </span><span class="lineCov">         36 :         return false;</span>
+<span class="lineNum">     327 </span>            :     }
+<span class="lineNum">     328 </span>            :     else
+<span class="lineNum">     329 </span>            :     {
+<span class="lineNum">     330 </span><span class="lineCov">         18 :         return true;</span>
+<span class="lineNum">     331 </span>            :     }
+<a name="332"><span class="lineNum">     332 </span>            : }</a>
+<span class="lineNum">     333 </span>            : //
+<span class="lineNum">     334 </span><span class="lineCov">        126 : bool envir::small(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     335 </span>            : {
+<span class="lineNum">     336 </span><span class="lineCov">        216 :     vector&lt;double&gt; result;</span>
+<span class="lineNum">     337 </span><span class="lineCov">        126 :     build_string_vector(input, result);</span>
+<span class="lineNum">     338 </span><span class="lineCov">         90 :     if(result[0] &lt; result[1])</span>
+<span class="lineNum">     339 </span>            :     {
+<span class="lineNum">     340 </span><span class="lineCov">         72 :         return true;</span>
+<span class="lineNum">     341 </span>            :     }
+<span class="lineNum">     342 </span>            :     else
+<span class="lineNum">     343 </span>            :     {
+<span class="lineNum">     344 </span><span class="lineCov">         18 :         return false;</span>
+<span class="lineNum">     345 </span>            :     }
+<a name="346"><span class="lineNum">     346 </span>            : }</a>
+<span class="lineNum">     347 </span>            : //
+<span class="lineNum">     348 </span><span class="lineCov">         72 : bool envir::small_equal(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     349 </span>            : {
+<span class="lineNum">     350 </span><span class="lineCov">        144 :     vector&lt;double&gt; result;</span>
+<span class="lineNum">     351 </span><span class="lineCov">         72 :     build_string_vector(input, result);</span>
+<span class="lineNum">     352 </span><span class="lineCov">         72 :     if(result[0] &lt;= result[1])</span>
+<span class="lineNum">     353 </span>            :     {
+<span class="lineNum">     354 </span><span class="lineCov">         36 :         return true;</span>
+<span class="lineNum">     355 </span>            :     }
+<span class="lineNum">     356 </span>            :     else
+<span class="lineNum">     357 </span>            :     {
+<span class="lineNum">     358 </span><span class="lineCov">         36 :         return false;</span>
+<span class="lineNum">     359 </span>            :     }
+<a name="360"><span class="lineNum">     360 </span>            : }</a>
+<span class="lineNum">     361 </span>            : 
+<span class="lineNum">     362 </span><span class="lineCov">         36 : bool envir::larger(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     363 </span>            : {
+<span class="lineNum">     364 </span><span class="lineCov">         72 :     vector&lt;double&gt; result;</span>
+<span class="lineNum">     365 </span><span class="lineCov">         36 :     build_string_vector(input, result);</span>
+<span class="lineNum">     366 </span><span class="lineCov">         36 :     if(result[0] &gt; result[1])</span>
+<span class="lineNum">     367 </span>            :     {
+<span class="lineNum">     368 </span><span class="lineCov">         18 :         return true;</span>
+<span class="lineNum">     369 </span>            :     }
+<span class="lineNum">     370 </span>            :     else
+<span class="lineNum">     371 </span>            :     {
+<span class="lineNum">     372 </span><span class="lineCov">         18 :         return false;</span>
+<span class="lineNum">     373 </span>            :     }
+<a name="374"><span class="lineNum">     374 </span>            : }</a>
+<span class="lineNum">     375 </span>            : 
+<span class="lineNum">     376 </span><span class="lineCov">         72 : bool envir::larger_equal(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     377 </span>            : {
+<span class="lineNum">     378 </span><span class="lineCov">        144 :     vector&lt;double&gt; result;</span>
+<span class="lineNum">     379 </span><span class="lineCov">         72 :     build_string_vector(input, result);</span>
+<span class="lineNum">     380 </span><span class="lineCov">         72 :     if(result[0] &gt;= result[1])</span>
+<span class="lineNum">     381 </span>            :     {
+<span class="lineNum">     382 </span><span class="lineCov">         36 :         return true;</span>
+<span class="lineNum">     383 </span>            :     }
+<span class="lineNum">     384 </span>            :     else
+<span class="lineNum">     385 </span>            :     {
+<span class="lineNum">     386 </span><span class="lineCov">         36 :         return false;</span>
+<span class="lineNum">     387 </span>            :     }
+<a name="388"><span class="lineNum">     388 </span>            : }</a>
+<span class="lineNum">     389 </span>            : 
+<span class="lineNum">     390 </span><span class="lineCov">         90 : bool envir::equal(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     391 </span>            : {
+<span class="lineNum">     392 </span><span class="lineCov">        180 :     vector&lt;double&gt; result;</span>
+<span class="lineNum">     393 </span><span class="lineCov">         90 :     build_string_vector(input, result);</span>
+<span class="lineNum">     394 </span><span class="lineCov">         90 :     if(result[0] == result[1])</span>
+<span class="lineNum">     395 </span>            :     {
+<span class="lineNum">     396 </span><span class="lineCov">         36 :         return true;</span>
+<span class="lineNum">     397 </span>            :     }
+<span class="lineNum">     398 </span>            :     else
+<span class="lineNum">     399 </span>            :     {
+<span class="lineNum">     400 </span><span class="lineCov">         54 :         return false;</span>
+<span class="lineNum">     401 </span>            :     }
+<span class="lineNum">     402 </span>            : }
+<a name="403"><span class="lineNum">     403 </span>            : ////-----------------------------special-------------------------------</a>
+<span class="lineNum">     404 </span>            : 
+<span class="lineNum">     405 </span><span class="lineCov">        196 : Expression envir::_if(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     406 </span>            : {
+<span class="lineNum">     407 </span><span class="lineCov">        196 :     input.erase(input.begin()); //delete if</span>
+<span class="lineNum">     408 </span><span class="lineCov">        196 :     if(input.size() != 3 || (input[0].type != &quot;symbol&quot; &amp;&amp; input[0].type != &quot;bool&quot;))</span>
+<span class="lineNum">     409 </span>            :     {
+<span class="lineNum">     410 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     411 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     412 </span>            :     }
+<span class="lineNum">     413 </span><span class="lineCov">        178 :     if(input[0].bool_value == true)</span>
+<span class="lineNum">     414 </span>            :     {
+<span class="lineNum">     415 </span><span class="lineCov">        106 :         if(input[1].type == &quot;number&quot; || input[1].type == &quot;bool&quot;)</span>
+<span class="lineNum">     416 </span>            :         {
+<span class="lineNum">     417 </span><span class="lineCov">         72 :             return input[1];</span>
+<span class="lineNum">     418 </span>            :         }
+<span class="lineNum">     419 </span><span class="lineCov">         50 :         not_found(input[1].symbol);</span>
+<span class="lineNum">     420 </span><span class="lineCov">         18 :         double val = environment.find(input[1].symbol) -&gt; second;</span>
+<span class="lineNum">     421 </span><span class="lineCov">         36 :         Expression result(val);</span>
+<span class="lineNum">     422 </span><span class="lineCov">         18 :         return result;</span>
+<span class="lineNum">     423 </span>            :     }
+<span class="lineNum">     424 </span>            :     else
+<span class="lineNum">     425 </span>            :     {
+<span class="lineNum">     426 </span><span class="lineCov">         72 :         if(input[2].type == &quot;number&quot; || input[2].type == &quot;bool&quot;)</span>
+<span class="lineNum">     427 </span>            :         {
+<span class="lineNum">     428 </span><span class="lineCov">         18 :             return input[2];</span>
+<span class="lineNum">     429 </span>            :         }
+<span class="lineNum">     430 </span><span class="lineCov">         90 :         not_found(input[2].symbol);</span>
+<span class="lineNum">     431 </span><span class="lineCov">         18 :         double val = environment.find(input[2].symbol) -&gt; second;</span>
+<span class="lineNum">     432 </span><span class="lineCov">         36 :         Expression result(val);</span>
+<span class="lineNum">     433 </span><span class="lineCov">         18 :         return result;</span>
+<span class="lineNum">     434 </span>            :     }
+<a name="435"><span class="lineNum">     435 </span>            : }</a>
+<span class="lineNum">     436 </span>            : 
+<span class="lineNum">     437 </span><span class="lineCov">        602 : Expression envir::begin(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     438 </span>            : {
+<span class="lineNum">     439 </span><span class="lineCov">        602 :     input.erase(input.begin());</span>
+<span class="lineNum">     440 </span><span class="lineCov">       1204 :     vector&lt;Expression&gt; result;</span>
+<span class="lineNum">     441 </span><span class="lineCov">       2220 :     for(int i=0; i&lt;input.size();i++)</span>
+<span class="lineNum">     442 </span>            :     {
+<span class="lineNum">     443 </span><span class="lineCov">       1618 :         result.push_back(input[i]);</span>
+<span class="lineNum">     444 </span>            :     }
+<span class="lineNum">     445 </span><span class="lineCov">        602 :     if(result.back().type == &quot;number&quot; || result.back().type == &quot;bool&quot; || result.back().type == &quot;None&quot; || result.back().type == &quot;line&quot; || result.back().type == &quot;point&quot;||result.back().type == &quot;arc&quot;)</span>
+<span class="lineNum">     446 </span>            :     {
+<span class="lineNum">     447 </span><span class="lineCov">        530 :         return result.back();</span>
+<span class="lineNum">     448 </span>            :     }
+<span class="lineNum">     449 </span>            :     else
+<span class="lineNum">     450 </span>            :     {
+<span class="lineNum">     451 </span><span class="lineCov">         72 :         if(bool_envir.find(result.back().symbol) != bool_envir.end()) //is bool</span>
+<span class="lineNum">     452 </span>            :         {
+<span class="lineNum">     453 </span><span class="lineCov">         18 :              bool val = bool_envir.find(result.back().symbol)-&gt; second;</span>
+<span class="lineNum">     454 </span><span class="lineCov">         36 :              Expression temp(val);</span>
+<span class="lineNum">     455 </span><span class="lineCov">         18 :              return temp;</span>
+<span class="lineNum">     456 </span>            :         }
+<span class="lineNum">     457 </span><span class="lineCov">         54 :         if(exp_envir.find(result.back().symbol) != exp_envir.end())//is exp</span>
+<span class="lineNum">     458 </span>            :         {
+<span class="lineNum">     459 </span><span class="lineCov">         36 :               Expression val = exp_envir.find(result.back().symbol)-&gt; second;</span>
+<span class="lineNum">     460 </span><span class="lineCov">         18 :               return val;</span>
+<span class="lineNum">     461 </span>            :         }
+<span class="lineNum">     462 </span><span class="lineCov">         36 :         if(environment.find(result.back().symbol) != environment.end())//is number</span>
+<span class="lineNum">     463 </span>            :         {
+<span class="lineNum">     464 </span><span class="lineCov">         18 :             double val = environment.find(result.back().symbol) -&gt; second;</span>
+<span class="lineNum">     465 </span><span class="lineCov">         36 :             Expression result(val);</span>
+<span class="lineNum">     466 </span><span class="lineCov">         18 :             return result;</span>
+<span class="lineNum">     467 </span>            :         }
+<span class="lineNum">     468 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;not defined&quot;); //is nothing</span>
+<span class="lineNum">     469 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     470 </span>            : 
+<span class="lineNum">     471 </span>            :     }
+<a name="472"><span class="lineNum">     472 </span>            : }</a>
+<span class="lineNum">     473 </span>            : 
+<span class="lineNum">     474 </span><span class="lineCov">       1320 : Expression envir::single(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     475 </span>            : {
+<span class="lineNum">     476 </span>            :     double value;
+<span class="lineNum">     477 </span><span class="lineCov">       2640 :     Expression result;</span>
+<span class="lineNum">     478 </span><span class="lineCov">       1320 :     if (input[0].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     479 </span>            :     {
+<span class="lineNum">     480 </span><span class="lineCov">        282 :         if(bool_envir.find(input[0].symbol) != bool_envir.end()) //is bool</span>
+<span class="lineNum">     481 </span>            :         {
+<span class="lineNum">     482 </span><span class="lineCov">         52 :             bool val = bool_envir.find(input[0].symbol)-&gt; second;</span>
+<span class="lineNum">     483 </span><span class="lineCov">        104 :             Expression temp(val);</span>
+<span class="lineNum">     484 </span><span class="lineCov">         52 :             result = temp;</span>
+<span class="lineNum">     485 </span><span class="lineCov">         52 :             return result;</span>
+<span class="lineNum">     486 </span>            :         }
+<span class="lineNum">     487 </span><span class="lineCov">        230 :         if(environment.find(input[0].symbol) != environment.end())</span>
+<span class="lineNum">     488 </span>            :         {
+<span class="lineNum">     489 </span><span class="lineCov">        108 :             value = environment.find(input[0].symbol) -&gt; second;</span>
+<span class="lineNum">     490 </span><span class="lineCov">        216 :             Expression temp(value);</span>
+<span class="lineNum">     491 </span><span class="lineCov">        108 :             result = temp;</span>
+<span class="lineNum">     492 </span><span class="lineCov">        108 :             return result;</span>
+<span class="lineNum">     493 </span>            :         }
+<span class="lineNum">     494 </span><span class="lineCov">        122 :         if(exp_envir.find(input[0].symbol) != exp_envir.end())//is exp</span>
+<span class="lineNum">     495 </span>            :         {
+<span class="lineNum">     496 </span><span class="lineCov">         36 :             Expression val = exp_envir.find(input[0].symbol)-&gt; second;</span>
+<span class="lineNum">     497 </span><span class="lineCov">         18 :             return val;</span>
+<span class="lineNum">     498 </span>            :         }
+<span class="lineNum">     499 </span><span class="lineCov">        104 :         InterpreterSemanticError error(&quot;not defined&quot;);</span>
+<span class="lineNum">     500 </span><span class="lineCov">        104 :         throw error;</span>
+<span class="lineNum">     501 </span>            :     }
+<span class="lineNum">     502 </span>            :     else
+<span class="lineNum">     503 </span>            :     {
+<span class="lineNum">     504 </span><span class="lineCov">       1038 :         result = input[0];</span>
+<span class="lineNum">     505 </span>            :     }
+<span class="lineNum">     506 </span><span class="lineCov">       1038 :     return result;</span>
+<a name="507"><span class="lineNum">     507 </span>            : }</a>
+<span class="lineNum">     508 </span>            : 
+<span class="lineNum">     509 </span><span class="lineCov">       1103 : Expression envir::define(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     510 </span>            : {
+<span class="lineNum">     511 </span><span class="lineCov">       1103 :     input.erase(input.begin());</span>
+<span class="lineNum">     512 </span><span class="lineCov">       1103 :     if(input.size() != 2)</span>
+<span class="lineNum">     513 </span>            :     {
+<span class="lineNum">     514 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     515 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     516 </span>            :     }
+<span class="lineNum">     517 </span><span class="lineCov">       2170 :     string v_name;</span>
+<span class="lineNum">     518 </span>            :     double val;
+<span class="lineNum">     519 </span>            :     bool bool_val;
+<span class="lineNum">     520 </span><span class="lineCov">       1085 :     v_name = input[0].symbol;</span>
+<span class="lineNum">     521 </span><span class="lineCov">       1085 :     if(input[0].type != &quot;symbol&quot;)</span>
+<span class="lineNum">     522 </span>            :     {
+<span class="lineNum">     523 </span><span class="lineCov">         36 :         InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     524 </span><span class="lineCov">         36 :         throw error;</span>
+<span class="lineNum">     525 </span>            :     }
+<span class="lineNum">     526 </span><span class="lineCov">       1049 :     if(is_number(v_name[0]) || is_boolop(v_name) || is_numop(v_name) || is_specialop(v_name) || environment.find(v_name) != environment.end() || bool_envir.find(v_name) != bool_envir.end() || exp_envir.find(v_name) != exp_envir.end())</span>
+<span class="lineNum">     527 </span>            :     {
+<span class="lineNum">     528 </span><span class="lineCov">         52 :         InterpreterSemanticError error(&quot;re-define&quot;);</span>
+<span class="lineNum">     529 </span><span class="lineCov">         52 :         throw error;</span>
+<span class="lineNum">     530 </span>            :     }
+<span class="lineNum">     531 </span>            :     
+<span class="lineNum">     532 </span><span class="lineCov">        997 :     if(input[1].type == &quot;number&quot;)</span>
+<span class="lineNum">     533 </span>            :     {
+<span class="lineNum">     534 </span><span class="lineCov">        580 :         val = input[1].number_value;</span>
+<span class="lineNum">     535 </span><span class="lineCov">        580 :         environment[v_name] = val;</span>
+<span class="lineNum">     536 </span><span class="lineCov">       1160 :         Expression result(val);</span>
+<span class="lineNum">     537 </span><span class="lineCov">        580 :         return result;</span>
+<span class="lineNum">     538 </span>            :     }
+<span class="lineNum">     539 </span><span class="lineCov">        417 :     else if(input[1].type == &quot;symbol&quot;)</span>
+<span class="lineNum">     540 </span>            :     {
+<span class="lineNum">     541 </span><span class="lineCov">         90 :         if(bool_envir.find(input[1].symbol) != bool_envir.end()) //is bool</span>
+<span class="lineNum">     542 </span>            :         {
+<span class="lineNum">     543 </span><span class="lineCov">         36 :             bool val = bool_envir.find(input[1].symbol)-&gt; second;</span>
+<span class="lineNum">     544 </span><span class="lineCov">         36 :             bool_envir[v_name] = val;</span>
+<span class="lineNum">     545 </span><span class="lineCov">         72 :             Expression temp(val);</span>
+<span class="lineNum">     546 </span><span class="lineCov">         36 :             return temp;</span>
+<span class="lineNum">     547 </span>            :         }
+<span class="lineNum">     548 </span><span class="lineCov">         54 :         if(exp_envir.find(input[1].symbol) != exp_envir.end())//is exp</span>
+<span class="lineNum">     549 </span>            :         {
+<span class="lineNum">     550 </span><span class="lineCov">         36 :             Expression val = exp_envir.find(input[1].symbol)-&gt; second;</span>
+<span class="lineNum">     551 </span><span class="lineCov">         18 :             exp_envir[v_name] = val;</span>
+<span class="lineNum">     552 </span><span class="lineCov">         18 :             return val;</span>
+<span class="lineNum">     553 </span>            :         }
+<span class="lineNum">     554 </span><span class="lineCov">         36 :         if(environment.find(input[1].symbol) != environment.end()) //is number</span>
+<span class="lineNum">     555 </span>            :         {
+<span class="lineNum">     556 </span><span class="lineCov">         18 :             val = environment.find(input[1].symbol) -&gt; second;</span>
+<span class="lineNum">     557 </span><span class="lineCov">         18 :             environment[v_name] = val;</span>
+<span class="lineNum">     558 </span><span class="lineCov">         36 :             Expression result(val);</span>
+<span class="lineNum">     559 </span><span class="lineCov">         18 :             return result;</span>
+<span class="lineNum">     560 </span>            :         }
+<span class="lineNum">     561 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;not defined&quot;);</span>
+<span class="lineNum">     562 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     563 </span>            :         
+<span class="lineNum">     564 </span>            :     }
+<span class="lineNum">     565 </span><span class="lineCov">        327 :     else if(input[1].type == &quot;point&quot; || input[1].type == &quot;line&quot;||input[1].type == &quot;arc&quot;)</span>
+<span class="lineNum">     566 </span>            :     {
+<span class="lineNum">     567 </span><span class="lineCov">        108 :         exp_envir[v_name] = input[1];</span>
+<span class="lineNum">     568 </span><span class="lineCov">        108 :         return input[1];</span>
+<span class="lineNum">     569 </span>            :     }
+<span class="lineNum">     570 </span>            :     else
+<span class="lineNum">     571 </span>            :     {
+<span class="lineNum">     572 </span><span class="lineCov">        219 :         bool_val = input[1].bool_value;</span>
+<span class="lineNum">     573 </span><span class="lineCov">        219 :         bool_envir[v_name] = bool_val;</span>
+<span class="lineNum">     574 </span><span class="lineCov">        438 :         Expression result(bool_val);</span>
+<span class="lineNum">     575 </span><span class="lineCov">        219 :         return result;</span>
+<span class="lineNum">     576 </span>            :     }
+<span class="lineNum">     577 </span>            : }
+<span class="lineNum">     578 </span>            : 
+<a name="579"><span class="lineNum">     579 </span>            : </a>
+<span class="lineNum">     580 </span>            : //-------------------------return double--------------------------
+<span class="lineNum">     581 </span><span class="lineCov">         72 : double envir::_sin(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     582 </span>            : {
+<span class="lineNum">     583 </span>            :     double result;
+<span class="lineNum">     584 </span><span class="lineCov">         72 :     if(input.size() != 1)</span>
+<span class="lineNum">     585 </span>            :     {
+<span class="lineNum">     586 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     587 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     588 </span>            :     }
+<span class="lineNum">     589 </span><span class="lineCov">         54 :     if(input[0].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     590 </span>            :     {
+<span class="lineNum">     591 </span><span class="lineCov">         18 :         result = sin(input[0].number_value);</span>
+<span class="lineNum">     592 </span><span class="lineCov">         18 :         return result;</span>
+<span class="lineNum">     593 </span>            :     }
+<span class="lineNum">     594 </span><span class="lineCov">         36 :     else if(input[0].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     595 </span>            :     {
+<span class="lineNum">     596 </span><span class="lineCov">         18 :         not_found(input[0].symbol);</span>
+<span class="lineNum">     597 </span><span class="lineCov">         18 :         result = sin(environment.find(input[0].symbol) -&gt; second);</span>
+<span class="lineNum">     598 </span><span class="lineCov">         18 :         return result;</span>
+<span class="lineNum">     599 </span>            :     }
+<span class="lineNum">     600 </span>            :     else
+<span class="lineNum">     601 </span>            :     {
+<span class="lineNum">     602 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     603 </span><span class="lineCov">         18 :         throw error;</span>
+<a name="604"><span class="lineNum">     604 </span>            :     }</a>
+<span class="lineNum">     605 </span>            : }
+<span class="lineNum">     606 </span><span class="lineCov">         70 : double envir::_cos(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     607 </span>            : {
+<span class="lineNum">     608 </span><span class="lineCov">         70 :     double result =0;</span>
+<span class="lineNum">     609 </span><span class="lineCov">         70 :     if(input.size() != 1)</span>
+<span class="lineNum">     610 </span>            :     {
+<span class="lineNum">     611 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     612 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     613 </span>            :     }
+<span class="lineNum">     614 </span><span class="lineCov">         52 :     if(input[0].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     615 </span>            :     {
+<span class="lineNum">     616 </span><span class="lineCov">         16 :         result = cos(input[0].number_value);</span>
+<span class="lineNum">     617 </span><span class="lineCov">         16 :         return result;</span>
+<span class="lineNum">     618 </span>            :     }
+<span class="lineNum">     619 </span><span class="lineCov">         36 :     else if(input[0].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     620 </span>            :     {
+<span class="lineNum">     621 </span><span class="lineCov">         18 :         not_found(input[0].symbol);</span>
+<span class="lineNum">     622 </span><span class="lineCov">         18 :         result = cos(environment.find(input[0].symbol) -&gt; second);</span>
+<span class="lineNum">     623 </span><span class="lineCov">         18 :         return result;</span>
+<span class="lineNum">     624 </span>            :     }
+<span class="lineNum">     625 </span>            :     else
+<span class="lineNum">     626 </span>            :     {
+<span class="lineNum">     627 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     628 </span><span class="lineCov">         18 :         throw error;</span>
+<a name="629"><span class="lineNum">     629 </span>            :     }</a>
+<span class="lineNum">     630 </span>            : }
+<span class="lineNum">     631 </span><span class="lineCov">         70 : double envir::arctan(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     632 </span>            : {
+<span class="lineNum">     633 </span><span class="lineCov">        140 :     vector&lt;double&gt; result;</span>
+<span class="lineNum">     634 </span><span class="lineCov">         70 :     if(input.size() == 2)</span>
+<span class="lineNum">     635 </span>            :     {
+<span class="lineNum">     636 </span>            :         //sub
+<span class="lineNum">     637 </span><span class="lineCov">        138 :         for(int i=0; i &lt; 2; i++)</span>
+<span class="lineNum">     638 </span>            :         {
+<span class="lineNum">     639 </span><span class="lineCov">        104 :             if(input[i].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     640 </span>            :             {
+<span class="lineNum">     641 </span><span class="lineCov">         70 :                 result.push_back(input[i].number_value);</span>
+<span class="lineNum">     642 </span>            :             }
+<span class="lineNum">     643 </span><span class="lineCov">         34 :             else if(input[i].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     644 </span>            :             {
+<span class="lineNum">     645 </span><span class="lineCov">         16 :                 not_found(input[i].symbol);</span>
+<span class="lineNum">     646 </span><span class="lineCov">         16 :                 result.push_back((environment.find(input[i].symbol) -&gt; second));</span>
+<span class="lineNum">     647 </span>            :             }
+<span class="lineNum">     648 </span>            :             else
+<span class="lineNum">     649 </span>            :             {
+<span class="lineNum">     650 </span><span class="lineCov">         18 :                 InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     651 </span><span class="lineCov">         18 :                 throw error;</span>
+<span class="lineNum">     652 </span>            :             }
+<span class="lineNum">     653 </span>            :         }
+<span class="lineNum">     654 </span>            :     }
+<span class="lineNum">     655 </span>            :     else
+<span class="lineNum">     656 </span>            :     {
+<span class="lineNum">     657 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     658 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     659 </span>            :     }
+<span class="lineNum">     660 </span><span class="lineCov">         68 :     return atan2(result[0],result[1]);</span>
+<a name="661"><span class="lineNum">     661 </span>            :     </a>
+<span class="lineNum">     662 </span>            : }
+<span class="lineNum">     663 </span><span class="lineCov">        124 : double envir::times(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     664 </span>            : {
+<span class="lineNum">     665 </span><span class="lineCov">        124 :     double result=1;</span>
+<span class="lineNum">     666 </span><span class="lineCov">        124 :     if(input.size() == 1)</span>
+<span class="lineNum">     667 </span>            :     {
+<span class="lineNum">     668 </span><span class="lineCov">         36 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     669 </span><span class="lineCov">         36 :         throw error;</span>
+<span class="lineNum">     670 </span>            :     }
+<span class="lineNum">     671 </span><span class="lineCov">        210 :     for(int i=0; i &lt; input.size();i++)</span>
+<span class="lineNum">     672 </span>            :     {
+<span class="lineNum">     673 </span><span class="lineCov">        158 :         if(input[i].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     674 </span>            :         {
+<span class="lineNum">     675 </span><span class="lineCov">        106 :             result = (input[i].number_value)*result;</span>
+<span class="lineNum">     676 </span>            :         }
+<span class="lineNum">     677 </span><span class="lineCov">         52 :         else if(input[i].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     678 </span>            :         {
+<span class="lineNum">     679 </span><span class="lineCov">         52 :             not_found(input[i].symbol);</span>
+<span class="lineNum">     680 </span><span class="lineCov">         16 :             result = result*(environment.find(input[i].symbol) -&gt; second);</span>
+<span class="lineNum">     681 </span>            :         }
+<span class="lineNum">     682 </span>            :         else
+<span class="lineNum">     683 </span>            :         {
+<span class="lineNum">     684 </span><span class="lineCov">         18 :             InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     685 </span><span class="lineCov">         18 :             throw error;</span>
+<span class="lineNum">     686 </span>            :         }
+<span class="lineNum">     687 </span>            :     }
+<span class="lineNum">     688 </span><span class="lineCov">         52 :     return result;</span>
+<a name="689"><span class="lineNum">     689 </span>            : }</a>
+<span class="lineNum">     690 </span>            : 
+<span class="lineNum">     691 </span><span class="lineCov">        160 : double envir::divid(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     692 </span>            : {
+<span class="lineNum">     693 </span><span class="lineCov">        320 :     vector&lt;double&gt; result;</span>
+<span class="lineNum">     694 </span><span class="lineCov">        160 :     if(input.size() == 2)</span>
+<span class="lineNum">     695 </span>            :     {
+<span class="lineNum">     696 </span>            :         //sub
+<span class="lineNum">     697 </span><span class="lineCov">        354 :         for(int i=0; i &lt; 2; i++)</span>
+<span class="lineNum">     698 </span>            :         {
+<span class="lineNum">     699 </span><span class="lineCov">        248 :             if(input[i].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     700 </span>            :             {
+<span class="lineNum">     701 </span><span class="lineCov">        196 :                 result.push_back(input[i].number_value);</span>
+<span class="lineNum">     702 </span>            :             }
+<span class="lineNum">     703 </span><span class="lineCov">         52 :             else if(input[i].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     704 </span>            :             {
+<span class="lineNum">     705 </span><span class="lineCov">         52 :                 not_found(input[i].symbol);</span>
+<span class="lineNum">     706 </span><span class="lineCov">         16 :                 result.push_back((environment.find(input[i].symbol) -&gt; second));</span>
+<span class="lineNum">     707 </span>            :             }
+<span class="lineNum">     708 </span>            :             else
+<span class="lineNum">     709 </span>            :             {
+<span class="lineNum">     710 </span><span class="lineCov">         18 :                 InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     711 </span><span class="lineCov">         18 :                 throw error;</span>
+<span class="lineNum">     712 </span>            :             }
+<span class="lineNum">     713 </span>            :         }
+<span class="lineNum">     714 </span>            :     }
+<span class="lineNum">     715 </span>            :     else
+<span class="lineNum">     716 </span>            :     {
+<span class="lineNum">     717 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     718 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     719 </span>            :     }
+<span class="lineNum">     720 </span><span class="lineCov">        212 :     return result[0] / result[1];</span>
+<a name="721"><span class="lineNum">     721 </span>            : }</a>
+<span class="lineNum">     722 </span>            : 
+<span class="lineNum">     723 </span><span class="lineCov">        324 : double envir::add(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     724 </span>            : {
+<span class="lineNum">     725 </span><span class="lineCov">        324 :     double sum = 0;</span>
+<span class="lineNum">     726 </span><span class="lineCov">        324 :     if(input.size() == 0)</span>
+<span class="lineNum">     727 </span>            :     {
+<span class="lineNum">     728 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     729 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     730 </span>            :     }
+<span class="lineNum">     731 </span><span class="lineCov">       1134 :     for(int i=0; i &lt; input.size();i++)</span>
+<span class="lineNum">     732 </span>            :     {
+<span class="lineNum">     733 </span><span class="lineCov">        846 :         if(input[i].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     734 </span>            :         {
+<span class="lineNum">     735 </span><span class="lineCov">        792 :             sum = input[i].number_value + sum;</span>
+<span class="lineNum">     736 </span>            :         }
+<span class="lineNum">     737 </span><span class="lineCov">         54 :         else if(input[i].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     738 </span>            :         {
+<span class="lineNum">     739 </span><span class="lineCov">         36 :             not_found(input[i].symbol);</span>
+<span class="lineNum">     740 </span><span class="lineCov">         36 :             sum = sum + (environment.find(input[i].symbol) -&gt; second);</span>
+<span class="lineNum">     741 </span>            :         }
+<span class="lineNum">     742 </span>            :         else
+<span class="lineNum">     743 </span>            :         {
+<span class="lineNum">     744 </span><span class="lineCov">         18 :             InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     745 </span><span class="lineCov">         18 :             throw error;</span>
+<span class="lineNum">     746 </span>            :         }
+<span class="lineNum">     747 </span>            :     }
+<span class="lineNum">     748 </span><span class="lineCov">        288 :     return sum;</span>
+<a name="749"><span class="lineNum">     749 </span>            : }</a>
+<span class="lineNum">     750 </span>            : 
+<span class="lineNum">     751 </span><span class="lineCov">        302 : double envir::sub(vector&lt;Expression&gt; input)</span>
+<span class="lineNum">     752 </span>            : {
+<span class="lineNum">     753 </span>            :     //if sub
+<span class="lineNum">     754 </span><span class="lineCov">        302 :     if(input.size() == 2)</span>
+<span class="lineNum">     755 </span>            :     {
+<span class="lineNum">     756 </span><span class="lineCov">        320 :         vector&lt;double&gt; result;</span>
+<span class="lineNum">     757 </span><span class="lineCov">        372 :         for(int i=0; i &lt; 2; i++)</span>
+<span class="lineNum">     758 </span>            :         {
+<span class="lineNum">     759 </span><span class="lineCov">        266 :             if(input[i].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     760 </span>            :             {
+<span class="lineNum">     761 </span><span class="lineCov">        196 :                 result.push_back((input[i].number_value));</span>
+<span class="lineNum">     762 </span>            :             }
+<span class="lineNum">     763 </span><span class="lineCov">         70 :             else if(input[i].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     764 </span>            :             {
+<span class="lineNum">     765 </span><span class="lineCov">         52 :                 not_found(input[i].symbol);</span>
+<span class="lineNum">     766 </span><span class="lineCov">         16 :                 result.push_back((environment.find(input[i].symbol) -&gt; second));</span>
+<span class="lineNum">     767 </span>            :             }
+<span class="lineNum">     768 </span>            :             else
+<span class="lineNum">     769 </span>            :             {
+<span class="lineNum">     770 </span><span class="lineCov">         36 :                 InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     771 </span><span class="lineCov">         36 :                 throw error;</span>
+<span class="lineNum">     772 </span>            :             }
+<span class="lineNum">     773 </span>            :         }
+<span class="lineNum">     774 </span><span class="lineCov">        106 :         return result[0] - result[1];</span>
+<span class="lineNum">     775 </span>            :     }
+<span class="lineNum">     776 </span>            :     //if negate
+<span class="lineNum">     777 </span><span class="lineCov">        142 :     else if(input.size() == 1)</span>
+<span class="lineNum">     778 </span>            :     {
+<span class="lineNum">     779 </span><span class="lineCov">        106 :         double result = 0;</span>
+<span class="lineNum">     780 </span><span class="lineCov">        106 :         if(input[0].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     781 </span>            :         {
+<span class="lineNum">     782 </span><span class="lineCov">         54 :             result = input[0].number_value;</span>
+<span class="lineNum">     783 </span>            :         }
+<span class="lineNum">     784 </span><span class="lineCov">         52 :         else if(input[0].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     785 </span>            :         {
+<span class="lineNum">     786 </span><span class="lineCov">         52 :             not_found(input[0].symbol);</span>
+<span class="lineNum">     787 </span><span class="lineCov">         16 :             result = environment.find(input[0].symbol) -&gt; second;</span>
+<span class="lineNum">     788 </span>            :         }
+<span class="lineNum">     789 </span>            :         else
+<span class="lineNum">     790 </span>            :         {
+<span class="lineNum">     791 </span><span class="lineCov">         18 :             InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     792 </span><span class="lineCov">         18 :             throw error;</span>
+<span class="lineNum">     793 </span>            :         }
+<span class="lineNum">     794 </span><span class="lineCov">         70 :         return -result;</span>
+<span class="lineNum">     795 </span>            : 
+<span class="lineNum">     796 </span>            :     }
+<span class="lineNum">     797 </span>            :     else
+<span class="lineNum">     798 </span>            :     {
+<span class="lineNum">     799 </span><span class="lineCov">         36 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     800 </span><span class="lineCov">         36 :         throw error;</span>
+<span class="lineNum">     801 </span>            :     }
+<span class="lineNum">     802 </span>            : }
+<a name="803"><span class="lineNum">     803 </span>            : </a>
+<span class="lineNum">     804 </span>            : ////------------------helper func--------------------
+<span class="lineNum">     805 </span><span class="lineCov">        396 : void envir::build_string_vector(vector&lt;Expression&gt; &amp;input,vector&lt;double&gt; &amp;result)</span>
+<span class="lineNum">     806 </span>            : {
+<span class="lineNum">     807 </span><span class="lineCov">        396 :     if(input.size() != 2)</span>
+<span class="lineNum">     808 </span>            :     {
+<span class="lineNum">     809 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;args number not right&quot;);</span>
+<span class="lineNum">     810 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     811 </span>            :     }
+<span class="lineNum">     812 </span><span class="lineCov">       1098 :     for(int i=0; i &lt; input.size(); i++)</span>
+<span class="lineNum">     813 </span>            :     {
+<span class="lineNum">     814 </span><span class="lineCov">        738 :         if(input[i].type == &quot;number&quot;) //is number</span>
+<span class="lineNum">     815 </span>            :         {
+<span class="lineNum">     816 </span><span class="lineCov">        648 :             result.push_back(input[i].number_value);</span>
+<span class="lineNum">     817 </span>            :         }
+<span class="lineNum">     818 </span><span class="lineCov">         90 :         else if(input[i].type == &quot;symbol&quot;) //is var</span>
+<span class="lineNum">     819 </span>            :         {
+<span class="lineNum">     820 </span><span class="lineCov">         72 :             not_found(input[i].symbol);</span>
+<span class="lineNum">     821 </span><span class="lineCov">         72 :             result.push_back((environment.find(input[i].symbol) -&gt; second));</span>
+<span class="lineNum">     822 </span>            :         }
+<span class="lineNum">     823 </span>            :         else
+<span class="lineNum">     824 </span>            :         {
+<span class="lineNum">     825 </span><span class="lineCov">         18 :             InterpreterSemanticError error(&quot;args type not right&quot;);</span>
+<span class="lineNum">     826 </span><span class="lineCov">         18 :             throw error;</span>
+<span class="lineNum">     827 </span>            :         }
+<span class="lineNum">     828 </span>            :     }
+<a name="829"><span class="lineNum">     829 </span><span class="lineCov">        360 : }</span></a>
+<span class="lineNum">     830 </span>            : 
+<span class="lineNum">     831 </span><span class="lineCov">        447 : void envir::not_found(string key)</span>
+<span class="lineNum">     832 </span>            : {
+<span class="lineNum">     833 </span><span class="lineCov">        447 :     if(environment.find(key) == environment.end())</span>
+<span class="lineNum">     834 </span>            :     {
+<span class="lineNum">     835 </span><span class="lineCov">        124 :         InterpreterSemanticError error(&quot;not defined&quot;);</span>
+<span class="lineNum">     836 </span><span class="lineCov">        124 :         throw error;</span>
+<span class="lineNum">     837 </span>            :     }
+<a name="838"><span class="lineNum">     838 </span><span class="lineCov">        323 : }</span></a>
+<span class="lineNum">     839 </span>            : 
+<span class="lineNum">     840 </span><span class="lineCov">        126 : void envir::not_found_bool(string key)</span>
+<span class="lineNum">     841 </span>            : {
+<span class="lineNum">     842 </span><span class="lineCov">        126 :     if(bool_envir.find(key) == bool_envir.end())</span>
+<span class="lineNum">     843 </span>            :     {
+<span class="lineNum">     844 </span><span class="lineCov">         18 :         InterpreterSemanticError error(&quot;not defined&quot;);</span>
+<span class="lineNum">     845 </span><span class="lineCov">         18 :         throw error;</span>
+<span class="lineNum">     846 </span>            :     }
+<a name="847"><span class="lineNum">     847 </span><span class="lineCov">        108 : }</span></a>
+<span class="lineNum">     848 </span>            : 
+<span class="lineNum">     849 </span><span class="lineCov">         68 : void envir::not_found_exp(string key)</span>
+<span class="lineNum">     850 </span>            : {
+<span class="lineNum">     851 </span><span class="lineCov">         68 :     if(exp_envir.find(key) == exp_envir.end())</span>
+<span class="lineNum">     852 </span>            :     {
+<span class="lineNum">     853 </span><span class="lineCov">         14 :         InterpreterSemanticError error(&quot;not defined&quot;);</span>
+<a name="854"><span class="lineNum">     854 </span><span class="lineCov">         14 :         throw error;</span></a>
+<span class="lineNum">     855 </span>            :     }
+<span class="lineNum">     856 </span><span class="lineCov">        156 : }</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

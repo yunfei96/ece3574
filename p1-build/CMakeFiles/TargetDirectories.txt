@@ -1,0 +1,5 @@
+/Users/YunfeiGuo/Desktop/ece3574/p1-build/CMakeFiles/RUN_TESTS.dir
+/Users/YunfeiGuo/Desktop/ece3574/p1-build/CMakeFiles/unittests.dir
+/Users/YunfeiGuo/Desktop/ece3574/p1-build/CMakeFiles/vtscript.dir
+/Users/YunfeiGuo/Desktop/ece3574/p1-build/CMakeFiles/ALL_BUILD.dir
+/Users/YunfeiGuo/Desktop/ece3574/p1-build/CMakeFiles/ZERO_CHECK.dir

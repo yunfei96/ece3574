@@ -1,0 +1,14 @@
+/vagrant/_build/CMakeFiles/test.dir
+/vagrant/_build/CMakeFiles/tidy.dir
+/vagrant/_build/CMakeFiles/rebuild_cache.dir
+/vagrant/_build/CMakeFiles/vtdraw.dir
+/vagrant/_build/CMakeFiles/coverage.dir
+/vagrant/_build/CMakeFiles/unittests.dir
+/vagrant/_build/CMakeFiles/edit_cache.dir
+/vagrant/_build/CMakeFiles/memtest.dir
+/vagrant/_build/CMakeFiles/vtscript.dir
+/vagrant/_build/CMakeFiles/test_gui.dir
+/vagrant/_build/CMakeFiles/vtdraw_automoc.dir
+/vagrant/_build/CMakeFiles/unittests_automoc.dir
+/vagrant/_build/CMakeFiles/vtscript_automoc.dir
+/vagrant/_build/CMakeFiles/test_gui_automoc.dir

@@ -1,0 +1,7 @@
+/Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeFiles/RUN_TESTS.dir
+/Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeFiles/vtray.dir
+/Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeFiles/unittests.dir
+/Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeFiles/vtray_automoc.dir
+/Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeFiles/unittests_automoc.dir
+/Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeFiles/ALL_BUILD.dir
+/Users/YunfeiGuo/Desktop/ece3574/p3-build/CMakeFiles/ZERO_CHECK.dir

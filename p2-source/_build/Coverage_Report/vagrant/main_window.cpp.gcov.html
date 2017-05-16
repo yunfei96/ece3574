@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/main_window.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - main_window.cpp<span style="font-size: 80%;"> (source / <a href="main_window.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntryHi">97.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-03-26 20:01:17</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include &quot;main_window.hpp&quot;</a>
+<span class="lineNum">       2 </span>            : #include &lt;QLayout&gt;
+<a name="3"><span class="lineNum">       3 </span>            : #include &lt;fstream&gt;</a>
+<span class="lineNum">       4 </span>            : #include &lt;QDebug&gt;
+<span class="lineNum">       5 </span><span class="lineCov">          2 : MainWindow::MainWindow(QWidget * parent)</span>
+<span class="lineNum">       6 </span>            : {
+<span class="lineNum">       7 </span><span class="lineCov">          2 :     this-&gt;setMinimumSize(800, 600);</span>
+<span class="lineNum">       8 </span><span class="lineCov">          2 :     info = new MessageWidget(nullptr);</span>
+<span class="lineNum">       9 </span><span class="lineCov">          2 :     input = new REPLWidget(nullptr);</span>
+<span class="lineNum">      10 </span><span class="lineCov">          2 :     display = new CanvasWidget(nullptr);</span>
+<span class="lineNum">      11 </span><span class="lineCov">          2 :     interp = new QtInterpreter();</span>
+<span class="lineNum">      12 </span><span class="lineCov">          2 :     auto layout = new QGridLayout;</span>
+<span class="lineNum">      13 </span><span class="lineCov">          2 :     layout -&gt; addWidget(info, 1, 0);</span>
+<span class="lineNum">      14 </span><span class="lineCov">          2 :     layout -&gt; addWidget(input, 3,0);</span>
+<span class="lineNum">      15 </span><span class="lineCov">          2 :     layout -&gt; addWidget(display, 2,0);</span>
+<span class="lineNum">      16 </span><span class="lineCov">          2 :     setLayout(layout);</span>
+<span class="lineNum">      17 </span>            :     //-----connect with self
+<span class="lineNum">      18 </span><span class="lineCov">          2 :     QObject::connect(input, SIGNAL(lineEntered(QString)), interp, SLOT(parseAndEvaluate(QString)));</span>
+<span class="lineNum">      19 </span><span class="lineCov">          2 :     QObject::connect(interp, SIGNAL(info(QString)), info, SLOT(info(QString)));</span>
+<span class="lineNum">      20 </span><span class="lineCov">          2 :     QObject::connect(interp, SIGNAL(error(QString)), info, SLOT(error(QString)));</span>
+<span class="lineNum">      21 </span><span class="lineCov">          2 :     QObject::connect(interp, SIGNAL(drawGraphic(QGraphicsItem *)), display, SLOT(addGraphic(QGraphicsItem * )));</span>
+<a name="22"><span class="lineNum">      22 </span><span class="lineCov">          2 : }</span></a>
+<span class="lineNum">      23 </span>            : 
+<span class="lineNum">      24 </span><span class="lineCov">          2 : MainWindow::MainWindow(std::string filename, QWidget * parent)</span>
+<span class="lineNum">      25 </span>            : {
+<span class="lineNum">      26 </span><span class="lineCov">          2 :     this-&gt;setMinimumSize(800, 600);</span>
+<span class="lineNum">      27 </span><span class="lineCov">          2 :     info = new MessageWidget(nullptr);</span>
+<span class="lineNum">      28 </span><span class="lineCov">          2 :     input = new REPLWidget(nullptr);</span>
+<span class="lineNum">      29 </span><span class="lineCov">          2 :     display = new CanvasWidget(nullptr);</span>
+<span class="lineNum">      30 </span><span class="lineCov">          2 :     interp = new QtInterpreter();</span>
+<span class="lineNum">      31 </span><span class="lineCov">          2 :     auto layout = new QGridLayout;</span>
+<span class="lineNum">      32 </span><span class="lineCov">          2 :     layout -&gt; addWidget(info, 1, 0);</span>
+<span class="lineNum">      33 </span><span class="lineCov">          2 :     layout -&gt; addWidget(input, 3,0);</span>
+<span class="lineNum">      34 </span><span class="lineCov">          2 :     layout -&gt; addWidget(display, 2,0);</span>
+<span class="lineNum">      35 </span><span class="lineCov">          2 :     setLayout(layout);</span>
+<span class="lineNum">      36 </span>            :     //-----connect with self
+<span class="lineNum">      37 </span><span class="lineCov">          2 :     QObject::connect(input, SIGNAL(lineEntered(QString)), interp, SLOT(parseAndEvaluate(QString)));</span>
+<span class="lineNum">      38 </span><span class="lineCov">          2 :     QObject::connect(interp, SIGNAL(info(QString)), info, SLOT(info(QString)));</span>
+<span class="lineNum">      39 </span><span class="lineCov">          2 :     QObject::connect(interp, SIGNAL(error(QString)), info, SLOT(error(QString)));</span>
+<span class="lineNum">      40 </span><span class="lineCov">          2 :     QObject::connect(interp, SIGNAL(drawGraphic(QGraphicsItem *)), display, SLOT(addGraphic(QGraphicsItem * )));</span>
+<span class="lineNum">      41 </span><span class="lineCov">          4 :     ifstream in(filename);</span>
+<span class="lineNum">      42 </span><span class="lineCov">          2 :     if(!in.is_open())</span>
+<span class="lineNum">      43 </span>            :     {
+<span class="lineNum">      44 </span><span class="lineCov">          2 :         info-&gt;error(&quot;Error: cannot open file&quot;);</span>
+<span class="lineNum">      45 </span>            :     }
+<span class="lineNum">      46 </span>            :     else
+<span class="lineNum">      47 </span>            :     {
+<span class="lineNum">      48 </span><span class="lineNoCov">          0 :        interp-&gt;readfile(in);</span>
+<a name="49"><span class="lineNum">      49 </span>            :     }</a>
+<span class="lineNum">      50 </span>            :     
+<span class="lineNum">      51 </span><span class="lineCov">          8 : }</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

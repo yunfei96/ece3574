@@ -1,0 +1,143 @@
+Start testing: May 01 15:06 UTC
+----------------------------------------------------------
+1/9 Testing: unit
+1/9 Test: unit
+Command: "/vagrant/_build/unittests"
+Directory: /vagrant/_build
+"unit" start time: May 01 15:06 UTC
+Output:
+----------------------------------------------------------
+===============================================================================
+All tests passed (9 assertions in 7 test cases)
+
+<end of output>
+Test time =   5.07 sec
+----------------------------------------------------------
+Test Passed.
+"unit" end time: May 01 15:06 UTC
+"unit" time elapsed: 00:00:05
+----------------------------------------------------------
+
+2/9 Testing: test0
+2/9 Test: test0
+Command: "/vagrant/_build/vtray" "/vagrant/tests/scene0.json" "output0.png"
+Directory: /vagrant/_build
+"test0" start time: May 01 15:06 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"test0" end time: May 01 15:06 UTC
+"test0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/9 Testing: test1
+3/9 Test: test1
+Command: "/vagrant/_build/vtray" "/vagrant/tests/scene1.json" "output1.png"
+Directory: /vagrant/_build
+"test1" start time: May 01 15:06 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.57 sec
+----------------------------------------------------------
+Test Passed.
+"test1" end time: May 01 15:06 UTC
+"test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/9 Testing: test2
+4/9 Test: test2
+Command: "/vagrant/_build/vtray" "/vagrant/tests/scene2.json" "output2.png"
+Directory: /vagrant/_build
+"test2" start time: May 01 15:06 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  42.31 sec
+----------------------------------------------------------
+Test Passed.
+"test2" end time: May 01 15:07 UTC
+"test2" time elapsed: 00:00:42
+----------------------------------------------------------
+
+5/9 Testing: test3
+5/9 Test: test3
+Command: "/vagrant/_build/vtray" "/vagrant/tests/scene3.json" "output3.png"
+Directory: /vagrant/_build
+"test3" start time: May 01 15:07 UTC
+Output:
+----------------------------------------------------------
+json parsing error
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test3" end time: May 01 15:07 UTC
+"test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/9 Testing: test4
+6/9 Test: test4
+Command: "/vagrant/_build/vtray" "/vagrant/tests/scene4.json" "output4.png"
+Directory: /vagrant/_build
+"test4" start time: May 01 15:07 UTC
+Output:
+----------------------------------------------------------
+json parsing error
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test4" end time: May 01 15:07 UTC
+"test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/9 Testing: test0diff
+7/9 Test: test0diff
+Command: "/usr/bin/perceptualdiff" "--sum-errors" "--output" "output0diff.png" "/vagrant/tests/scene0.png" "output0.png"
+Directory: /vagrant/_build
+"test0diff" start time: May 01 15:07 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test0diff" end time: May 01 15:07 UTC
+"test0diff" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/9 Testing: test1diff
+8/9 Test: test1diff
+Command: "/usr/bin/perceptualdiff" "--threshold" "200000" "--sum-errors" "--output" "output1diff.png" "/vagrant/tests/scene1.png" "output1.png"
+Directory: /vagrant/_build
+"test1diff" start time: May 01 15:07 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   2.34 sec
+----------------------------------------------------------
+Test Passed.
+"test1diff" end time: May 01 15:07 UTC
+"test1diff" time elapsed: 00:00:02
+----------------------------------------------------------
+
+9/9 Testing: test2diff
+9/9 Test: test2diff
+Command: "/usr/bin/perceptualdiff" "--threshold" "400000" "--sum-errors" "--output" "output2diff.png" "/vagrant/tests/scene2.png" "output2.png"
+Directory: /vagrant/_build
+"test2diff" start time: May 01 15:07 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   2.11 sec
+----------------------------------------------------------
+Test Passed.
+"test2diff" end time: May 01 15:07 UTC
+"test2diff" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: May 01 15:07 UTC

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/repl_widget.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - repl_widget.cpp<span style="font-size: 80%;"> (source / <a href="repl_widget.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-03-26 20:01:17</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include &quot;repl_widget.hpp&quot;</a>
+<span class="lineNum">       2 </span>            : #include &lt;QLabel&gt;
+<span class="lineNum">       3 </span>            : #include &lt;QHBoxLayout&gt;
+<span class="lineNum">       4 </span>            : #include &lt;QLineEdit&gt;
+<span class="lineNum">       5 </span>            : #include &lt;QDebug&gt;
+<a name="6"><span class="lineNum">       6 </span>            : #include &lt;QKeyEvent&gt;</a>
+<span class="lineNum">       7 </span>            : 
+<span class="lineNum">       8 </span><span class="lineCov">         60 : REPLWidget::REPLWidget(QWidget * parent)</span>
+<span class="lineNum">       9 </span>            : {
+<span class="lineNum">      10 </span><span class="lineCov">         60 :     label = new QLabel(tr(&quot;vtscript&gt;&quot;));</span>
+<span class="lineNum">      11 </span><span class="lineCov">         60 :     repl_lable = new mylineitem;</span>
+<span class="lineNum">      12 </span><span class="lineCov">         60 :     repl_lable-&gt;setReadOnly(false);</span>
+<span class="lineNum">      13 </span><span class="lineCov">         60 :     QHBoxLayout *layout = new QHBoxLayout();</span>
+<span class="lineNum">      14 </span><span class="lineCov">         60 :     layout-&gt;addWidget(label);</span>
+<span class="lineNum">      15 </span><span class="lineCov">         60 :     layout-&gt;addWidget(repl_lable);</span>
+<span class="lineNum">      16 </span><span class="lineCov">         60 :     setLayout(layout);</span>
+<span class="lineNum">      17 </span><span class="lineCov">         60 :     QObject::connect(repl_lable, SIGNAL(returnPressed()), this, SLOT(check_return_pressed()));</span>
+<span class="lineNum">      18 </span><span class="lineCov">         60 :     QObject::connect(repl_lable, SIGNAL(up_pressed()), this, SLOT(up_pressed()));</span>
+<span class="lineNum">      19 </span><span class="lineCov">         60 :     QObject::connect(repl_lable, SIGNAL(down_pressed()), this, SLOT(down_pressed()));</span>
+<a name="20"><span class="lineNum">      20 </span><span class="lineCov">         60 : }</span></a>
+<span class="lineNum">      21 </span>            : 
+<span class="lineNum">      22 </span><span class="lineCov">        321 : void REPLWidget::check_return_pressed()</span>
+<span class="lineNum">      23 </span>            : {
+<span class="lineNum">      24 </span><span class="lineCov">        321 :     emit lineEntered(repl_lable-&gt;text());</span>
+<span class="lineNum">      25 </span><span class="lineCov">        321 :     command.push_back(repl_lable-&gt;text());</span>
+<span class="lineNum">      26 </span><span class="lineCov">        321 :     command_position = 0;</span>
+<a name="27"><span class="lineNum">      27 </span><span class="lineCov">        321 :     repl_lable-&gt;clear();</span></a>
+<span class="lineNum">      28 </span><span class="lineCov">        321 : }</span>
+<span class="lineNum">      29 </span><span class="lineCov">         34 : void REPLWidget::up_pressed()</span>
+<span class="lineNum">      30 </span>            : {
+<span class="lineNum">      31 </span><span class="lineCov">         34 :     if(command_position &lt; command.size())</span>
+<span class="lineNum">      32 </span>            :     {
+<span class="lineNum">      33 </span><span class="lineCov">         34 :         repl_lable-&gt;setText(command[(command.size()-command_position)-1]);</span>
+<span class="lineNum">      34 </span><span class="lineCov">         34 :         command_position++;</span>
+<a name="35"><span class="lineNum">      35 </span>            :     }</a>
+<span class="lineNum">      36 </span><span class="lineCov">         34 : }</span>
+<span class="lineNum">      37 </span><span class="lineCov">         34 : void REPLWidget::down_pressed()</span>
+<span class="lineNum">      38 </span>            : {
+<span class="lineNum">      39 </span><span class="lineCov">         34 :     if(command_position &gt; 0)</span>
+<span class="lineNum">      40 </span>            :     {
+<span class="lineNum">      41 </span><span class="lineCov">         34 :         if(command_position == 1)</span>
+<span class="lineNum">      42 </span>            :         {
+<span class="lineNum">      43 </span><span class="lineCov">         26 :             repl_lable-&gt;clear();</span>
+<span class="lineNum">      44 </span><span class="lineCov">         26 :             command_position--;</span>
+<span class="lineNum">      45 </span>            :         }
+<span class="lineNum">      46 </span>            :         else
+<span class="lineNum">      47 </span>            :         {
+<span class="lineNum">      48 </span><span class="lineCov">          8 :            repl_lable-&gt;setText(command[command.size()-command_position+1]);</span>
+<span class="lineNum">      49 </span><span class="lineCov">          8 :             command_position--;</span>
+<span class="lineNum">      50 </span>            :         }
+<span class="lineNum">      51 </span>            :         
+<span class="lineNum">      52 </span>            :     }
+<span class="lineNum">      53 </span><span class="lineCov">         34 : }</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/qt_interpreter.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - qt_interpreter.cpp<span style="font-size: 80%;"> (source / <a href="qt_interpreter.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-03-26 20:01:17</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include &quot;qt_interpreter.hpp&quot;</a>
+<a name="2"><span class="lineNum">       2 </span>            : #include &lt;QString&gt;</a>
+<span class="lineNum">       3 </span>            : #include &lt;QDebug&gt;
+<span class="lineNum">       4 </span><span class="lineCov">         18 : QtInterpreter ::QtInterpreter(QObject * parent)</span>
+<span class="lineNum">       5 </span>            : {
+<a name="6"><span class="lineNum">       6 </span>            :     </a>
+<span class="lineNum">       7 </span><span class="lineCov">         18 : }</span>
+<span class="lineNum">       8 </span><span class="lineCov">         84 : void QtInterpreter::parseAndEvaluate(QString entry)</span>
+<span class="lineNum">       9 </span>            : {
+<span class="lineNum">      10 </span>            :     //output the entry
+<span class="lineNum">      11 </span><span class="lineCov">        168 :     string input_string;</span>
+<span class="lineNum">      12 </span><span class="lineCov">         84 :     input_string = entry.toStdString();</span>
+<span class="lineNum">      13 </span><span class="lineCov">        168 :     istringstream iss(input_string);</span>
+<a name="14"><span class="lineNum">      14 </span><span class="lineCov">         84 :     readfile(iss);</span></a>
+<span class="lineNum">      15 </span><span class="lineCov">         84 : }</span>
+<span class="lineNum">      16 </span><span class="lineCov">         88 : void QtInterpreter::readfile(std::istream &amp; expression)</span>
+<span class="lineNum">      17 </span>            : {
+<span class="lineNum">      18 </span><span class="lineCov">         88 :     bool ok = interp.parse(expression);</span>
+<span class="lineNum">      19 </span><span class="lineCov">         88 :     bool flag = calndis(ok);</span>
+<span class="lineNum">      20 </span><span class="lineCov">         88 :     if(!flag)</span>
+<span class="lineNum">      21 </span>            :     {
+<span class="lineNum">      22 </span><span class="lineCov">         22 :         emit error(result);</span>
+<span class="lineNum">      23 </span><span class="lineCov">         22 :         result.clear();</span>
+<span class="lineNum">      24 </span>            :     }
+<span class="lineNum">      25 </span>            :     else
+<span class="lineNum">      26 </span>            :     {
+<span class="lineNum">      27 </span><span class="lineCov">         66 :         emit info(result);</span>
+<span class="lineNum">      28 </span><span class="lineCov">         66 :         result.clear();</span>
+<span class="lineNum">      29 </span>            :     }
+<a name="30"><span class="lineNum">      30 </span><span class="lineCov">         88 :     draw();</span></a>
+<span class="lineNum">      31 </span><span class="lineCov">         88 : }</span>
+<span class="lineNum">      32 </span><span class="lineCov">         88 : bool QtInterpreter::calndis(bool ok)</span>
+<span class="lineNum">      33 </span>            : {
+<span class="lineNum">      34 </span><span class="lineCov">         88 :     if(ok)</span>
+<span class="lineNum">      35 </span>            :     {
+<span class="lineNum">      36 </span><span class="lineCov">        168 :         Expression myresult;</span>
+<span class="lineNum">      37 </span>            :         try
+<span class="lineNum">      38 </span>            :         {
+<span class="lineNum">      39 </span><span class="lineCov">         84 :             myresult = interp.eval();</span>
+<span class="lineNum">      40 </span>            :         }
+<span class="lineNum">      41 </span><span class="lineCov">         36 :         catch (InterpreterSemanticError e)</span>
+<span class="lineNum">      42 </span>            :         {
+<span class="lineNum">      43 </span><span class="lineCov">         36 :             QString temp1 = QString::fromStdString(&quot;Error: &quot;);</span>
+<span class="lineNum">      44 </span><span class="lineCov">         36 :             QString temp2 = QString::fromStdString(e.what());</span>
+<span class="lineNum">      45 </span><span class="lineCov">         18 :             result.push_back(temp1);</span>
+<span class="lineNum">      46 </span><span class="lineCov">         18 :             result.push_back(temp2);</span>
+<span class="lineNum">      47 </span><span class="lineCov">         36 :             Interpreter new_interp;</span>
+<span class="lineNum">      48 </span><span class="lineCov">         18 :             interp = new_interp;</span>
+<span class="lineNum">      49 </span><span class="lineCov">         18 :             return false;</span>
+<span class="lineNum">      50 </span>            :         }
+<span class="lineNum">      51 </span><span class="lineCov">         66 :         if(myresult.type == &quot;number&quot;)</span>
+<span class="lineNum">      52 </span>            :         {
+<span class="lineNum">      53 </span><span class="lineCov">         24 :             QString temp1 = QString::fromStdString(&quot;(&quot;);</span>
+<span class="lineNum">      54 </span><span class="lineCov">         24 :             std::stringstream buffer;</span>
+<span class="lineNum">      55 </span><span class="lineCov">         12 :             buffer &lt;&lt; myresult.number_value;</span>
+<span class="lineNum">      56 </span><span class="lineCov">         24 :             QString temp2 = QString::fromStdString(buffer.str());</span>
+<span class="lineNum">      57 </span><span class="lineCov">         24 :             QString temp3 = QString::fromStdString(&quot;)&quot;);</span>
+<span class="lineNum">      58 </span><span class="lineCov">         12 :             result.push_back(temp1);</span>
+<span class="lineNum">      59 </span><span class="lineCov">         12 :             result.push_back(temp2);</span>
+<span class="lineNum">      60 </span><span class="lineCov">         12 :             result.push_back(temp3);</span>
+<span class="lineNum">      61 </span>            :         }
+<span class="lineNum">      62 </span><span class="lineCov">         54 :         else if(myresult.type == &quot;bool&quot;)</span>
+<span class="lineNum">      63 </span>            :         {
+<span class="lineNum">      64 </span><span class="lineCov">         12 :             if(myresult.bool_value == true)</span>
+<span class="lineNum">      65 </span><span class="lineCov">          6 :                 result = QString::fromStdString(&quot;(True)&quot;);</span>
+<span class="lineNum">      66 </span>            :             else
+<span class="lineNum">      67 </span><span class="lineCov">          6 :                 result = QString::fromStdString(&quot;(False)&quot;);</span>
+<span class="lineNum">      68 </span>            :         }
+<span class="lineNum">      69 </span><span class="lineCov">         42 :         else if(myresult.type == &quot;point&quot;)</span>
+<span class="lineNum">      70 </span>            :         {
+<span class="lineNum">      71 </span><span class="lineCov">         12 :             std::stringstream buffer;</span>
+<span class="lineNum">      72 </span><span class="lineCov">          6 :             buffer &lt;&lt; &quot;(&quot; &lt;&lt; get&lt;0&gt;(myresult.start)&lt;&lt; &quot;,&quot; &lt;&lt;  get&lt;1&gt;(myresult.start)&lt;&lt; &quot;)&quot;;</span>
+<span class="lineNum">      73 </span><span class="lineCov">          6 :             result = QString::fromStdString(buffer.str());</span>
+<span class="lineNum">      74 </span>            :         }
+<span class="lineNum">      75 </span><span class="lineCov">         36 :         else if(myresult.type == &quot;line&quot;)</span>
+<span class="lineNum">      76 </span>            :         {
+<span class="lineNum">      77 </span><span class="lineCov">         12 :             std::stringstream buffer;</span>
+<span class="lineNum">      78 </span><span class="lineCov">          6 :             buffer &lt;&lt; &quot;((&quot; &lt;&lt; get&lt;0&gt;(myresult.start)&lt;&lt; &quot;,&quot; &lt;&lt;  get&lt;1&gt;(myresult.start)&lt;&lt; &quot;)&quot; &lt;&lt; &quot;(&quot; &lt;&lt; get&lt;0&gt;(myresult.end)&lt;&lt; &quot;,&quot; &lt;&lt;  get&lt;1&gt;(myresult.end) &lt;&lt; &quot;))&quot;;</span>
+<span class="lineNum">      79 </span><span class="lineCov">          6 :             result = QString::fromStdString(buffer.str());</span>
+<span class="lineNum">      80 </span>            :         }
+<span class="lineNum">      81 </span><span class="lineCov">         30 :         else if(myresult.type == &quot;arc&quot;)</span>
+<span class="lineNum">      82 </span>            :         {
+<span class="lineNum">      83 </span><span class="lineCov">         12 :             std::stringstream buffer;</span>
+<span class="lineNum">      84 </span><span class="lineCov">          6 :             buffer &lt;&lt; &quot;((&quot; &lt;&lt; get&lt;0&gt;(myresult.center)&lt;&lt; &quot;,&quot; &lt;&lt;  get&lt;1&gt;(myresult.center)&lt;&lt; &quot;)&quot; &lt;&lt; &quot;(&quot; &lt;&lt; get&lt;0&gt;(myresult.start)&lt;&lt; &quot;,&quot; &lt;&lt;  get&lt;1&gt;(myresult.start) &lt;&lt; &quot;)&quot;&lt;&lt; myresult.angle &lt;&lt; &quot;)&quot;;</span>
+<span class="lineNum">      85 </span><span class="lineCov">          6 :             result = QString::fromStdString(buffer.str());</span>
+<span class="lineNum">      86 </span>            :         }
+<span class="lineNum">      87 </span><span class="lineCov">         66 :         return true;</span>
+<span class="lineNum">      88 </span>            :     }
+<span class="lineNum">      89 </span><span class="lineCov">          4 :     result = QString::fromStdString(&quot;Error: parsing failed&quot;);</span>
+<span class="lineNum">      90 </span><span class="lineCov">          8 :     Interpreter new_interp;</span>
+<span class="lineNum">      91 </span><span class="lineCov">          4 :     interp = new_interp;</span>
+<a name="92"><span class="lineNum">      92 </span><span class="lineCov">          4 :     return false;</span></a>
+<span class="lineNum">      93 </span>            : }
+<span class="lineNum">      94 </span><span class="lineCov">         88 : void QtInterpreter::draw()</span>
+<span class="lineNum">      95 </span>            : {
+<span class="lineNum">      96 </span><span class="lineCov">        112 :     for(int i=0; i&lt;interp.drawlist.size();i++)</span>
+<span class="lineNum">      97 </span>            :     {
+<span class="lineNum">      98 </span><span class="lineCov">         24 :         if(interp.drawlist[i].type == &quot;line&quot;)</span>
+<span class="lineNum">      99 </span>            :         {
+<span class="lineNum">     100 </span>            :             int x;
+<span class="lineNum">     101 </span>            :             int y;
+<span class="lineNum">     102 </span>            :             int z;
+<span class="lineNum">     103 </span>            :             int k;
+<span class="lineNum">     104 </span><span class="lineCov">          6 :             x = get&lt;0&gt;(interp.drawlist[i].start);</span>
+<span class="lineNum">     105 </span><span class="lineCov">          6 :             y = get&lt;1&gt;(interp.drawlist[i].start);</span>
+<span class="lineNum">     106 </span><span class="lineCov">          6 :             z = get&lt;0&gt;(interp.drawlist[i].end);</span>
+<span class="lineNum">     107 </span><span class="lineCov">          6 :             k = get&lt;1&gt;(interp.drawlist[i].end);</span>
+<span class="lineNum">     108 </span><span class="lineCov">          6 :             QGraphicsLineItem *line = new QGraphicsLineItem(QLineF(x,y,z,k));</span>
+<span class="lineNum">     109 </span>            :     
+<span class="lineNum">     110 </span><span class="lineCov">          6 :             emit drawGraphic(line);</span>
+<span class="lineNum">     111 </span>            :         }
+<span class="lineNum">     112 </span><span class="lineCov">         18 :         else if(interp.drawlist[i].type == &quot;point&quot;)</span>
+<span class="lineNum">     113 </span>            :         {
+<span class="lineNum">     114 </span>            :             int x;
+<span class="lineNum">     115 </span>            :             int y;
+<span class="lineNum">     116 </span><span class="lineCov">          6 :             x = get&lt;0&gt;(interp.drawlist[i].start);</span>
+<span class="lineNum">     117 </span><span class="lineCov">          6 :             y = get&lt;1&gt;(interp.drawlist[i].start);</span>
+<span class="lineNum">     118 </span>            :             
+<span class="lineNum">     119 </span><span class="lineCov">          6 :             QGraphicsEllipseItem *point = new QGraphicsEllipseItem(x,y,2,2);</span>
+<span class="lineNum">     120 </span><span class="lineCov">          6 :             point-&gt;setBrush(QBrush(Qt::black, Qt::SolidPattern));</span>
+<span class="lineNum">     121 </span><span class="lineCov">          6 :             emit drawGraphic(point);</span>
+<span class="lineNum">     122 </span>            :         }
+<span class="lineNum">     123 </span>            :         else
+<span class="lineNum">     124 </span>            :         {
+<span class="lineNum">     125 </span>            :             int x;
+<span class="lineNum">     126 </span>            :             int y;
+<span class="lineNum">     127 </span>            :             int z;
+<span class="lineNum">     128 </span>            :             int k;
+<span class="lineNum">     129 </span>            :             double angle;
+<span class="lineNum">     130 </span><span class="lineCov">         12 :             x = get&lt;0&gt;(interp.drawlist[i].center);</span>
+<span class="lineNum">     131 </span><span class="lineCov">         12 :             y = get&lt;1&gt;(interp.drawlist[i].center);</span>
+<span class="lineNum">     132 </span><span class="lineCov">         12 :             z = get&lt;0&gt;(interp.drawlist[i].start);</span>
+<span class="lineNum">     133 </span><span class="lineCov">         12 :             k = get&lt;1&gt;(interp.drawlist[i].start);</span>
+<span class="lineNum">     134 </span><span class="lineCov">         12 :             angle = interp.drawlist[i].angle;</span>
+<span class="lineNum">     135 </span><span class="lineCov">         12 :             QGraphicsArcItem *arc = new QGraphicsArcItem(x,y,z,k,angle);</span>
+<span class="lineNum">     136 </span><span class="lineCov">         12 :             emit drawGraphic(arc);</span>
+<span class="lineNum">     137 </span>            :         }
+<span class="lineNum">     138 </span>            :         
+<a name="139"><span class="lineNum">     139 </span>            :     }</a>
+<span class="lineNum">     140 </span><span class="lineCov">         88 :     interp.drawlist.clear();</span>
+<span class="lineNum">     141 </span><span class="lineCov">        106 : }</span>
+<span class="lineNum">     142 </span>            : 
+<span class="lineNum">     143 </span>            : 
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

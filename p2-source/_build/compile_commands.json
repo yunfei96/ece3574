@@ -1,0 +1,197 @@
+[
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/tokenize.cpp.o -c /vagrant/tokenize.cpp",
+  "file": "/vagrant/tokenize.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/expression.cpp.o -c /vagrant/expression.cpp",
+  "file": "/vagrant/expression.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/environment.cpp.o -c /vagrant/environment.cpp",
+  "file": "/vagrant/environment.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/interpreter.cpp.o -c /vagrant/interpreter.cpp",
+  "file": "/vagrant/interpreter.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/mylineitem.cpp.o -c /vagrant/mylineitem.cpp",
+  "file": "/vagrant/mylineitem.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/qgraphics_arc_item.cpp.o -c /vagrant/qgraphics_arc_item.cpp",
+  "file": "/vagrant/qgraphics_arc_item.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/message_widget.cpp.o -c /vagrant/message_widget.cpp",
+  "file": "/vagrant/message_widget.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/canvas_widget.cpp.o -c /vagrant/canvas_widget.cpp",
+  "file": "/vagrant/canvas_widget.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/repl_widget.cpp.o -c /vagrant/repl_widget.cpp",
+  "file": "/vagrant/repl_widget.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/qt_interpreter.cpp.o -c /vagrant/qt_interpreter.cpp",
+  "file": "/vagrant/qt_interpreter.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/main_window.cpp.o -c /vagrant/main_window.cpp",
+  "file": "/vagrant/main_window.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/vtdraw.cpp.o -c /vagrant/vtdraw.cpp",
+  "file": "/vagrant/vtdraw.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++    -fPIC -std=gnu++11 -o CMakeFiles/vtdraw.dir/vtdraw_automoc.cpp.o -c /vagrant/_build/vtdraw_automoc.cpp",
+  "file": "/vagrant/_build/vtdraw_automoc.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -g -O0 -fprofile-arcs -ftest-coverage -std=gnu++11 -o CMakeFiles/unittests.dir/tokenize.cpp.o -c /vagrant/tokenize.cpp",
+  "file": "/vagrant/tokenize.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -g -O0 -fprofile-arcs -ftest-coverage -std=gnu++11 -o CMakeFiles/unittests.dir/expression.cpp.o -c /vagrant/expression.cpp",
+  "file": "/vagrant/expression.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -g -O0 -fprofile-arcs -ftest-coverage -std=gnu++11 -o CMakeFiles/unittests.dir/environment.cpp.o -c /vagrant/environment.cpp",
+  "file": "/vagrant/environment.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -g -O0 -fprofile-arcs -ftest-coverage -std=gnu++11 -o CMakeFiles/unittests.dir/interpreter.cpp.o -c /vagrant/interpreter.cpp",
+  "file": "/vagrant/interpreter.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -g -O0 -fprofile-arcs -ftest-coverage -std=gnu++11 -o CMakeFiles/unittests.dir/unittests.cpp.o -c /vagrant/unittests.cpp",
+  "file": "/vagrant/unittests.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -g -O0 -fprofile-arcs -ftest-coverage -std=gnu++11 -o CMakeFiles/unittests.dir/test_interpreter.cpp.o -c /vagrant/test_interpreter.cpp",
+  "file": "/vagrant/test_interpreter.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -g -O0 -fprofile-arcs -ftest-coverage -std=gnu++11 -o CMakeFiles/unittests.dir/unittests_automoc.cpp.o -c /vagrant/_build/unittests_automoc.cpp",
+  "file": "/vagrant/_build/unittests_automoc.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -std=gnu++11 -o CMakeFiles/vtscript.dir/tokenize.cpp.o -c /vagrant/tokenize.cpp",
+  "file": "/vagrant/tokenize.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -std=gnu++11 -o CMakeFiles/vtscript.dir/expression.cpp.o -c /vagrant/expression.cpp",
+  "file": "/vagrant/expression.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -std=gnu++11 -o CMakeFiles/vtscript.dir/environment.cpp.o -c /vagrant/environment.cpp",
+  "file": "/vagrant/environment.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -std=gnu++11 -o CMakeFiles/vtscript.dir/interpreter.cpp.o -c /vagrant/interpreter.cpp",
+  "file": "/vagrant/interpreter.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -std=gnu++11 -o CMakeFiles/vtscript.dir/vtscript.cpp.o -c /vagrant/vtscript.cpp",
+  "file": "/vagrant/vtscript.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++    -I/vagrant/_build -I/vagrant    -std=gnu++11 -o CMakeFiles/vtscript.dir/vtscript_automoc.cpp.o -c /vagrant/_build/vtscript_automoc.cpp",
+  "file": "/vagrant/_build/vtscript_automoc.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/test_gui.cpp.o -c /vagrant/test_gui.cpp",
+  "file": "/vagrant/test_gui.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/mylineitem.cpp.o -c /vagrant/mylineitem.cpp",
+  "file": "/vagrant/mylineitem.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/qgraphics_arc_item.cpp.o -c /vagrant/qgraphics_arc_item.cpp",
+  "file": "/vagrant/qgraphics_arc_item.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/message_widget.cpp.o -c /vagrant/message_widget.cpp",
+  "file": "/vagrant/message_widget.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/canvas_widget.cpp.o -c /vagrant/canvas_widget.cpp",
+  "file": "/vagrant/canvas_widget.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/repl_widget.cpp.o -c /vagrant/repl_widget.cpp",
+  "file": "/vagrant/repl_widget.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/qt_interpreter.cpp.o -c /vagrant/qt_interpreter.cpp",
+  "file": "/vagrant/qt_interpreter.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/main_window.cpp.o -c /vagrant/main_window.cpp",
+  "file": "/vagrant/main_window.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/tokenize.cpp.o -c /vagrant/tokenize.cpp",
+  "file": "/vagrant/tokenize.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/expression.cpp.o -c /vagrant/expression.cpp",
+  "file": "/vagrant/expression.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/environment.cpp.o -c /vagrant/environment.cpp",
+  "file": "/vagrant/environment.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/interpreter.cpp.o -c /vagrant/interpreter.cpp",
+  "file": "/vagrant/interpreter.cpp"
+},
+{
+  "directory": "/vagrant/_build",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/vagrant/_build -I/vagrant -isystem /usr/include/i386-linux-gnu/qt5 -isystem /usr/include/i386-linux-gnu/qt5/QtWidgets -isystem /usr/include/i386-linux-gnu/qt5/QtGui -isystem /usr/include/i386-linux-gnu/qt5/QtCore -isystem /usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/i386-linux-gnu/qt5/QtTest    -g -O0 -fprofile-arcs -ftest-coverage -fPIC -std=gnu++11 -o CMakeFiles/test_gui.dir/test_gui_automoc.cpp.o -c /vagrant/_build/test_gui_automoc.cpp",
+  "file": "/vagrant/_build/test_gui_automoc.cpp"
+}
+]

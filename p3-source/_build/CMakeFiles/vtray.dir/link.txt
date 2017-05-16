@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/vtray.dir/vtray.cpp.o CMakeFiles/vtray.dir/parsejson.cpp.o CMakeFiles/vtray.dir/calculate.cpp.o CMakeFiles/vtray.dir/vector3d.cpp.o CMakeFiles/vtray.dir/sphere.cpp.o CMakeFiles/vtray.dir/plane.cpp.o CMakeFiles/vtray.dir/vtray_automoc.cpp.o  -o vtray /usr/lib/i386-linux-gnu/libQt5Gui.so.5.5.1 -lpthread /usr/lib/i386-linux-gnu/libQt5Core.so.5.5.1 

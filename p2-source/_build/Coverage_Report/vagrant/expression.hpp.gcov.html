@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/expression.hpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - expression.hpp<span style="font-size: 80%;"> (source / <a href="expression.hpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-03-26 20:01:17</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #ifndef EXP</a>
+<span class="lineNum">       2 </span>            : #define EXP
+<span class="lineNum">       3 </span>            : #include &lt;iostream&gt;
+<span class="lineNum">       4 </span>            : #include &lt;string&gt;
+<span class="lineNum">       5 </span>            : #include &lt;tuple&gt;
+<a name="6"><span class="lineNum">       6 </span>            : using namespace std;</a>
+<span class="lineNum">       7 </span>            : 
+<span class="lineNum">       8 </span><span class="lineCov">     310352 : class Expression</span>
+<span class="lineNum">       9 </span>            : {
+<span class="lineNum">      10 </span>            : public:
+<span class="lineNum">      11 </span>            :     // Default construct an Expression of type None
+<span class="lineNum">      12 </span>            :     Expression();
+<span class="lineNum">      13 </span>            :     
+<span class="lineNum">      14 </span>            :     // Construct an Expression with a single Boolean atom with value
+<span class="lineNum">      15 </span>            :     Expression(bool value);
+<span class="lineNum">      16 </span>            :     
+<span class="lineNum">      17 </span>            :     // Construct an Expression with a single Number atom with value
+<span class="lineNum">      18 </span>            :     Expression(double value);
+<span class="lineNum">      19 </span>            :     
+<span class="lineNum">      20 </span>            :     // Construct an Expression with a single Symbol atom with value
+<span class="lineNum">      21 </span>            :     Expression(const std::string &amp; value);
+<span class="lineNum">      22 </span>            :     
+<span class="lineNum">      23 </span>            :     // Equality operator for two Expressions, two expressions are equal if the have the same
+<span class="lineNum">      24 </span>            :     // type, atom value, and number of arguments
+<span class="lineNum">      25 </span>            :     bool operator==(const Expression &amp; exp) const noexcept;
+<span class="lineNum">      26 </span>            :     
+<span class="lineNum">      27 </span>            :     // Construct an Expression with a single Point atom with value
+<span class="lineNum">      28 </span>            :     Expression(std::tuple&lt;double,double&gt; value);
+<span class="lineNum">      29 </span>            :     
+<span class="lineNum">      30 </span>            :     // Construct an Expression with a single Line atom with starting
+<span class="lineNum">      31 </span>            :     // point start and ending point end
+<span class="lineNum">      32 </span>            :     Expression(std::tuple&lt;double,double&gt; start,
+<span class="lineNum">      33 </span>            :                std::tuple&lt;double,double&gt; end);
+<span class="lineNum">      34 </span>            :     
+<span class="lineNum">      35 </span>            :     // Construct an Expression with a single Arc atom with center
+<span class="lineNum">      36 </span>            :     // point center, starting point start, and spanning angle angle in radians
+<span class="lineNum">      37 </span>            :     Expression(std::tuple&lt;double,double&gt; center,
+<span class="lineNum">      38 </span>            :                std::tuple&lt;double,double&gt; start,
+<span class="lineNum">      39 </span>            :                double angle);
+<span class="lineNum">      40 </span>            :     string type;
+<span class="lineNum">      41 </span>            :     string symbol;
+<span class="lineNum">      42 </span>            :     tuple&lt;double,double&gt; start{0,0};
+<span class="lineNum">      43 </span>            :     tuple&lt;double,double&gt; end{0,0};
+<span class="lineNum">      44 </span>            :     tuple&lt;double,double&gt; center{0,0};
+<span class="lineNum">      45 </span>            :     double angle;
+<span class="lineNum">      46 </span>            :     double number_value;
+<span class="lineNum">      47 </span>            :     bool bool_value;
+<span class="lineNum">      48 </span>            :     
+<span class="lineNum">      49 </span>            : };
+<span class="lineNum">      50 </span>            : #endif
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

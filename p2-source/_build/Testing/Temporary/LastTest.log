@@ -1,0 +1,54 @@
+Start testing: Mar 26 19:59 UTC
+----------------------------------------------------------
+1/2 Testing: unittests
+1/2 Test: unittests
+Command: "/vagrant/_build/unittests"
+Directory: /vagrant/_build
+"unittests" start time: Mar 26 19:59 UTC
+Output:
+----------------------------------------------------------
+===============================================================================
+All tests passed (430 assertions in 41 test cases)
+
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"unittests" end time: Mar 26 19:59 UTC
+"unittests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: test_gui
+2/2 Test: test_gui
+Command: "/vagrant/_build/test_gui"
+Directory: /vagrant/_build
+"test_gui" start time: Mar 26 19:59 UTC
+Output:
+----------------------------------------------------------
+********* Start testing of TestGUI *********
+Config: Using QtTest library 5.5.1, Qt 5.5.1 (i386-little_endian-ilp32 shared (dynamic) release build; by GCC 5.4.0 20160609)
+PASS   : TestGUI::initTestCase()
+PASS   : TestGUI::testREPLGood()
+QDEBUG : TestGUI::testREPLBad() "Error: not defined"
+PASS   : TestGUI::testREPLBad()
+PASS   : TestGUI::testREPLBad2Good()
+PASS   : TestGUI::testPoint()
+PASS   : TestGUI::testLine()
+PASS   : TestGUI::testArc()
+PASS   : TestGUI::testEnvRestore()
+PASS   : TestGUI::testupkey()
+PASS   : TestGUI::testlowkey()
+PASS   : TestGUI::testmain()
+PASS   : TestGUI::testmsg()
+PASS   : TestGUI::cleanupTestCase()
+Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted
+********* Finished testing of TestGUI *********
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"test_gui" end time: Mar 26 19:59 UTC
+"test_gui" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 26 19:59 UTC
